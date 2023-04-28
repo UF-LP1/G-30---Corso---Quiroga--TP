@@ -1,7 +1,11 @@
 /**
  * Project Untitled
  */
+#include <iostream>
+#include <string>
 
+
+using namespace std;
 
 #ifndef _CORTOPEDIA_H
 #define _CORTOPEDIA_H

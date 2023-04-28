@@ -1,7 +1,11 @@
 /**
  * Project Untitled
  */
+#include <iostream>
+#include <string>
 
+
+using namespace std;
 
 #ifndef _CPERFUMERIA_H
 #define _CPERFUMERIA_H

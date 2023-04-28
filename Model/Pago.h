@@ -1,7 +1,11 @@
 /**
  * Project Untitled
  */
+#include <iostream>
+#include <string>
 
+
+using namespace std;
 
 #ifndef _PAGO_H
 #define _PAGO_H

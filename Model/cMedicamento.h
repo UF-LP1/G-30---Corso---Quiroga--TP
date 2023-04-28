@@ -1,7 +1,11 @@
 /**
  * Project Untitled
  */
+#include <iostream>
+#include <string>
 
+
+using namespace std;
 
 #ifndef _CMEDICAMENTO_H
 #define _CMEDICAMENTO_H

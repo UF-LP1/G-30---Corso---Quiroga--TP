@@ -1,7 +1,11 @@
 /**
  * Project Untitled
  */
+#include <iostream>
+#include <string>
 
+
+using namespace std;
 
 #ifndef _CEFARMACEUTICO_H
 #define _CEFARMACEUTICO_H

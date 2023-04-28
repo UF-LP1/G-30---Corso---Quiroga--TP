@@ -37,9 +37,9 @@
     <ClCompile Include="..\Model\cPerfumeria.cpp" />
     <ClCompile Include="..\Model\cProducto.cpp" />
     <ClCompile Include="..\Model\cReceta.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Model\cAsistente.h" />
     <ClInclude Include="..\Model\cAtienden.h" />
     <ClInclude Include="..\Model\cCajero.h" />
     <ClInclude Include="..\Model\cCarrito.h" />

@@ -2,6 +2,11 @@
  * Project Untitled
  */
 
+#include <iostream>
+#include <string>
+
+
+using namespace std;
 
 #ifndef _CCARRITO_H
 #define _CCARRITO_H

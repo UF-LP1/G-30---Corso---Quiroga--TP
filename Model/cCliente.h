@@ -2,6 +2,11 @@
  * Project Untitled
  */
 
+#include <iostream>
+#include <string>
+
+
+using namespace std;
 
 #ifndef _CCLIENTE_H
 #define _CCLIENTE_H
