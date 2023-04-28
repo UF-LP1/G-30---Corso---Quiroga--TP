@@ -4,7 +4,11 @@
 
 #include <iostream>
 #include <string>
-
+#include <cTime>
+#include "../Model/ObraSocial.h"
+#include "../Model/Pago.h"
+#include "../Model/Ticket.h"
+#include "../Model/TipoAdmision.h"
 
 using namespace std;
 
@@ -21,34 +25,34 @@ public:
  * @param Pago
  * @param ObraSocial
  */
-void cCliente(string Nombre, string Apellido, const int DNI, enum Pago, enum ObraSocial);
+cCliente(string Nombre, string Apellido, const int DNI,Pago pago, ObraSocial obraSocial);
     
-void cCliente();
+~cCliente();
     
 string getNombre();
     
 /**
  * @param string
  */
-void setNombre(void string);
+void setNombre(string);
     
 /**
  * @param Ticket
  */
-void SacarTicket(void Ticket);
+void SacarTicket();
     
 /**
  * @param Pago
  */
-void Pagar(void Pago);
+void Pagar(Pago pago);
     
 void ElegirProducto();
 private: 
     string Nombre;
     string Apellido;
     const int DNI;
-    enum Pago;
-    enum ObraSocial;
+    Pago pago;
+    ObraSocial obraSocial;
 };
 
 #endif //_CCLIENTE_H

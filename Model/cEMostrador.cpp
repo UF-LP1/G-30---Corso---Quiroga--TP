@@ -3,11 +3,14 @@
  */
 #include <iostream>
 #include <string>
+#include <cTime>
 
 
 using namespace std;
 
 #include "cEMostrador.h"
+#include "ObraSocial.h"
+
 
 /**
  * cEMostrador implementation
@@ -19,11 +22,11 @@ using namespace std;
  * @param ID
  * @param Factura
  */
-void cEMostrador::cEmpleadosMostrador(string Nombre, const int ID, float Factura) {
+cEMostrador::cEMostrador(string Nombre, const int ID, float Factura) {
 
 }
 
-void cEMostrador::cEmpleadosMostrador() {
+cEMostrador::~cEMostrador() {
 
 }
 
@@ -38,7 +41,7 @@ void cEMostrador::LlamarCliente() {
  * @param Factura
  * @return float
  */
-float cEMostrador::EmitirFactura(void Factura) {
+float cEMostrador::EmitirFactura(float Factura) {
     return 0.0;
 }
 
@@ -46,7 +49,17 @@ float cEMostrador::EmitirFactura(void Factura) {
  * @param ObraSocial
  * @return void
  */
-void cEMostrador::AplicarDescuento(void ObraSocial) {
+void cEMostrador::AplicarDescuento(ObraSocial obraSocial) {
+
+    float Descuento, Total;
+    float Monto = EmitirFactura(Factura);
+    if (obraSocial != Ninguno) {
+        Descuento = (15.0 * Monto) / 100.0;
+        Total = Monto - Descuento;
+    }
+    else
+        Total = Monto;
+    //HAY QUE CONVERTIRLO EN FLOAT A LA FUNCION!!!!!!!!
     return;
 }
 
@@ -61,7 +74,7 @@ string cEMostrador::getNombre() {
  * @param string
  * @return void
  */
-void cEMostrador::setNombre(void string) {
+void cEMostrador::setNombre(string) {
     return;
 }
 
@@ -71,6 +84,6 @@ void cEMostrador::setNombre(void string) {
  * @param Medicamento
  * @return void
  */
-void cEMostrador::LeerReceta(void Nombre, void Unidades, void Medicamento) {
+void cEMostrador::LeerReceta(string Nombre, int Unidades, string Medicamento) {
     return;
 }

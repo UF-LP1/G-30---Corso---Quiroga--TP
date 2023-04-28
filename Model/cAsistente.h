@@ -1,6 +1,10 @@
 #include <iostream>
 #include <string>
-
+#include <cTime>
+#include "../Model/ObraSocial.h"
+#include "../Model/Pago.h"
+#include "../Model/Ticket.h"
+#include "../Model/TipoAdmision.h"
 
 using namespace std;
 /**
@@ -18,23 +22,23 @@ public:
  * @param Ticket
  * @param Numero
  */
-void cAsistente(enum Ticket, int Numero);
+cAsistente(enum Ticket, int Numero);
     
 int getNumero();
     
 /**
  * @param int
  */
-void setNumero(void int);
+void setNumero(int);
     
 /**
  * @param Ticket
  * @param Numero
  */
-void GenerarTicket(void Ticket, void Numero);
+void GenerarTicket(enum Ticket, int Numero);
 protected: 
     
-void cAsistente();
+~cAsistente();
 private: 
     enum Ticket;
     int Numero;

@@ -3,7 +3,7 @@
  */
 #include <iostream>
 #include <string>
-
+#include <cTime>
 
 using namespace std;
 
@@ -18,7 +18,7 @@ using namespace std;
  * @param Ticket
  * @param Numero
  */
-void cAsistente::cAsistente(enum Ticket, int Numero) {
+cAsistente::cAsistente(enum Ticket, int Numero) {
 
 }
 
@@ -33,7 +33,7 @@ int cAsistente::getNumero() {
  * @param int
  * @return void
  */
-void cAsistente::setNumero(void int) {
+void cAsistente::setNumero(int) {
     return;
 }
 
@@ -42,10 +42,10 @@ void cAsistente::setNumero(void int) {
  * @param Numero
  * @return void
  */
-void cAsistente::GenerarTicket(void Ticket, void Numero) {
+void cAsistente::GenerarTicket(enum Ticket, int Numero) {
     return;
 }
 
-void cAsistente::cAsistente() {
+cAsistente::~cAsistente() {
 
 }

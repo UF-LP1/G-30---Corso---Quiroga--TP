@@ -3,7 +3,7 @@
  */
 #include <iostream>
 #include <string>
-
+#include <cTime>
 
 using namespace std;
 
@@ -26,7 +26,7 @@ using namespace std;
  * @param Dosis
  * @param FechaVencimiento
  */
-void cMedicamento::cMedicamento(string Nombre, float Precio, int Stock, string Marca, string Area, const int ID, enum TipoAdmision, float ContenidoNeto, string Dosis, cTime FechaVencimiento) {
+cMedicamento::cMedicamento(string Nombre, float Precio, int Stock, string Marca, string Area, const int ID, enum TipoAdmision, float ContenidoNeto, string Dosis, cTime FechaVencimiento) {
 
 }
 
@@ -48,10 +48,10 @@ float cMedicamento::getPrecio() {
  * @param float
  * @return void
  */
-void cMedicamento::setPrecio(void float) {
+void cMedicamento::setPrecio(float) {
     return;
 }
 
-void cMedicamento::cMedicamento() {
+cMedicamento::~cMedicamento() {
 
 }

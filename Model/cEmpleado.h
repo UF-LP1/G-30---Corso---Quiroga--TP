@@ -3,7 +3,11 @@
  */
 #include <iostream>
 #include <string>
-
+#include <cTime>
+#include "../Model/ObraSocial.h"
+#include "../Model/Pago.h"
+#include "../Model/Ticket.h"
+#include "../Model/TipoAdmision.h"
 
 using namespace std;
 
@@ -14,6 +18,10 @@ class cEmpleado {
 protected: 
     string Nombre;
     const int ID;
+
+public:
+    cEmpleado(string Nombre,  const int ID);
+    ~cEmpleado();
 };
 
 #endif //_CEMPLEADO_H

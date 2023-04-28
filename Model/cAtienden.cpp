@@ -3,7 +3,7 @@
  */
 #include <iostream>
 #include <string>
-
+#include <cTime>
 
 using namespace std;
 
@@ -13,14 +13,16 @@ using namespace std;
  * cAtienden implementation
  */
 
-
-void cAtienden::Virtual void LlamarCliente() {
+cAtienden::cAtienden(float Factura) {
 
 }
+cAtienden::~cAtienden() {
+
+}
+
+//cAtienden::virtual void LlamarCliente() {}
 
 /**
  * @param Factura
  */
-void cAtienden::Virtual float EmitirFactura(void Factura) {
-
-}
+//void cAtienden::virtual float EmitirFactura(void Factura) {}

@@ -137,5 +137,8 @@
     <ClInclude Include="..\Model\cFarmacia.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\Model\cAsistente.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

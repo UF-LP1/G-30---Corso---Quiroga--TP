@@ -3,7 +3,11 @@
  */
 #include <iostream>
 #include <string>
-
+#include <cTime>
+#include "../Model/ObraSocial.h"
+#include "../Model/Pago.h"
+#include "../Model/Ticket.h"
+#include "../Model/TipoAdmision.h"
 
 using namespace std;
 
@@ -24,24 +28,24 @@ public:
  * @param TrabajaFindeSemana
  * @param TrabajaDiadeSemana
  */
-void cEmpleadoLimpieza(string Nombre, int NumeroEmpleado, int HoraEntrada, int HoraSalida, bool TrabajaFindeSemana, bool TrabajaDiadeSemana);
+cELimpieza(string Nombre, int NumeroEmpleado, int HoraEntrada, int HoraSalida, bool TrabajaFindeSemana, bool TrabajaDiadeSemana);
     
 /**
  * @param Limpio
  * @param Fecha
  * @param NumeroEmpleado
  */
-void Limpiar(void Limpio, void Fecha, void NumeroEmpleado);
+void Limpiar(bool Limpio, cTime Fecha, int NumeroEmpleado);
     
 int getNumeroEmpleado();
     
 /**
  * @param int
  */
-void setNumeroEmpleado(void int);
+void setNumeroEmpleado(int);
 protected: 
     
-void cEmpleadoLimpieza();
+~cELimpieza();
 private: 
     int HoraEntrada;
     int HoraSalida;

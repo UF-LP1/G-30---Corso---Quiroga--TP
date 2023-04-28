@@ -3,7 +3,7 @@
  */
 #include <iostream>
 #include <string>
-
+#include <cTime>
 
 using namespace std;
 
@@ -12,6 +12,10 @@ using namespace std;
 
 #include "cAtienden.h"
 
+#include "../Model/ObraSocial.h"
+#include "../Model/Pago.h"
+#include "../Model/Ticket.h"
+#include "../Model/TipoAdmision.h"
 
 class cEMostrador: public cAtienden {
 public: 
@@ -21,35 +25,35 @@ public:
  * @param ID
  * @param Factura
  */
-void cEmpleadosMostrador(string Nombre, const int ID, float Factura);
+cEMostrador(string Nombre, const int ID, float Factura);
     
-void cEmpleadosMostrador();
+~cEMostrador();
     
 void LlamarCliente();
     
 /**
  * @param Factura
  */
-float EmitirFactura(void Factura);
+float EmitirFactura(float Factura);
     
 /**
  * @param ObraSocial
  */
-void AplicarDescuento(void ObraSocial);
+void AplicarDescuento(ObraSocial obraSocial);
     
 string getNombre();
     
 /**
  * @param string
  */
-void setNombre(void string);
+void setNombre( string);
     
 /**
  * @param Nombre
  * @param Unidades
  * @param Medicamento
  */
-void LeerReceta(void Nombre, void Unidades, void Medicamento);
+void LeerReceta(string Nombre, int Unidades, string Medicamento);
 };
 
 #endif //_CEMOSTRADOR_H

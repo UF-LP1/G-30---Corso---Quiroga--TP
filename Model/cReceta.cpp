@@ -3,7 +3,7 @@
  */
 #include <iostream>
 #include <string>
-
+#include <cTime>
 
 using namespace std;
 
@@ -22,7 +22,7 @@ using namespace std;
  * @param Medico
  * @param ObraSocial
  */
-void cReceta::cReceta(string Nombre, enum TipoAdmision, int Unidades, string Medicamento, string Medico, enum ObraSocial) {
+cReceta::cReceta(string Nombre, TipoAdmision tipoAdmision, int Unidades, string Medicamento, string Medico, ObraSocial obraSocial) {
 
 }
 
@@ -37,10 +37,10 @@ int cReceta::getCantidad() {
  * @param int
  * @return void
  */
-void cReceta::setCantidad(void int) {
+void cReceta::setCantidad(int) {
     return;
 }
 
-void cReceta::cReceta() {
+cReceta::~cReceta() {
 
 }

@@ -3,7 +3,11 @@
  */
 #include <iostream>
 #include <string>
-
+#include <cTime>
+#include "../Model/ObraSocial.h"
+#include "../Model/Pago.h"
+#include "../Model/Ticket.h"
+#include "../Model/TipoAdmision.h"
 
 using namespace std;
 
@@ -13,7 +17,9 @@ using namespace std;
 class cProducto {
 public: 
     
-void Virtual bool VerificarStock();
+    cProducto(string Nombre, float Precio, int Stock, string Marca, string Area, const int ID);
+    ~cProducto();
+virtual bool VerificarStock();
 protected: 
     string Nombre;
     float Precio;

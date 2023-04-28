@@ -3,7 +3,7 @@
  */
 #include <iostream>
 #include <string>
-
+#include <cTime>
 
 using namespace std;
 
@@ -19,7 +19,7 @@ using namespace std;
  * @param ID
  * @param Factura
  */
-void cEFarmaceutico::cFarmaceutico(string Nombre, const int ID, float Factura) {
+cEFarmaceutico::cEFarmaceutico(string Nombre, const int ID, float Factura) {
 
 }
 
@@ -34,7 +34,7 @@ void cEFarmaceutico::LlamarCliente() {
  * @param Factura
  * @return float
  */
-float cEFarmaceutico::EmitirFactura(void Factura) {
+float cEFarmaceutico::EmitirFactura(float Factura) {
     return 0.0;
 }
 
@@ -56,10 +56,10 @@ string cEFarmaceutico::getNombre() {
  * @param string
  * @return void
  */
-void cEFarmaceutico::setNombre(void string) {
+void cEFarmaceutico::setNombre(string) {
     return;
 }
 
-void cEFarmaceutico::cFarmaceutico() {
+cEFarmaceutico::~cEFarmaceutico() {
 
 }

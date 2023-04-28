@@ -3,7 +3,7 @@
  */
 #include <iostream>
 #include <string>
-
+#include <cTime>
 
 using namespace std;
 
@@ -19,7 +19,7 @@ using namespace std;
  * @param ID
  * @param Factura
  */
-void cEOrtopedia::cEOrtopedia(string Nombre, const int ID, float Factura) {
+cEOrtopedia::cEOrtopedia(string Nombre, const int ID, float Factura) {
 
 }
 
@@ -34,7 +34,7 @@ void cEOrtopedia::LlamarCliente() {
  * @param Factura
  * @return float
  */
-float cEOrtopedia::EmitirFactura(void Factura) {
+float cEOrtopedia::EmitirFactura(float Factura) {
     return 0.0;
 }
 
@@ -56,10 +56,10 @@ string cEOrtopedia::getNombre() {
  * @param string
  * @return void
  */
-void cEOrtopedia::setNombre(void string) {
+void cEOrtopedia::setNombre(string) {
     return;
 }
 
-void cEOrtopedia::cEOrtopedia() {
+cEOrtopedia::~cEOrtopedia() {
 
 }

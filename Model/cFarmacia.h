@@ -3,7 +3,11 @@
  */
 #include <iostream>
 #include <string>
-
+#include <cTime>
+#include "../Model/ObraSocial.h"
+#include "../Model/Pago.h"
+#include "../Model/Ticket.h"
+#include "../Model/TipoAdmision.h"
 
 using namespace std;
 
@@ -22,7 +26,7 @@ public:
  * @param Limpio
  * @param Producto
  */
-void cFarmacia(cTime Fecha, bool Abierto, string Nombre, enum Perfumeria, enum Ortopedia, bool Limpio, string Producto);
+cFarmacia(cTime Fecha, bool Abierto, string Nombre, enum Perfumeria, enum Ortopedia, bool Limpio, string Producto);
     
 bool AbrirFarmacia();
     
@@ -33,17 +37,17 @@ bool getAbierto();
 /**
  * @param bool
  */
-void setAbierto(void bool);
+void setAbierto(bool);
     
 /**
  * @param Producto
  */
-void SeleccionarProducto(void Producto);
+void SeleccionarProducto(string Producto);
 protected: 
     
-void cFarmacia();
+~cFarmacia();
 private: 
-    cTime Fecha;
+    cTime Fecha; //VER
     bool Abierto;
     string Nombre;
     bool Limpio;

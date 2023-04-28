@@ -4,7 +4,11 @@
 
 #include <iostream>
 #include <string>
-
+#include <cTime>
+#include "../Model/ObraSocial.h"
+#include "../Model/Pago.h"
+#include "../Model/Ticket.h"
+#include "../Model/TipoAdmision.h"
 
 using namespace std;
 
@@ -18,11 +22,11 @@ public:
  * @param TipoProducto
  * @param Cantidad
  */
-void cCarrito(enum TipoProducto, int Cantidad);
+cCarrito(enum TipoProducto, int Cantidad);
     
 void AgregarProducto();
     
-*cProducto QuitarProducto();
+//cProducto* QuitarProducto();
     
 void EliminarProducto();
     
@@ -35,7 +39,7 @@ void getTipoProducto();
 void setTipoProducto();
 protected: 
     
-void cCarrito();
+~cCarrito();
 private: 
     enum TipoProducto;
     int Cantidad;

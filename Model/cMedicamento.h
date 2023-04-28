@@ -3,7 +3,11 @@
  */
 #include <iostream>
 #include <string>
-
+#include <cTime>
+#include "../Model/ObraSocial.h"
+#include "../Model/Pago.h"
+#include "../Model/Ticket.h"
+#include "../Model/TipoAdmision.h"
 
 using namespace std;
 
@@ -28,7 +32,7 @@ public:
  * @param Dosis
  * @param FechaVencimiento
  */
-void cMedicamento(string Nombre, float Precio, int Stock, string Marca, string Area, const int ID, enum TipoAdmision, float ContenidoNeto, string Dosis, cTime FechaVencimiento);
+cMedicamento(string Nombre, float Precio, int Stock, string Marca, string Area, const int ID, enum TipoAdmision, float ContenidoNeto, string Dosis, cTime FechaVencimiento);
     
 bool VerificarStock();
     
@@ -37,10 +41,10 @@ float getPrecio();
 /**
  * @param float
  */
-void setPrecio(void float);
+void setPrecio(float);
 protected: 
     
-void cMedicamento();
+~cMedicamento();
 private: 
     enum TipoAdmision;
     float ContenidoNeto;

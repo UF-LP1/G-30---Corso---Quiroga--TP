@@ -3,7 +3,11 @@
  */
 #include <iostream>
 #include <string>
-
+#include <cTime>
+#include "../Model/ObraSocial.h"
+#include "../Model/Pago.h"
+#include "../Model/Ticket.h"
+#include "../Model/TipoAdmision.h"
 
 using namespace std;
 
@@ -14,7 +18,7 @@ class cReceta {
 public: 
     string Medicamento;
     string Medico;
-    enum ObraSocial;
+    ObraSocial obraSocial;
     
 /**
  * @param Nombre
@@ -24,20 +28,20 @@ public:
  * @param Medico
  * @param ObraSocial
  */
-void cReceta(string Nombre, enum TipoAdmision, int Unidades, string Medicamento, string Medico, enum ObraSocial);
+cReceta(string Nombre, TipoAdmision tipoAdmision, int Unidades, string Medicamento, string Medico, ObraSocial obraSocial);
     
 int getCantidad();
     
 /**
  * @param int
  */
-void setCantidad(void int);
+void setCantidad(int);
 protected: 
     
-void cReceta();
+~cReceta();
 private: 
     string Nombre;
-    enum TipoAdmision;
+    TipoAdmision tipoAdmision;
     int Unidades;
 };
 

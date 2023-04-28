@@ -3,7 +3,7 @@
  */
 #include <iostream>
 #include <string>
-
+#include <cTime>
 
 using namespace std;
 
@@ -23,7 +23,7 @@ using namespace std;
  * @param ID
  * @param CantLitros
  */
-void cPerfumeria::cPerfumeria(string Nombre, float Precio, int Stock, string Marca, string Area, const int ID, float CantLitros) {
+cPerfumeria::cPerfumeria(string Nombre, float Precio, int Stock, string Marca, string Area, const int ID, float CantLitros) {
 
 }
 
@@ -45,10 +45,10 @@ float cPerfumeria::getPrecio() {
  * @param float
  * @return void
  */
-void cPerfumeria::setPrecio(void float) {
+void cPerfumeria::setPrecio(float) {
     return;
 }
 
-void cPerfumeria::cPerfumeria() {
+cPerfumeria::~cPerfumeria() {
 
 }

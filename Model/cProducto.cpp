@@ -3,7 +3,7 @@
  */
 #include <iostream>
 #include <string>
-
+#include <cTime>
 
 using namespace std;
 
@@ -13,7 +13,12 @@ using namespace std;
  * cProducto implementation
  */
 
-
-void cProducto::Virtual bool VerificarStock() {
+cProducto::cProducto(string Nombre, float Precio, int Stock, string Marca, string Area, const int ID) {
 
 }
+cProducto::~cProducto() {
+
+}
+//void cProducto::irtual bool VerificarStock() {
+//
+//}

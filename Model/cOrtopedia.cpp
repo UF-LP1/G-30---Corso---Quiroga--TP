@@ -3,7 +3,7 @@
  */
 #include <iostream>
 #include <string>
-
+#include <cTime>
 
 using namespace std;
 
@@ -24,7 +24,7 @@ using namespace std;
  * @param CantUnidades
  * @param Color
  */
-void cOrtopedia::cOrtopedia(string Nombre, float Precio, int Stock, string Marca, string Area, void ID const int, int CantUnidades, string Color) {
+cOrtopedia::cOrtopedia(string Nombre, float Precio, int Stock, string Marca, string Area, void ID const int, int CantUnidades, string Color) {
 
 }
 
@@ -46,10 +46,10 @@ float cOrtopedia::getPrecio() {
  * @param float
  * @return void
  */
-void cOrtopedia::setPrecio(void float) {
+void cOrtopedia::setPrecio(float) {
     return;
 }
 
-void cOrtopedia::cOrtopedia() {
+cOrtopedia::~cOrtopedia() {
 
 }

@@ -3,7 +3,11 @@
  */
 #include <iostream>
 #include <string>
-
+#include <cTime>
+#include "../Model/ObraSocial.h"
+#include "../Model/Pago.h"
+#include "../Model/Ticket.h"
+#include "../Model/TipoAdmision.h"
 
 using namespace std;
 
@@ -16,12 +20,14 @@ using namespace std;
 class cAtienden: public cEmpleado {
 public: 
     
-void Virtual void LlamarCliente();
+    cAtienden(float Factura);
+    ~cAtienden();
+virtual void LlamarCliente();
     
 /**
  * @param Factura
  */
-void Virtual float EmitirFactura(void Factura);
+float virtual EmitirFactura(float Factura);
 protected: 
     float Factura;
 };

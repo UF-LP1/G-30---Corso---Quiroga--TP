@@ -3,7 +3,7 @@
  */
 #include <iostream>
 #include <string>
-
+#include <cTime>
 
 using namespace std;
 
@@ -21,11 +21,11 @@ using namespace std;
  * @param Pago
  * @param ObraSocial
  */
-void cCliente::cCliente(string Nombre, string Apellido, const int DNI, enum Pago, enum ObraSocial) {
+cCliente::cCliente(string Nombre, string Apellido, const int DNI, Pago pago, ObraSocial obraSocial) {
 
 }
 
-void cCliente::cCliente() {
+cCliente::~cCliente() {
 
 }
 
@@ -40,7 +40,7 @@ string cCliente::getNombre() {
  * @param string
  * @return void
  */
-void cCliente::setNombre(void string) {
+void cCliente::setNombre(string) {
     return;
 }
 
@@ -48,7 +48,7 @@ void cCliente::setNombre(void string) {
  * @param Ticket
  * @return void
  */
-void cCliente::SacarTicket(void Ticket) {
+void cCliente::SacarTicket() {
     return;
 }
 
@@ -56,7 +56,7 @@ void cCliente::SacarTicket(void Ticket) {
  * @param Pago
  * @return void
  */
-void cCliente::Pagar(void Pago) {
+void cCliente::Pagar(Pago pago) {
     return;
 }
 

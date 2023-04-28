@@ -3,7 +3,7 @@
  */
 #include <iostream>
 #include <string>
-
+#include <cTime>
 
 using namespace std;
 
@@ -12,6 +12,10 @@ using namespace std;
 
 #include "cAtienden.h"
 
+#include "../Model/ObraSocial.h"
+#include "../Model/Pago.h"
+#include "../Model/Ticket.h"
+#include "../Model/TipoAdmision.h"
 
 class cCajero: public cAtienden {
 public: 
@@ -21,7 +25,7 @@ public:
  * @param ID
  * @param Factura
  */
-void cCajero(string Nombre, const int ID, float Factura);
+cCajero(string Nombre, const int ID, float Factura);
     
 string getNombre();
     
@@ -36,7 +40,7 @@ void setNombre(void string);
 float GenerarMonto(float Factura);
 protected: 
     
-void cCajero();
+~cCajero();
 };
 
 #endif //_CCAJERO_H

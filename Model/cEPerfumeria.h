@@ -3,7 +3,11 @@
  */
 #include <iostream>
 #include <string>
-
+#include <cTime>
+#include "../Model/ObraSocial.h"
+#include "../Model/Pago.h"
+#include "../Model/Ticket.h"
+#include "../Model/TipoAdmision.h"
 
 using namespace std;
 
@@ -21,14 +25,14 @@ public:
  * @param ID
  * @param Factura
  */
-void cEmpleadosPerfumeria(string Nombre, const int ID, float Factura);
+cEPerfumeria(string Nombre, const int ID, float Factura);
     
 void LlamarCliente();
     
 /**
  * @param Factura
  */
-float EmitirFactura(void Factura);
+float EmitirFactura(float Factura);
     
 void Asesorar();
     
@@ -37,10 +41,10 @@ string getNombre();
 /**
  * @param string
  */
-void setNombre(void string);
+void setNombre(string);
 protected: 
     
-void cEmpleadosPerfumeria();
+~cEPerfumeria();
 };
 
 #endif //_CEPERFUMERIA_H

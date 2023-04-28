@@ -3,7 +3,7 @@
  */
 #include <iostream>
 #include <string>
-
+#include <cTime>
 
 using namespace std;
 
@@ -18,7 +18,7 @@ using namespace std;
  * @param TipoProducto
  * @param Cantidad
  */
-void cCarrito::cCarrito(enum TipoProducto, int Cantidad) {
+cCarrito::cCarrito(enum TipoProducto, int Cantidad) {
 
 }
 
@@ -32,9 +32,9 @@ void cCarrito::AgregarProducto() {
 /**
  * @return *cProducto
  */
-*cProducto cCarrito::QuitarProducto() {
-    return null;
-}
+//cProducto* cCarrito::QuitarProducto() {
+//    return null;
+//}
 
 /**
  * @return void
@@ -71,6 +71,6 @@ void cCarrito::setTipoProducto() {
     return;
 }
 
-void cCarrito::cCarrito() {
+cCarrito::~cCarrito() {
 
 }

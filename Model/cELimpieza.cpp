@@ -3,7 +3,7 @@
  */
 #include <iostream>
 #include <string>
-
+#include <cTime>
 
 using namespace std;
 
@@ -22,7 +22,7 @@ using namespace std;
  * @param TrabajaFindeSemana
  * @param TrabajaDiadeSemana
  */
-void cELimpieza::cEmpleadoLimpieza(string Nombre, int NumeroEmpleado, int HoraEntrada, int HoraSalida, bool TrabajaFindeSemana, bool TrabajaDiadeSemana) {
+cELimpieza::cELimpieza(string Nombre, int NumeroEmpleado, int HoraEntrada, int HoraSalida, bool TrabajaFindeSemana, bool TrabajaDiadeSemana) {
 
 }
 
@@ -32,7 +32,7 @@ void cELimpieza::cEmpleadoLimpieza(string Nombre, int NumeroEmpleado, int HoraEn
  * @param NumeroEmpleado
  * @return void
  */
-void cELimpieza::Limpiar(void Limpio, void Fecha, void NumeroEmpleado) {
+void cELimpieza::Limpiar(bool Limpio, cTime Fecha, int NumeroEmpleado) {
     return;
 }
 
@@ -47,10 +47,10 @@ int cELimpieza::getNumeroEmpleado() {
  * @param int
  * @return void
  */
-void cELimpieza::setNumeroEmpleado(void int) {
+void cELimpieza::setNumeroEmpleado(int) {
     return;
 }
 
-void cELimpieza::cEmpleadoLimpieza() {
+cELimpieza::~cELimpieza() {
 
 }

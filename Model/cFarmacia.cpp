@@ -3,7 +3,7 @@
  */
 #include <iostream>
 #include <string>
-
+#include <cTime>
 
 using namespace std;
 
@@ -23,7 +23,7 @@ using namespace std;
  * @param Limpio
  * @param Producto
  */
-void cFarmacia::cFarmacia(cTime Fecha, bool Abierto, string Nombre, enum Perfumeria, enum Ortopedia, bool Limpio, string Producto) {
+cFarmacia::cFarmacia(cTime Fecha, bool Abierto, string Nombre, enum Perfumeria, enum Ortopedia, bool Limpio, string Producto) {
 
 }
 
@@ -52,7 +52,7 @@ bool cFarmacia::getAbierto() {
  * @param bool
  * @return void
  */
-void cFarmacia::setAbierto(void bool) {
+void cFarmacia::setAbierto(bool) {
     return;
 }
 
@@ -60,10 +60,10 @@ void cFarmacia::setAbierto(void bool) {
  * @param Producto
  * @return void
  */
-void cFarmacia::SeleccionarProducto(void Producto) {
+void cFarmacia::SeleccionarProducto(string Producto) {
     return;
 }
 
-void cFarmacia::cFarmacia() {
+cFarmacia::~cFarmacia() {
 
 }
