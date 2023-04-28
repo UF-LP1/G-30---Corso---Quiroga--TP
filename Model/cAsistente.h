@@ -16,20 +16,25 @@ using namespace std;
 #define _CASISTENTE_H
 
 class cAsistente {
+private:
+    enum Ticket;
+    int Numero;
 public: 
     
 /**
  * @param Ticket
  * @param Numero
  */
+
 cAsistente(enum Ticket, int Numero);
-    
-int getNumero();
+~cAsistente();
+
+int getNumero() {return this->Numero;};
     
 /**
  * @param int
  */
-void setNumero(int);
+void setNumero(int numero);
     
 /**
  * @param Ticket
@@ -38,10 +43,6 @@ void setNumero(int);
 void GenerarTicket(enum Ticket, int Numero);
 protected: 
     
-~cAsistente();
-private: 
-    enum Ticket;
-    int Numero;
 };
 
 #endif //_CASISTENTE_H

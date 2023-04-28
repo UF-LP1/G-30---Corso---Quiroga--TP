@@ -5,6 +5,7 @@
 #include <iostream>
 #include <string>
 #include <cTime>
+#include "../Model/cProducto.h"
 #include "../Model/ObraSocial.h"
 #include "../Model/Pago.h"
 #include "../Model/Ticket.h"
@@ -16,6 +17,10 @@ using namespace std;
 #define _CCARRITO_H
 
 class cCarrito {
+private:
+    int Cantidad;
+    cProducto** _listaProductos;
+
 public: 
     
 /**
@@ -30,7 +35,7 @@ void AgregarProducto();
     
 void EliminarProducto();
     
-void VerTotal();
+float VerTotal();
     
 int BuscarProducto();
     

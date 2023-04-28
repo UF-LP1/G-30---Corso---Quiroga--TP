@@ -9,6 +9,7 @@ using namespace std;
 
 #include "cCliente.h"
 
+
 /**
  * cCliente implementation
  */
@@ -57,6 +58,10 @@ void cCliente::SacarTicket() {
  * @return void
  */
 void cCliente::Pagar(Pago pago) {
+    float _factura = this->atiende->EmitirFactura();
+    if (pago == Efectivo) {
+
+    }
     return;
 }
 

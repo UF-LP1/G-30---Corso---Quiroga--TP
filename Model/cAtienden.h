@@ -15,21 +15,26 @@ using namespace std;
 #define _CATIENDEN_H
 
 #include "cEmpleado.h"
+#include "cCliente.h"
 
 
 class cAtienden: public cEmpleado {
+protected:
+    float Factura;
+    cCliente* cliente;
 public: 
-    
     cAtienden(float Factura);
     ~cAtienden();
+    void setcliente(cCliente* cliente);
+    cCliente* getcliente();
+
 virtual void LlamarCliente();
     
 /**
  * @param Factura
  */
 float virtual EmitirFactura(float Factura);
-protected: 
-    float Factura;
+
 };
 
 #endif //_CATIENDEN_H

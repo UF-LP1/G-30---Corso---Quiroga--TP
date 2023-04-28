@@ -19,7 +19,6 @@ using namespace std;
  * @param Numero
  */
 cAsistente::cAsistente(enum Ticket, int Numero) {
-
 }
 
 /**

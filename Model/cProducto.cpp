@@ -19,6 +19,9 @@ cProducto::cProducto(string Nombre, float Precio, int Stock, string Marca, strin
 cProducto::~cProducto() {
 
 }
+float cProducto::getprecio() {
+	return this->Precio;
+}
 //void cProducto::irtual bool VerificarStock() {
 //
 //}

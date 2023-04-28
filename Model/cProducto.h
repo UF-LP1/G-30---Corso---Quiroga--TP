@@ -15,18 +15,21 @@ using namespace std;
 #define _CPRODUCTO_H
 
 class cProducto {
-public: 
-    
-    cProducto(string Nombre, float Precio, int Stock, string Marca, string Area, const int ID);
-    ~cProducto();
-virtual bool VerificarStock();
-protected: 
+protected:
     string Nombre;
     float Precio;
     int Stock;
     string Marca;
     string Area;
     const int ID;
+public: 
+    
+    cProducto(string Nombre, float Precio, int Stock, string Marca, string Area, const int ID);
+    ~cProducto();
+virtual bool VerificarStock();
+float getprecio();
+
+
 };
 
 #endif //_CPRODUCTO_H

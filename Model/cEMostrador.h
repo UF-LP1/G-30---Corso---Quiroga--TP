@@ -25,7 +25,7 @@ public:
  * @param ID
  * @param Factura
  */
-cEMostrador(string Nombre, const int ID, float Factura);
+cEMostrador(string Nombre, const int ID);
     
 ~cEMostrador();
     
@@ -34,12 +34,12 @@ void LlamarCliente();
 /**
  * @param Factura
  */
-float EmitirFactura(float Factura);
+float EmitirFactura();
     
 /**
  * @param ObraSocial
  */
-void AplicarDescuento(ObraSocial obraSocial);
+float AplicarDescuento(ObraSocial obraSocial, float Monto);
     
 string getNombre();
     

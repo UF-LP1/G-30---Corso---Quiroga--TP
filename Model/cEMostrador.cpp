@@ -41,18 +41,19 @@ void cEMostrador::LlamarCliente() {
  * @param Factura
  * @return float
  */
-float cEMostrador::EmitirFactura(float Factura) {
-    return 0.0;
+float cEMostrador::EmitirFactura() {
+    cCliente* _cliente = this->getcliente();
+    float _monto->getcarrito()->VerTotal();
+    return this->AplicarDescuento(_cliente->getObraSocial(), _monto);
 }
 
 /**
  * @param ObraSocial
  * @return void
  */
-void cEMostrador::AplicarDescuento(ObraSocial obraSocial) {
-
+float cEMostrador::AplicarDescuento(ObraSocial obraSocial, float Monto) {
     float Descuento, Total;
-    float Monto = EmitirFactura(Factura);
+
     if (obraSocial != Ninguno) {
         Descuento = (15.0 * Monto) / 100.0;
         Total = Monto - Descuento;
@@ -60,7 +61,7 @@ void cEMostrador::AplicarDescuento(ObraSocial obraSocial) {
     else
         Total = Monto;
     //HAY QUE CONVERTIRLO EN FLOAT A LA FUNCION!!!!!!!!
-    return;
+    return Total;
 }
 
 /**

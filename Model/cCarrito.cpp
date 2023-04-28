@@ -46,8 +46,13 @@ void cCarrito::EliminarProducto() {
 /**
  * @return void
  */
-void cCarrito::VerTotal() {
-    return;
+float cCarrito::VerTotal() {
+    int i;
+    float ToR = 0;
+    for (i = 0; i < Cantidad; i++) {
+        ToR = ToR + this->_listaProductos[i]->getprecio(); //RECORRO LA LISTA Y LE AGREGO LOS PRECIOS A LOS PRODUCTOS
+    }
+    return ToR;
 }
 
 /**
