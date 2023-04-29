@@ -42,10 +42,15 @@ void cCajero::setNombre(string Nombre) {
 }
 
 /**
+* 
+* Esta funcion calcula el total que debe pagar el cliente sumando los tickets generados por los otros empleados que atienden.
+* 
  * @param Factura
  * @return float
  */
 float cCajero::Cobrar(float Factura) {
+
+
     return 0.0;
 }
 

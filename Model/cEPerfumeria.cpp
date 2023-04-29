@@ -31,11 +31,16 @@ void cEPerfumeria::LlamarCliente() {
 }
 
 /**
+*
+* Esta función genera un monto de los productos pertenecientes al sector donde trabaja este empleado.
+* 
  * @param Factura
  * @return float
  */
 float cEPerfumeria::EmitirFactura(float Factura) {
-    return 0.0;
+    cCliente* _cliente = this->getcliente();
+    float _monto->getcarrito()->VerTotal();
+    return _monto;
 }
 
 /**

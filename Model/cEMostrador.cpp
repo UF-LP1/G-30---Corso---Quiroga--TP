@@ -38,6 +38,10 @@ void cEMostrador::LlamarCliente() {
 }
 
 /**
+* 
+* Esta función genera un monto de los productos pertenecientes al sector donde trabaja este empleado. Tambien llama a la funcion AplicarDdescuento 
+* para descontar de la obra social.
+* 
  * @param Factura
  * @return float
  */
@@ -48,6 +52,9 @@ float cEMostrador::EmitirFactura() {
 }
 
 /**
+* 
+* Esta función aplica un descuento del 15% para todas las obras sociales. Si el cliente no tiene obra social (ninguno), no se le descuenta.
+* 
  * @param ObraSocial
  * @return void
  */

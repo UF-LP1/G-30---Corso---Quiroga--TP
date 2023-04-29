@@ -17,6 +17,7 @@ using namespace std;
 #include "../Model/Ticket.h"
 #include "../Model/TipoAdmision.h"
 #include "../Model/TipoProducto.h"
+
 class cEMostrador: public cAtienden {
 public: 
     

@@ -30,5 +30,21 @@ using namespace std;
 
 int main() {
 
+	cCliente* cliente1 = new cCliente("Juan", "Garcia", 44665522, "CREDITO", "OSDE");
+	cCajero* cajero = new cCajero("Luis", 001);
+	cEPerfumeria* empleadoPerfumeria = new cEPerfumeria("Ana", 023);
+	cPerfumeria* perfume1 = new cPerfumeria("Jabon", 144.99, 80, "Dove", "Perfumeria", 21, 0.0);
+	cCarrito* carrito = new cCarrito();
+
+	carrito->AgregarProducto(perfume1);
+	empleadoPerfumeria->EmitirFactura();
+
+	delete carrito;
+	delete perfume1;
+	delete empleadoPerfumeria;
+	delete cajero;
+	delete cliente1;
+
+
 	return 0;
 }
