@@ -49,9 +49,13 @@ void cCajero::setNombre(string Nombre) {
  * @return float
  */
 float cCajero::Cobrar(float Factura) {
+    float totFarmacia = cEFarmaceutico::EmitirFactura(Factura);
+    float totMostrador = cEMostrador::EmitirFactura(Factura);
+    float totOrtopedia = cEOrtopedia::EmitirFactura(Factura);
+    float totPerfumeria = cEPerfumeria::EmitirFactura(Factura);
 
-
-    return 0.0;
+    float TOTAL = totFarmacia + totMostrador + totOrtopedia + totPerfumeria;
+    return TOTAL;
 }
 
 cCajero::~cCajero() {

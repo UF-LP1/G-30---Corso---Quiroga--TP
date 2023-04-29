@@ -37,7 +37,8 @@ int main() {
 	cCarrito* carrito = new cCarrito();
 
 	carrito->AgregarProducto(perfume1);
-	empleadoPerfumeria->EmitirFactura();
+	
+	float TOTAL = cajero->Cobrar();
 
 	delete carrito;
 	delete perfume1;
