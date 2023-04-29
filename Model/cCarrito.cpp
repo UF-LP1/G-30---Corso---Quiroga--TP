@@ -18,7 +18,9 @@ using namespace std;
  * @param TipoProducto
  * @param Cantidad
  */
-cCarrito::cCarrito(enum TipoProducto, int Cantidad) {
+cCarrito::cCarrito(TipoProducto tipoProducto, int Cantidad) {
+    this->Cantdad = 5;
+    this->productos = New Productos[5];
 
 }
 

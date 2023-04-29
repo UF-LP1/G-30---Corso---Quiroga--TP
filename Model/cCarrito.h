@@ -10,6 +10,7 @@
 #include "../Model/Pago.h"
 #include "../Model/Ticket.h"
 #include "../Model/TipoAdmision.h"
+#include "../Model/TipoProducto.h"
 
 using namespace std;
 
@@ -18,9 +19,11 @@ using namespace std;
 
 class cCarrito {
 private:
+    static int MAX ID;
+    const int ID;
     int Cantidad;
     cProducto** _listaProductos;
-    enum TipoProducto;
+    TipoProducto tipoProducto;
 
 public: 
     
@@ -28,7 +31,7 @@ public:
  * @param TipoProducto
  * @param Cantidad
  */
-cCarrito(enum TipoProducto, int Cantidad);
+cCarrito(TipoProducto tipoProducto, int Cantidad);
     
 void AgregarProducto();
     

@@ -11,7 +11,7 @@
 #include "../Model/TipoAdmision.h"
 #include "../Model/cCarrito.h"
 #include "../Model/cAtienden.h"
-
+#include "../Model/TipoProducto.h"
 using namespace std;
 
 #ifndef _CCLIENTE_H

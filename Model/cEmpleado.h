@@ -8,7 +8,7 @@
 #include "../Model/Pago.h"
 #include "../Model/Ticket.h"
 #include "../Model/TipoAdmision.h"
-
+#include "../Model/TipoProducto.h"
 using namespace std;
 
 #ifndef _CEMPLEADO_H

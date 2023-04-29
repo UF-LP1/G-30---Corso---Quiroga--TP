@@ -45,7 +45,7 @@ void cCajero::setNombre(string Nombre) {
  * @param Factura
  * @return float
  */
-float cCajero::GenerarMonto(float Factura) {
+float cCajero::Cobrar(float Factura) {
     return 0.0;
 }
 

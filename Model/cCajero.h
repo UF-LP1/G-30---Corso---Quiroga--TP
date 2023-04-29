@@ -37,7 +37,7 @@ void setNombre(string Nombre);
 /**
  * @param Factura
  */
-float GenerarMonto(float Factura);
+float Cobrar(float Factura);
 protected: 
     
 ~cCajero();

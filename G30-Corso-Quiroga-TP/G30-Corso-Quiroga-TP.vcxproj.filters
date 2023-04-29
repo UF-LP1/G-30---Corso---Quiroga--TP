@@ -140,5 +140,8 @@
     <ClInclude Include="..\Model\cAsistente.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="TipoProducto.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
