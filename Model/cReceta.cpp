@@ -30,14 +30,15 @@ cReceta::cReceta(string Nombre, TipoAdmision tipoAdmision, int Unidades, string 
  * @return int
  */
 int cReceta::getCantidad() {
-    return 0;
+    return this->Unidades;
 }
 
 /**
  * @param int
  * @return void
  */
-void cReceta::setCantidad(int) {
+void cReceta::setCantidad(int Unidades) {
+    this->Unidades = Unidades;
     return;
 }
 

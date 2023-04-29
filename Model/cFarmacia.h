@@ -37,7 +37,7 @@ bool getAbierto();
 /**
  * @param bool
  */
-void setAbierto(bool);
+void setAbierto(bool Abierto);
     
 /**
  * @param Producto

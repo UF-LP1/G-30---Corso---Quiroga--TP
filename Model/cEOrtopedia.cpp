@@ -49,15 +49,18 @@ void cEOrtopedia::Asesorar() {
  * @return string
  */
 string cEOrtopedia::getNombre() {
-    return "";
+    return this->Nombre;
+
 }
 
 /**
  * @param string
  * @return void
  */
-void cEOrtopedia::setNombre(string) {
+void cEOrtopedia::setNombre(string Nombre) {
+    this->Nombre = Nombre;
     return;
+
 }
 
 cEOrtopedia::~cEOrtopedia() {

@@ -49,15 +49,18 @@ void cEPerfumeria::Asesorar() {
  * @return string
  */
 string cEPerfumeria::getNombre() {
-    return "";
+    return this->Nombre;
+
 }
 
 /**
  * @param string
  * @return void
  */
-void cEPerfumeria::setNombre(string) {
+void cEPerfumeria::setNombre(string Nombre) {
+    this->Nombre = Nombre;
     return;
+
 }
 
 cEPerfumeria::~cEPerfumeria() {

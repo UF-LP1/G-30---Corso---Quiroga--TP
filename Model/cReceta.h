@@ -35,7 +35,7 @@ int getCantidad();
 /**
  * @param int
  */
-void setCantidad(int);
+void setCantidad(int Unidades);
 protected: 
     
 ~cReceta();

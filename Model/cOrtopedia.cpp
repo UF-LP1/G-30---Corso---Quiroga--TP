@@ -39,14 +39,15 @@ bool cOrtopedia::VerificarStock() {
  * @return float
  */
 float cOrtopedia::getPrecio() {
-    return 0.0;
+    return this->Precio;
 }
 
 /**
  * @param float
  * @return void
  */
-void cOrtopedia::setPrecio(float) {
+void cOrtopedia::setPrecio(float Precio) {
+    this->Precio = Precio;
     return;
 }
 

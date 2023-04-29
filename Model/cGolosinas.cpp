@@ -38,14 +38,15 @@ bool cGolosinas::VerificarStock() {
  * @return float
  */
 float cGolosinas::getPrecio() {
-    return 0.0;
+    return this->Precio;
 }
 
 /**
  * @param float
  * @return void
  */
-void cGolosinas::setPrecio(float) {
+void cGolosinas::setPrecio(float Precio) {
+    this->Precio = Precio;
     return;
 }
 

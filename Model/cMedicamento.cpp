@@ -41,14 +41,15 @@ bool cMedicamento::VerificarStock() {
  * @return float
  */
 float cMedicamento::getPrecio() {
-    return 0.0;
+    return this->Precio;
 }
 
 /**
  * @param float
  * @return void
  */
-void cMedicamento::setPrecio(float) {
+void cMedicamento::setPrecio(float Precio) {
+    this->Precio = Precio;
     return;
 }
 

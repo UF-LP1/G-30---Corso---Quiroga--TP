@@ -26,8 +26,9 @@ public:
     
     cProducto(string Nombre, float Precio, int Stock, string Marca, string Area, const int ID);
     ~cProducto();
-virtual bool VerificarStock();
-float getprecio();
+    virtual bool VerificarStock();
+    float getPrecio();
+    void setPrecio(float Precio);
 
 
 };

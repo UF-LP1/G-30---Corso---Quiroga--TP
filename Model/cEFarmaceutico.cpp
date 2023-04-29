@@ -49,15 +49,18 @@ void cEFarmaceutico::AconsejarCliente() {
  * @return string
  */
 string cEFarmaceutico::getNombre() {
-    return "";
+    return this->Nombre;
+
 }
 
 /**
  * @param string
  * @return void
  */
-void cEFarmaceutico::setNombre(string) {
+void cEFarmaceutico::setNombre(string Nombre) {
+    this->Nombre = Nombre;
     return;
+
 }
 
 cEFarmaceutico::~cEFarmaceutico() {

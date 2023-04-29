@@ -32,7 +32,7 @@ string getNombre();
 /**
  * @param string
  */
-void setNombre(void string);
+void setNombre(string Nombre);
     
 /**
  * @param Factura

@@ -38,14 +38,15 @@ bool cPerfumeria::VerificarStock() {
  * @return float
  */
 float cPerfumeria::getPrecio() {
-    return 0.0;
+    return this->Precio;
 }
 
 /**
  * @param float
  * @return void
  */
-void cPerfumeria::setPrecio(float) {
+void cPerfumeria::setPrecio(float Precio) {
+    this->Precio = Precio;
     return;
 }
 

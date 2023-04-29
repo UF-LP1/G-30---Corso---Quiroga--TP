@@ -42,7 +42,8 @@ int getNumeroEmpleado();
 /**
  * @param int
  */
-void setNumeroEmpleado(int);
+void setNumeroEmpleado(int NumeroEmpleado);
+
 protected: 
     
 ~cELimpieza();

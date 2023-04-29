@@ -25,15 +25,15 @@ cAsistente::cAsistente(enum Ticket, int Numero) {
  * @return int
  */
 int cAsistente::getNumero() {
-    return 0;
+    return this-> Numero;
 }
 
 /**
  * @param int
  * @return void
  */
-void cAsistente::setNumero(int) {
-    return;
+void cAsistente::setNumero(int Numero) {
+    this->Numero = Numero;
 }
 
 /**

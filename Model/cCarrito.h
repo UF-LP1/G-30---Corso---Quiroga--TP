@@ -20,6 +20,7 @@ class cCarrito {
 private:
     int Cantidad;
     cProducto** _listaProductos;
+    enum TipoProducto;
 
 public: 
     
@@ -45,9 +46,8 @@ void setTipoProducto();
 protected: 
     
 ~cCarrito();
-private: 
-    enum TipoProducto;
-    int Cantidad;
+ 
+    
 };
 
 #endif //_CCARRITO_H

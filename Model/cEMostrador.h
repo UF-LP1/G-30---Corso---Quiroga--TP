@@ -46,7 +46,7 @@ string getNombre();
 /**
  * @param string
  */
-void setNombre( string);
+void setNombre(string Nombre);
     
 /**
  * @param Nombre

@@ -45,14 +45,15 @@ bool cFarmacia::CerrarFarmacia() {
  * @return bool
  */
 bool cFarmacia::getAbierto() {
-    return false;
+    return this->Abierto;
 }
 
 /**
  * @param bool
  * @return void
  */
-void cFarmacia::setAbierto(bool) {
+void cFarmacia::setAbierto(bool Abierto) {
+    this->Abierto = Abierto;
     return;
 }
 

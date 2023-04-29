@@ -60,7 +60,7 @@ float cEMostrador::AplicarDescuento(ObraSocial obraSocial, float Monto) {
     }
     else
         Total = Monto;
-    //HAY QUE CONVERTIRLO EN FLOAT A LA FUNCION!!!!!!!!
+    
     return Total;
 }
 
@@ -68,15 +68,17 @@ float cEMostrador::AplicarDescuento(ObraSocial obraSocial, float Monto) {
  * @return string
  */
 string cEMostrador::getNombre() {
-    return "";
+    return this->Nombre;;
 }
 
 /**
  * @param string
  * @return void
  */
-void cEMostrador::setNombre(string) {
+void cEMostrador::setNombre(string Nombre) {
+    this->Nombre = Nombre;
     return;
+
 }
 
 /**

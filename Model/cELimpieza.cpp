@@ -40,14 +40,15 @@ void cELimpieza::Limpiar(bool Limpio, cTime Fecha, int NumeroEmpleado) {
  * @return int
  */
 int cELimpieza::getNumeroEmpleado() {
-    return 0;
+    return this->NumeroEmpleado;
 }
 
 /**
  * @param int
  * @return void
  */
-void cELimpieza::setNumeroEmpleado(int) {
+void cELimpieza::setNumeroEmpleado(int NumeroEmpleado) {
+    this-> NumeroEmpleado = NumeroEmpleado;
     return;
 }
 

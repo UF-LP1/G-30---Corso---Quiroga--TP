@@ -20,6 +20,13 @@ cAtienden::~cAtienden() {
 
 }
 
+void setcliente(cCliente* cliente) {
+
+}
+cCliente* getcliente() {
+
+}
+
 //cAtienden::virtual void LlamarCliente() {}
 
 /**

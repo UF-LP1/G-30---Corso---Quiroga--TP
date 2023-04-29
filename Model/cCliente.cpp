@@ -34,14 +34,16 @@ cCliente::~cCliente() {
  * @return string
  */
 string cCliente::getNombre() {
-    return "";
+    return this->Nombre;
 }
+
 
 /**
  * @param string
  * @return void
  */
-void cCliente::setNombre(string) {
+void cCliente::setNombre(string Nombre) {
+    this -> Nombre= Nombre;
     return;
 }
 

@@ -29,12 +29,12 @@ public:
 cAsistente(enum Ticket, int Numero);
 ~cAsistente();
 
-int getNumero() {return this->Numero;};
+int getNumero();
     
 /**
  * @param int
  */
-void setNumero(int numero);
+void setNumero(int Numero);
     
 /**
  * @param Ticket

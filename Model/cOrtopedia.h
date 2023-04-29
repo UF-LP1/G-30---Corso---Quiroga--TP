@@ -39,7 +39,7 @@ float getPrecio();
 /**
  * @param float
  */
-void setPrecio(float);
+void setPrecio(float Precio);
 protected: 
     
 ~cOrtopedia();

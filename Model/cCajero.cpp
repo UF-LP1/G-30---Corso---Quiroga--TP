@@ -27,15 +27,18 @@ cCajero::cCajero(string Nombre, const int ID, float Factura) {
  * @return string
  */
 string cCajero::getNombre() {
-    return "";
+    return this->Nombre;
+
 }
 
 /**
  * @param string
  * @return void
  */
-void cCajero::setNombre(string) {
+void cCajero::setNombre(string Nombre) {
+    this->Nombre = Nombre;
     return;
+
 }
 
 /**
