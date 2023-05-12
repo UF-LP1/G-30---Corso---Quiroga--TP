@@ -28,8 +28,8 @@ public:
  * @param TrabajaFindeSemana
  * @param TrabajaDiadeSemana
  */
-cELimpieza(string Nombre, int NumeroEmpleado, int HoraEntrada, int HoraSalida, bool TrabajaFindeSemana, bool TrabajaDiadeSemana);
-    
+    cELimpieza(string Nombre, int NumeroEmpleado, int HoraEntrada, int HoraSalida, bool TrabajaFindeSemana, bool TrabajaDiadeSemana);
+    ~cELimpieza();    
 /**
  * @param Limpio
  * @param Fecha
@@ -44,9 +44,6 @@ int getNumeroEmpleado();
  */
 void setNumeroEmpleado(int NumeroEmpleado);
 
-protected: 
-    
-~cELimpieza();
 private: 
     int HoraEntrada;
     int HoraSalida;

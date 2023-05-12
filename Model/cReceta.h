@@ -15,11 +15,16 @@ using namespace std;
 #define _CRECETA_H
 
 class cReceta {
-public: 
+private: 
+    string Nombre;
+    TipoAdmision tipoAdmision;
+    int Unidades;
     string Medicamento;
     string Medico;
     ObraSocial obraSocial;
-    
+
+public: 
+   
 /**
  * @param Nombre
  * @param TipoAdmision
@@ -28,21 +33,16 @@ public:
  * @param Medico
  * @param ObraSocial
  */
-cReceta(string Nombre, TipoAdmision tipoAdmision, int Unidades, string Medicamento, string Medico, ObraSocial obraSocial);
-    
+    cReceta(string Nombre, TipoAdmision tipoAdmision, int Unidades, string Medicamento, string Medico, ObraSocial obraSocial);
+    ~cReceta();    
 int getCantidad();
     
 /**
  * @param int
  */
 void setCantidad(int Unidades);
-protected: 
-    
-~cReceta();
-private: 
-    string Nombre;
-    TipoAdmision tipoAdmision;
-    int Unidades;
+
+
 };
 
 #endif //_CRECETA_H

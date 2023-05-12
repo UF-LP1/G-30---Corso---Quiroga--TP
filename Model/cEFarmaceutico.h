@@ -25,26 +25,24 @@ public:
  * @param ID
  * @param Factura
  */
-cEFarmaceutico(string Nombre, const int ID, float Factura);
-    
-void LlamarCliente();
+    cEFarmaceutico(string Nombre, const int ID, float Factura);
+    ~cEFarmaceutico();    
+    void LlamarCliente();
     
 /**
  * @param Factura
  */
-float EmitirFactura(float Factura);
+    float EmitirFactura(float Factura);
     
-void AconsejarCliente();
+    void AconsejarCliente();
     
-string getNombre();
+    string getNombre();
     
 /**
  * @param string
  */
-void setNombre(string Nombre);
-protected: 
-    
-~cEFarmaceutico();
+    void setNombre(string Nombre);
+
 };
 
 #endif //_CEFARMACEUTICO_H

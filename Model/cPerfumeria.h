@@ -18,6 +18,9 @@ using namespace std;
 
 
 class cPerfumeria: public cProducto {
+private: 
+    float CantLitros;
+
 public: 
     
 /**
@@ -29,8 +32,8 @@ public:
  * @param ID
  * @param CantLitros
  */
-cPerfumeria(string Nombre, float Precio, int Stock, string Marca, string Area, const int ID, float CantLitros);
-    
+    cPerfumeria(string Nombre, float Precio, int Stock, string Marca, string Area, const int ID, float CantLitros);
+    ~cPerfumeria();
 bool VerificarStock();
     
 float getPrecio();
@@ -39,11 +42,8 @@ float getPrecio();
  * @param float
  */
 void setPrecio(float Precio);
-protected: 
-    
-~cPerfumeria();
-private: 
-    float CantLitros;
+
+
 };
 
 #endif //_CPERFUMERIA_H

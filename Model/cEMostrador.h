@@ -26,35 +26,35 @@ public:
  * @param ID
  * @param Factura
  */
-cEMostrador(string Nombre, const int ID);
+    cEMostrador(string Nombre, const int ID, float Factura);
     
-~cEMostrador();
+    ~cEMostrador();
     
-void LlamarCliente();
+    void LlamarCliente();
     
 /**
  * @param Factura
  */
-float EmitirFactura();
+    float EmitirFactura();
     
 /**
  * @param ObraSocial
  */
-float AplicarDescuento(ObraSocial obraSocial, float Monto);
+    float AplicarDescuento(ObraSocial obraSocial, float Monto);
     
-string getNombre();
+    string getNombre();
     
 /**
  * @param string
  */
-void setNombre(string Nombre);
+    void setNombre(string Nombre);
     
 /**
  * @param Nombre
  * @param Unidades
  * @param Medicamento
  */
-void LeerReceta(string Nombre, int Unidades, string Medicamento);
+    void LeerReceta(string Nombre, int Unidades, string Medicamento);
 };
 
 #endif //_CEMOSTRADOR_H

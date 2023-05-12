@@ -19,7 +19,7 @@ using namespace std;
 
 class cCarrito {
 private:
-    static int MAX ID;
+    static int MAX_ID;
     const int ID;
     int Cantidad;
     cProducto** _listaProductos;
@@ -31,26 +31,21 @@ public:
  * @param TipoProducto
  * @param Cantidad
  */
-cCarrito(TipoProducto tipoProducto, int Cantidad);
-    
-void AgregarProducto();
+    cCarrito(TipoProducto tipoProducto, int Cantidad);
+    ~cCarrito();    
+    void AgregarProducto();
     
 //cProducto* QuitarProducto();
     
-void EliminarProducto();
+    void EliminarProducto();
     
-float VerTotal();
+    float VerTotal();
     
-int BuscarProducto();
+    int BuscarProducto();
     
-void getTipoProducto();
+    void getTipoProducto();
     
-void setTipoProducto();
-protected: 
-    
-~cCarrito();
- 
-    
+    void setTipoProducto();
 };
 
 #endif //_CCARRITO_H

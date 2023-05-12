@@ -25,22 +25,20 @@ public:
  * @param ID
  * @param Factura
  */
-cCajero(string Nombre, const int ID, float Factura);
-    
-string getNombre();
+    cCajero(string Nombre, const int ID, float Factura);
+    ~cCajero();    
+    string getNombre();
     
 /**
  * @param string
  */
-void setNombre(string Nombre);
+    void setNombre(string Nombre);
     
 /**
  * @param Factura
  */
-float Cobrar(float Factura);
-protected: 
-    
-~cCajero();
+    float Cobrar(float Factura);
+
 };
 
 #endif //_CCAJERO_H

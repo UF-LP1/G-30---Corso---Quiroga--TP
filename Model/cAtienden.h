@@ -28,12 +28,12 @@ public:
     void setcliente(cCliente* cliente);
     cCliente* getcliente();
 
-virtual void LlamarCliente();
+    virtual void LlamarCliente();
     
 /**
  * @param Factura
  */
-float virtual EmitirFactura(float Factura);
+    float virtual EmitirFactura(float Factura);
 
 };
 

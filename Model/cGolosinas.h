@@ -18,6 +18,8 @@ using namespace std;
 
 
 class cGolosinas: public cProducto {
+private: 
+    cTime FechaVencimiento;
 public: 
     
 /**
@@ -29,21 +31,17 @@ public:
  * @param ID
  * @param FechaVencimiento
  */
-cGolosinas(string Nombre, float Precio, int Stock, string Marca, string Area, const int ID, cTime FechaVencimiento);
+    cGolosinas(string Nombre, float Precio, int Stock, string Marca, string Area, const int ID, cTime FechaVencimiento);
+    ~cGolosinas();
     
-bool VerificarStock();
+    bool VerificarStock();
     
-float getPrecio();
+    float getPrecio();
     
 /**
  * @param float
  */
-void setPrecio(float Precio);
-protected: 
-    
-~cGolosinas();
-private: 
-    cTime FechaVencimiento;
+    void setPrecio(float Precio);
 };
 
 #endif //_CGOLOSINAS_H

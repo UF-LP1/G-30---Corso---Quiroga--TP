@@ -25,26 +25,24 @@ public:
  * @param ID
  * @param Factura
  */
-cEPerfumeria(string Nombre, const int ID, float Factura);
-    
-void LlamarCliente();
+    cEPerfumeria(string Nombre, const int ID, float Factura);
+    ~cEPerfumeria();    
+    void LlamarCliente();
     
 /**
  * @param Factura
  */
-float EmitirFactura(float Factura);
+    float EmitirFactura(float Factura);
     
-void Asesorar();
+    void Asesorar();
     
-string getNombre();
+    string getNombre();
     
 /**
  * @param string
  */
-void setNombre(string Nombre);
-protected: 
-    
-~cEPerfumeria();
+    void setNombre(string Nombre);
+
 };
 
 #endif //_CEPERFUMERIA_H

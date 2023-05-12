@@ -25,26 +25,25 @@ public:
  * @param ID
  * @param Factura
  */
-cEOrtopedia(string Nombre, const int ID, float Factura);
-    
-void LlamarCliente();
+    cEOrtopedia(string Nombre, const int ID, float Factura);
+    ~cEOrtopedia();    
+    void LlamarCliente();
     
 /**
  * @param Factura
  */
-float EmitirFactura(float Factura);
+    float EmitirFactura(float Factura);
     
-void Asesorar();
+    void Asesorar();
     
-string getNombre();
+    string getNombre();
     
 /**
  * @param string
  */
-void setNombre(string Nombre);
-protected: 
-    
-~cEOrtopedia();
+    void setNombre(string Nombre);
+   
+
 };
 
 #endif //_CEORTOPEDIA_H
