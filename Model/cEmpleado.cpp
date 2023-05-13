@@ -13,8 +13,8 @@ using namespace std;
  * cEmpleado implementation
  */
 
-cEmpleado::cEmpleado(string Nombre, const int ID) {
-
+cEmpleado::cEmpleado(string _Nombre, const int _ID) {
+	this->Nombre = _Nombre;
 }
 cEmpleado::~cEmpleado() {
 

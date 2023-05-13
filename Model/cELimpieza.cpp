@@ -14,16 +14,13 @@ using namespace std;
  */
 
 
-/**
- * @param Nombre
- * @param NumeroEmpleado
- * @param HoraEntrada
- * @param HoraSalida
- * @param TrabajaFindeSemana
- * @param TrabajaDiadeSemana
- */
-cELimpieza::cELimpieza(string Nombre, int NumeroEmpleado, int HoraEntrada, int HoraSalida, bool TrabajaFindeSemana, bool TrabajaDiadeSemana) {
-
+cELimpieza::cELimpieza(string _Nombre, int _NumeroEmpleado, int _HoraEntrada, int _HoraSalida, bool _TrabajaFindeSemana, bool _TrabajaDiadeSemana) {
+    this->Nombre = _Nombre;
+    this->NumeroEmpleado = _NumeroEmpleado;
+    this->HoraEntrada = _HoraEntrada;
+    this->HoraSalida = _HoraSalida;
+    this->TrabajaFindeSemana = _TrabajaFindeSemana;
+    this->TrabajaDiadeSemana = _TrabajaDiadeSemana;
 }
 
 /**

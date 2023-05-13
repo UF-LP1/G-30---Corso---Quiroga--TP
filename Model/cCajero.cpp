@@ -19,7 +19,9 @@ using namespace std;
  * @param ID
  * @param Factura
  */
-cCajero::cCajero(string Nombre, const int ID, float Factura) {
+cCajero::cCajero(string _Nombre, const int _ID, float _Factura) {
+    this->Nombre = _Nombre;
+    this->Factura = _Factura;
 
 }
 

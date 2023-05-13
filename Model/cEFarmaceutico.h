@@ -8,7 +8,7 @@
 #include "../Model/Pago.h"
 #include "../Model/Ticket.h"
 #include "../Model/TipoAdmision.h"
-#include "../Model/TipoProducto.h"
+
 using namespace std;
 
 #ifndef _CEFARMACEUTICO_H
@@ -18,6 +18,10 @@ using namespace std;
 
 
 class cEFarmaceutico: public cAtienden {
+protected:
+    string Nombre;
+    const int ID;
+    float Factura;
 public: 
     
 /**
@@ -26,7 +30,10 @@ public:
  * @param Factura
  */
     cEFarmaceutico(string Nombre, const int ID, float Factura);
-    ~cEFarmaceutico();    
+    ~cEFarmaceutico();   
+    string getNombre() { return this->Nombre; }
+    int getID() { return this->ID; }
+    float getFactura() { return this->Factura; }
     void LlamarCliente();
     
 /**

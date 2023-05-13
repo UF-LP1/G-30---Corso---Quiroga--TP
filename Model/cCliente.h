@@ -27,17 +27,9 @@ private:
     cAtienden* atiende;
 public:
 
-    /**
-     * @param Nombre
-     * @param Apellido
-     * @param DNI
-     * @param Pago
-     * @param ObraSocial
-     */
-    cCliente(string Nombre, string Apellido, const int DNI, Pago pago, ObraSocial obraSocial);
-
+    cCliente(string _Nombre, string _Apellido, const int _DNI, Pago _pago, ObraSocial _obraSocial);
     ~cCliente();
-    ObraSocial getObraSocial();
+    ObraSocial getObraSocial() { return this->obraSocial; }
 
     cCarrito* getcarrito();
 

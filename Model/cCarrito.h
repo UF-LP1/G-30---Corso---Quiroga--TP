@@ -10,7 +10,7 @@
 #include "../Model/Pago.h"
 #include "../Model/Ticket.h"
 #include "../Model/TipoAdmision.h"
-#include "../Model/TipoProducto.h"
+
 
 using namespace std;
 
@@ -23,7 +23,7 @@ private:
     const int ID;
     int Cantidad;
     cProducto** _listaProductos;
-    TipoProducto tipoProducto;
+
 
 public: 
     
@@ -31,9 +31,12 @@ public:
  * @param TipoProducto
  * @param Cantidad
  */
-    cCarrito(TipoProducto tipoProducto, int Cantidad);
+    cCarrito(int _Cantidad);
     ~cCarrito();    
     void AgregarProducto();
+    int getMAXID() { return this->MAX_ID; }
+    int getID() { return this->ID; }
+    int getcantidad() { return this->Cantidad; }
     
 //cProducto* QuitarProducto();
     

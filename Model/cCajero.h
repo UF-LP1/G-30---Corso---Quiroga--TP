@@ -18,16 +18,18 @@ using namespace std;
 #include "../Model/TipoAdmision.h"
 
 class cCajero: public cAtienden {
-public: 
-    
-/**
- * @param Nombre
- * @param ID
- * @param Factura
- */
+  
+protected:
+    string Nombre;
+    const int ID;
+    float Factura;
+
+public:
     cCajero(string Nombre, const int ID, float Factura);
     ~cCajero();    
-    string getNombre();
+    string getNombre() { return this->Nombre; }
+    int getID() { return this->ID; }
+    float getfactura() { return this->Factura; }
     
 /**
  * @param string

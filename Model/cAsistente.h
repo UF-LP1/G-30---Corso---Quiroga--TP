@@ -26,10 +26,9 @@ public:
  * @param Numero
  */
 
-cAsistente(enum Ticket, int Numero);
-~cAsistente();
-
-int getNumero();
+    cAsistente(enum _Ticket, int _Numero);
+    ~cAsistente();
+    int getNumero() { return this->Numero; }
     
 /**
  * @param int

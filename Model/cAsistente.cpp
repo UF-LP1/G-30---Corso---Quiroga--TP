@@ -18,7 +18,9 @@ using namespace std;
  * @param Ticket
  * @param Numero
  */
-cAsistente::cAsistente(enum Ticket, int Numero) {
+cAsistente::cAsistente(enum _Ticket, int _Numero) {
+    this->Numero = _Numero;
+
 }
 
 /**

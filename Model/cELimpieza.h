@@ -8,7 +8,7 @@
 #include "../Model/Pago.h"
 #include "../Model/Ticket.h"
 #include "../Model/TipoAdmision.h"
-#include "../Model/TipoProducto.h"
+
 using namespace std;
 
 #ifndef _CELIMPIEZA_H
@@ -18,17 +18,17 @@ using namespace std;
 
 
 class cELimpieza: public cEmpleado {
+private:
+    int NumeroEmpleado;
+    int HoraEntrada;
+    int HoraSalida;
+    bool TrabajaFindeSemana;
+    bool TrabajaDiadeSemana;
+
 public: 
     
-/**
- * @param Nombre
- * @param NumeroEmpleado
- * @param HoraEntrada
- * @param HoraSalida
- * @param TrabajaFindeSemana
- * @param TrabajaDiadeSemana
- */
-    cELimpieza(string Nombre, int NumeroEmpleado, int HoraEntrada, int HoraSalida, bool TrabajaFindeSemana, bool TrabajaDiadeSemana);
+
+    cELimpieza(string _Nombre, int _NumeroEmpleado, int _HoraEntrada, int _HoraSalida, bool _TrabajaFindeSemana, bool _TrabajaDiadeSemana);
     ~cELimpieza();    
 /**
  * @param Limpio
@@ -38,21 +38,16 @@ public:
 void Limpiar(bool Limpio, cTime Fecha, int NumeroEmpleado);
     
 int getNumeroEmpleado();
+int getHoraEntrada() { return this->HoraEntrada; }
+int getHoraSalida() { return this->HoraSalida; }
+bool getTrabajaFindeSemana() { return this->TrabajaFindeSemana; }
+bool getTrabajaDiadeSemana() { return this->TrabajaDiadeSemana; }
     
 /**
  * @param int
  */
 void setNumeroEmpleado(int NumeroEmpleado);
 
-private: 
-    int HoraEntrada;
-    int HoraSalida;
-    bool TrabajaFindeSemana;
-    bool TrabajaDiadeSemana;
-    int HoraEntrada;
-    int HoraSalida;
-    bool TrabajaFindeSemana;
-    bool TrabajaDiaSemana;
 };
 
 #endif //_CELIMPIEZA_H

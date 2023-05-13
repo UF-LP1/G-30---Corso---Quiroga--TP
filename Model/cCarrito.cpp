@@ -78,6 +78,10 @@ void cCarrito::setTipoProducto() {
     return;
 }
 
+cCarrito::cCarrito(int _Cantidad){
+    this->Cantidad = _Cantidad;
+}
+
 cCarrito::~cCarrito() {
 
 }

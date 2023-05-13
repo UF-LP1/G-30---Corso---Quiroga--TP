@@ -23,10 +23,11 @@ protected:
     float Factura;
     cCliente* cliente;
 public: 
-    cAtienden(float Factura);
+    cAtienden(float _Factura);
     ~cAtienden();
     void setcliente(cCliente* cliente);
-    cCliente* getcliente();
+    cCliente* getcliente() { return this->cliente; }
+    float getfactura() { return this->Factura; }
 
     virtual void LlamarCliente();
     

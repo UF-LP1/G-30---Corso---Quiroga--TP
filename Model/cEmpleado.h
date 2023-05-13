@@ -20,8 +20,10 @@ protected:
     const int ID;
 
 public:
-    cEmpleado(string Nombre,  const int ID);
+    cEmpleado(string _Nombre,  const int _ID);
     ~cEmpleado();
+    string getNombre() { return this->Nombre; }
+    int getID() { return this->ID; }
 };
 
 #endif //_CEMPLEADO_H

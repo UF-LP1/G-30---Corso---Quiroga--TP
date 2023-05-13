@@ -4,28 +4,27 @@
 #include <iostream>
 #include <string>
 #include <cTime>
-
+#include "cAtienden.h"
+#include "cEmpleado.h"
 using namespace std;
 
-#include "cAtienden.h"
+
 
 /**
  * cAtienden implementation
  */
 
-cAtienden::cAtienden(float Factura) {
-
+cAtienden::cAtienden(float _Factura) {
+	this->Factura = _Factura;
 }
 cAtienden::~cAtienden() {
 
 }
 
-void setcliente(cCliente* cliente) {
+void cAtienden::setcliente(cCliente* cliente){
 
 }
-cCliente* getcliente() {
 
-}
 
 //cAtienden::virtual void LlamarCliente() {}
 

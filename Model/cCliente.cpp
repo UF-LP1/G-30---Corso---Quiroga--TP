@@ -22,20 +22,24 @@ using namespace std;
  * @param Pago
  * @param ObraSocial
  */
-cCliente::cCliente(string Nombre, string Apellido, const int DNI, Pago pago, ObraSocial obraSocial) {
-
+cCliente::cCliente(string _Nombre, string _Apellido, const int _DNI, Pago _pago, ObraSocial _obraSocial) {
+    this->Nombre = _Nombre;
+    this->Apellido = _Apellido;
 }
 
 cCliente::~cCliente() {
 
 }
 
+void cCliente::setObraSocial(ObraSocial _obraSocial){
+    this->obraSocial = _obrasocial;
+    return;
+}
+
 /**
  * @return string
  */
-string cCliente::getNombre() {
-    return this->Nombre;
-}
+
 
 
 /**
