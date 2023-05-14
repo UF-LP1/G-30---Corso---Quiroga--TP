@@ -26,7 +26,7 @@ public:
  * @param Limpio
  * @param Producto
  */
-cFarmacia(cTime Fecha, bool Abierto, string Nombre, enum Perfumeria, enum Ortopedia, bool Limpio, string Producto);
+cFarmacia(cTime Fecha, bool Abierto, string Nombre, bool Limpio, string Producto);
     
 bool AbrirFarmacia();
     

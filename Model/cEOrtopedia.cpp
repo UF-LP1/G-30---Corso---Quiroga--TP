@@ -19,9 +19,16 @@ using namespace std;
  * @param ID
  * @param Factura
  */
-cEOrtopedia::cEOrtopedia(string Nombre, const int ID, float Factura) {
-
+cEOrtopedia::cEOrtopedia(string _Nombre, const int _ID, float _Factura) {
+    this->Nombre = _Nombre;
+    this->Factura = _Factura;
 }
+
+/*cCajero::cCajero(string _Nombre, const int _ID, float _Factura) {
+    this->Nombre = _Nombre;
+    this->Factura = _Factura;
+
+}*/
 
 /**
  * @return void

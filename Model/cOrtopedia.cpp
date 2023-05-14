@@ -24,8 +24,14 @@ using namespace std;
  * @param CantUnidades
  * @param Color
  */
-cOrtopedia::cOrtopedia(string Nombre, float Precio, int Stock, string Marca, string Area, void ID const int, int CantUnidades, string Color) {
-
+cOrtopedia::cOrtopedia(string _Nombre, float _Precio, int _Stock, string _Marca, string _Area,  const int ID, int _CantUnidades, string _Color) {
+    this->Nombre = _Nombre;
+    this->Precio = _Precio;
+    this->Stock = _Stock;
+    this->Marca = _Marca;
+    this->Area = _Area;
+    this->CantUnidades = _CantUnidades;
+    this->Color = _Color;
 }
 
 /**

@@ -22,8 +22,9 @@ using namespace std;
  * @param ID
  * @param Factura
  */
-cEMostrador::cEMostrador(string Nombre, const int ID, float Factura) {
-
+cEMostrador::cEMostrador(string _Nombre, const int _ID, float _Factura) {
+    this->Nombre = _Nombre;
+    this->Factura = _Factura;
 }
 
 cEMostrador::~cEMostrador() {

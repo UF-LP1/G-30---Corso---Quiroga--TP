@@ -19,7 +19,7 @@ using namespace std;
 
 class cMedicamento: public cProducto {
 private: 
-    enum TipoAdmision;
+    TipoAdmision tipoAdmision;
     float ContenidoNeto;
     string Dosis;
     cTime FechaVencimiento;
@@ -38,7 +38,7 @@ public:
  * @param Dosis
  * @param FechaVencimiento
  */
-    cMedicamento(string Nombre, float Precio, int Stock, string Marca, string Area, const int ID, enum TipoAdmision, float ContenidoNeto, string Dosis, cTime FechaVencimiento);
+    cMedicamento(string Nombre, float Precio, int Stock, string Marca, string Area, const int ID, TipoAdmision tipoAdmision, float ContenidoNeto, string Dosis, cTime FechaVencimiento);
     ~cMedicamento();    
     bool VerificarStock();
     

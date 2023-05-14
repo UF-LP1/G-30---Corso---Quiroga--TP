@@ -19,8 +19,9 @@ using namespace std;
  * @param ID
  * @param Factura
  */
-cEFarmaceutico::cEFarmaceutico(string Nombre, const int ID, float Factura) {
-
+cEFarmaceutico::cEFarmaceutico(string _Nombre, const int _ID, float _Factura) {
+    this->Nombre = _Nombre;
+    this->Factura = _Factura;
 }
 
 /**

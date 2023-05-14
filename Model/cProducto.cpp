@@ -13,8 +13,12 @@ using namespace std;
  * cProducto implementation
  */
 
-cProducto::cProducto(string Nombre, float Precio, int Stock, string Marca, string Area, const int ID) {
-
+cProducto::cProducto(string _Nombre, float _Precio, int _Stock, string _Marca, string _Area, const int ID) {
+	this->Nombre = _Nombre;
+	this->Precio = _Precio;
+	this->Stock = _Stock;
+	this->Marca = _Marca;
+	this->Area = _Area;
 }
 cProducto::~cProducto() {
 

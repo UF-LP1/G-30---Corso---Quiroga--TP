@@ -26,8 +26,16 @@ using namespace std;
  * @param Dosis
  * @param FechaVencimiento
  */
-cMedicamento::cMedicamento(string Nombre, float Precio, int Stock, string Marca, string Area, const int ID, enum TipoAdmision, float ContenidoNeto, string Dosis, cTime FechaVencimiento) {
-
+cMedicamento::cMedicamento(string _Nombre, float _Precio, int _Stock, string _Marca, string _Area, const int ID, TipoAdmision _tipoAdmision, float _ContenidoNeto, string _Dosis, cTime _FechaVencimiento) {
+    this->Nombre = _Nombre;
+    this->Precio = _Precio;
+    this->Stock = _Stock;
+    this->Marca = _Marca;
+    this->Area = _Area;
+    this->tipoAdmision = _tipoAdmision;
+    this->ContenidoNeto = _ContenidoNeto;
+    this->Dosis = _Dosis;
+    this->FechaVencimiento = _FechaVencimiento;
 }
 
 /**

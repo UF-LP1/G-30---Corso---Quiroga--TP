@@ -22,8 +22,13 @@ using namespace std;
  * @param Medico
  * @param ObraSocial
  */
-cReceta::cReceta(string Nombre, TipoAdmision tipoAdmision, int Unidades, string Medicamento, string Medico, ObraSocial obraSocial) {
-
+cReceta::cReceta(string _Nombre, TipoAdmision _tipoAdmision, int _Unidades, string _Medicamento, string _Medico, ObraSocial _obraSocial) {
+    this->Nombre = _Nombre;
+    this->tipoAdmision = _tipoAdmision;
+    this->Unidades = _Unidades;
+    this->Medicamento = _Medicamento;
+    this->Medico = _Medico;
+    this->obraSocial = _obraSocial;
 }
 
 /**

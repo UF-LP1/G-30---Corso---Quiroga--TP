@@ -23,8 +23,12 @@ using namespace std;
  * @param Limpio
  * @param Producto
  */
-cFarmacia::cFarmacia(cTime Fecha, bool Abierto, string Nombre, enum Perfumeria, enum Ortopedia, bool Limpio, string Producto) {
-
+cFarmacia::cFarmacia(cTime _Fecha, bool _Abierto, string _Nombre, bool _Limpio, string _Producto) {
+    this->Fecha = _Fecha;
+    this->Abierto = _Abierto;
+    this->Nombre = _Nombre;
+    this->Limpio = _Limpio;
+    this->Producto = _Producto;
 }
 
 /**
