@@ -17,7 +17,7 @@ using namespace std;
 
 class cAsistente {
 private:
-    enum Ticket;
+    Ticket ticket;
     int Numero;
 public: 
     
@@ -29,6 +29,7 @@ public:
     cAsistente(enum _Ticket, int _Numero);
     ~cAsistente();
     int getNumero() { return this->Numero; }
+    static int contN;
     
 /**
  * @param int
@@ -39,8 +40,8 @@ void setNumero(int Numero);
  * @param Ticket
  * @param Numero
  */
-void GenerarTicket(enum Ticket, int Numero);
-protected: 
+int GenerarTicket(enum Ticket, int Numero);  //voy a generar el numero que le corresponde dependiendo de a que sector quiero ir. Necesito contadores para cada sector
+
     
 };
 

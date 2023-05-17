@@ -18,8 +18,10 @@ using namespace std;
  * @param Ticket
  * @param Numero
  */
-cAsistente::cAsistente(enum _Ticket, int _Numero) {
+cAsistente::cAsistente(Ticket _ticket, int _Numero) {
     this->Numero = _Numero;
+    this->Numero = cAsistente::contN;
+    cAsistente::contN++;
 
 }
 
@@ -43,7 +45,11 @@ void cAsistente::setNumero(int Numero) {
  * @param Numero
  * @return void
  */
-void cAsistente::GenerarTicket(enum Ticket, int Numero) {
+int cAsistente::GenerarTicket(Ticket _ticket, int Numero) {
+    
+    if ()
+    
+   
     return;
 }
 

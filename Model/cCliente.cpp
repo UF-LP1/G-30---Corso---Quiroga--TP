@@ -56,6 +56,7 @@ void cCliente::setNombre(string Nombre) {
  * @return void
  */
 void cCliente::SacarTicket() {
+
     return;
 }
 
@@ -66,9 +67,18 @@ void cCliente::SacarTicket() {
 void cCliente::Pagar(Pago pago) {
     float _factura = this->atiende->EmitirFactura();
     if (pago == Efectivo) {
-
+        cout << "El pago se realiza en efectivo" << endl;
     }
-    return;
+    else if (pago == Credito) {
+        cout << "El pago se realiza con credito" << endl;
+    }
+    else if (pago == Debito) {
+        cout << "El pago se realiza con debito" << endl;
+    }
+    else if (pago == Aplicacion) {
+        cout << "El pago se realiza con QR" << endl;
+    }
+    return;  //ESTO LO PONDRÍA EN EL MAIN, Y LE PASARÍA LA FACTURA Y EL TIPO DE PAGO
 }
 
 /**

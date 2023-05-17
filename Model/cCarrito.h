@@ -33,10 +33,10 @@ public:
  */
     cCarrito();
     ~cCarrito();    
-    void AgregarProducto();
+    void AgregarProducto(cProducto* producto);
     int getMAXID() { return this->MAX; }
     int getID() { return this->ID; }
-    //int getcantidad() { return this->Cantidad; }
+    int getcontProducto() { return this->contProducto; }
     
 //cProducto* QuitarProducto();
     
@@ -44,7 +44,7 @@ public:
     
     float VerTotal();
     
-    int BuscarProducto(int ID);
+    cProducto* BuscarProducto(int ID);
     
     void getTipoProducto();
     

@@ -12,6 +12,8 @@
 #include "../Model/cCarrito.h"
 #include "../Model/cAtienden.h"
 #include "../Model/TipoProducto.h"
+#include "../Model/cAsistente.h"
+
 using namespace std;
 
 #ifndef _CCLIENTE_H
@@ -25,6 +27,8 @@ private:
     Pago pago;
     ObraSocial obraSocial;
     cAtienden* atiende;
+    float Facturado; //HACER SETTER Y GETTER
+
 public:
 
     cCliente(string _Nombre, string _Apellido, const int _DNI, Pago _pago, ObraSocial _obraSocial);
@@ -32,6 +36,7 @@ public:
     ObraSocial getObraSocial() { return this->obraSocial; }
 
     cCarrito* getcarrito();
+    cAsistente* getAsistente();
 
     void setObraSocial(ObraSocial obraSocial);
 

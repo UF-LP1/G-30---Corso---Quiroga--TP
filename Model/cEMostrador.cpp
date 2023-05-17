@@ -37,8 +37,11 @@ cEMostrador::~cEMostrador() {
  * @return void
  */
 void cEMostrador::LlamarCliente() {
+    cCliente* _cliente = this->getcliente();
+    int num = _cliente->getAsistente()->GenerarTicket();
+    cout << "Numero de cliente "<< num <<" acercarse a mostrador" << endl;
     return;
-}
+} //CORREGIR
 
 /**
 * 

@@ -31,11 +31,17 @@ using namespace std;
 int main() {
 
 	cEmpleado::cont = 0;   //elemento static
+	cAsistente::contN = 0;
 
+	//creo productos
+	cPerfumeria* perfume1 = new cPerfumeria("Jabon", 144.99, 80, "Dove", "Perfumeria", 21, 0.0);
+	cGolosinas* golosina1 = new cGolosinas("Caramelo", 144.99, 80, "Moggul", "Golosinas", 21);
+	cOrtopedia* ortopedia1 = new cOrtopedia("Protesis", 144.99, 80, "Dove", "Ortopedia", 21);
+	cMedicamento* medicamento1 = new cMedicamento("Paracetamol", 144.99, 80, "Paracetamol", "Medicamento", 21);
 
-
-	cCliente* cliente1 = new cCliente("Juan", "Garcia", 44665522, "CREDITO", "OSDE");
-	cCajero* cajero = new cCajero("Luis", 001);
+	/*
+	cCliente* cliente1 = new cCliente ("Juan", "Garcia", 44665522, "CREDITO", "OSDE");
+	cCajero* cajero = new cCajero ("Luis", 001);
 	cEPerfumeria* empleadoPerfumeria = new cEPerfumeria("Ana", 023);
 	cPerfumeria* perfume1 = new cPerfumeria("Jabon", 144.99, 80, "Dove", "Perfumeria", 21, 0.0);
 	cCarrito* carrito = new cCarrito();
@@ -49,7 +55,7 @@ int main() {
 	delete empleadoPerfumeria;
 	delete cajero;
 	delete cliente1;
-
+	*/
 
 	return 0;
 }
