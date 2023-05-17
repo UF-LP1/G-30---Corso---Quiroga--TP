@@ -31,7 +31,7 @@ public:
  * @param ID
  * @param FechaVencimiento
  */
-    cGolosinas(string Nombre, float Precio, int Stock, string Marca, string Area, const int ID, cTime FechaVencimiento);
+    cGolosinas(string Nombre, float Precio, int Stock, string Marca, string Area,  int ID, cTime FechaVencimiento);
     ~cGolosinas();
     
     bool VerificarStock();

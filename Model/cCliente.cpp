@@ -32,7 +32,7 @@ cCliente::~cCliente() {
 }
 
 void cCliente::setObraSocial(ObraSocial _obraSocial){
-    this->obraSocial = _obrasocial;
+    this->obraSocial = _obraSocial;
     return;
 }
 

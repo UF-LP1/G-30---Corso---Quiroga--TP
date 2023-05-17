@@ -18,9 +18,10 @@ using namespace std;
 
 
 class cEFarmaceutico: public cAtienden {
+    float Factura;
 protected:
     string Nombre;
-    const int ID;
+    int ID;
     float Factura;
 public: 
     

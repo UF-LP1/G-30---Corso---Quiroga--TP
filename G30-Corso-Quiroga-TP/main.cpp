@@ -30,6 +30,10 @@ using namespace std;
 
 int main() {
 
+	cEmpleado::cont = 0;   //elemento static
+
+
+
 	cCliente* cliente1 = new cCliente("Juan", "Garcia", 44665522, "CREDITO", "OSDE");
 	cCajero* cajero = new cCajero("Luis", 001);
 	cEPerfumeria* empleadoPerfumeria = new cEPerfumeria("Ana", 023);

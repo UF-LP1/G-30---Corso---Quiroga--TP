@@ -32,7 +32,7 @@ public:
  * @param ID
  * @param CantLitros
  */
-    cPerfumeria(string Nombre, float Precio, int Stock, string Marca, string Area, const int ID, float CantLitros);
+    cPerfumeria(string Nombre, float Precio, int Stock, string Marca, string Area, int ID, float CantLitros);
     ~cPerfumeria();
 bool VerificarStock();
     

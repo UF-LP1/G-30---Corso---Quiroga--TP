@@ -17,13 +17,15 @@ using namespace std;
 class cEmpleado {
 protected: 
     string Nombre;
-    const int ID;
+    int ID;
+    
 
 public:
-    cEmpleado(string _Nombre,  const int _ID);
+    cEmpleado(string _Nombre);
     ~cEmpleado();
     string getNombre() { return this->Nombre; }
     int getID() { return this->ID; }
+    static int cont;
 };
 
 #endif //_CEMPLEADO_H

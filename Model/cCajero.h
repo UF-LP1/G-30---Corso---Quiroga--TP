@@ -21,11 +21,11 @@ class cCajero: public cAtienden {
   
 protected:
     string Nombre;
-    const int ID;
+    int ID;
     float Factura;
 
 public:
-    cCajero(string Nombre, const int ID, float Factura);
+    cCajero(string Nombre,  int ID, float Factura);
     ~cCajero();    
     string getNombre() { return this->Nombre; }
     int getID() { return this->ID; }

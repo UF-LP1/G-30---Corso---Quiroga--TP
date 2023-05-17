@@ -19,9 +19,11 @@ using namespace std;
  * @param ID
  * @param Factura
  */
-cEFarmaceutico::cEFarmaceutico(string _Nombre, const int _ID, float _Factura) {
+cEFarmaceutico::cEFarmaceutico(string _Nombre, const int _ID, float _Factura) :cAtienden(_Nombre, _ID) {
     this->Nombre = _Nombre;
     this->Factura = _Factura;
+    this->ID = cEmpleado::cont;
+    cEmpleado::cont++;
 }
 
 /**
@@ -38,8 +40,9 @@ void cEFarmaceutico::LlamarCliente() {
  * @return float
  */
 float cEFarmaceutico::EmitirFactura(float Factura) {
-    cCliente* _cliente = this->getcliente();
-    float _monto->getcarrito()->VerTotal();
+    cCliente* _cliente = this->getcliente();   //corregido
+    float _monto = _cliente->getcarrito()->VerTotal();
+    cout << "Emitiendo Factura" << endl;
     return _monto;
 }
 

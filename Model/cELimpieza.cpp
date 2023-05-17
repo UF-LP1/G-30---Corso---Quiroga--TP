@@ -14,7 +14,7 @@ using namespace std;
  */
 
 
-cELimpieza::cELimpieza(string _Nombre, int _NumeroEmpleado, int _HoraEntrada, int _HoraSalida, bool _TrabajaFindeSemana, bool _TrabajaDiadeSemana) {
+cELimpieza::cELimpieza(string _Nombre, int _NumeroEmpleado, int _HoraEntrada, int _HoraSalida, bool _TrabajaFindeSemana, bool _TrabajaDiadeSemana):cEmpleado(_Nombre, _ID) {
     this->Nombre = _Nombre;
     this->NumeroEmpleado = _NumeroEmpleado;
     this->HoraEntrada = _HoraEntrada;

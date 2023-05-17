@@ -13,8 +13,10 @@ using namespace std;
  * cEmpleado implementation
  */
 
-cEmpleado::cEmpleado(string _Nombre, const int _ID) {
+cEmpleado::cEmpleado(string _Nombre) {
 	this->Nombre = _Nombre;
+	this->ID = cEmpleado::cont;
+	cEmpleado::cont++;
 }
 cEmpleado::~cEmpleado() {
 

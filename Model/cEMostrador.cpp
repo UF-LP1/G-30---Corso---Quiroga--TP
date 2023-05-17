@@ -22,9 +22,11 @@ using namespace std;
  * @param ID
  * @param Factura
  */
-cEMostrador::cEMostrador(string _Nombre, const int _ID, float _Factura) {
+cEMostrador::cEMostrador(string _Nombre, int _ID, float _Factura) :cAtienden(_Nombre, _ID) {
     this->Nombre = _Nombre;
     this->Factura = _Factura;
+    this->ID = cEmpleado::cont;
+    cEmpleado::cont++;
 }
 
 cEMostrador::~cEMostrador() {
@@ -48,7 +50,8 @@ void cEMostrador::LlamarCliente() {
  */
 float cEMostrador::EmitirFactura() {
     cCliente* _cliente = this->getcliente();
-    float _monto->getcarrito()->VerTotal();
+    float _monto= _cliente->getcarrito()->VerTotal();//corregido
+    cout << "Emitiendo Factura"<< endl;
     return this->AplicarDescuento(_cliente->getObraSocial(), _monto);
 }
 

@@ -24,7 +24,7 @@ using namespace std;
  * @param CantUnidades
  * @param Color
  */
-cOrtopedia::cOrtopedia(string _Nombre, float _Precio, int _Stock, string _Marca, string _Area,  const int ID, int _CantUnidades, string _Color) {
+cOrtopedia::cOrtopedia(string _Nombre, float _Precio, int _Stock, string _Marca, string _Area, int ID, int _CantUnidades, string _Color) :cProducto(_Nombre, _Precio, _Stock, _Marca, _Area, ID) {
     this->Nombre = _Nombre;
     this->Precio = _Precio;
     this->Stock = _Stock;

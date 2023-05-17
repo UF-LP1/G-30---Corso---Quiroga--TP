@@ -19,7 +19,7 @@ using namespace std;
  * @param ID
  * @param Factura
  */
-cCajero::cCajero(string _Nombre, const int _ID, float _Factura) {
+cCajero::cCajero(string _Nombre, int _ID, float _Factura) :cAtienden(_Nombre, _ID) {
     this->Nombre = _Nombre;
     this->Factura = _Factura;
 

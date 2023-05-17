@@ -18,9 +18,9 @@ using namespace std;
  * @param TipoProducto
  * @param Cantidad
  */
-cCarrito::cCarrito(TipoProducto tipoProducto, int Cantidad) {
-    this->Cantdad = 5;
-    this->productos = New Productos[5];
+cCarrito::cCarrito() {
+    this->contProducto = 0;
+    this->_listaProductos = new cProducto*[this->MAX]();
 
 }
 
@@ -28,6 +28,14 @@ cCarrito::cCarrito(TipoProducto tipoProducto, int Cantidad) {
  * @return void
  */
 void cCarrito::AgregarProducto() {
+    
+    cProducto** array = new cProducto * [this->MAX](); //copio la lista
+    for (int i = 0; i < this->contProducto; i++) {  // recorro la lista copiada
+        if (_listaProductos[i]==NULL)
+
+
+    }
+    
     return;
 }
 
@@ -41,8 +49,19 @@ void cCarrito::AgregarProducto() {
 /**
  * @return void
  */
-void cCarrito::EliminarProducto() {
-    return;
+bool cCarrito::EliminarProducto(int ID) {
+    bool ToR = false;
+    cProducto** array = new cProducto * [this->MAX](); //copio la lista
+    for (int i = 0; i < this->contProducto; i++) {  // recorro la lista copiada
+        if (_listaProductos[i]->getID() == ID) //veo cuando coinside el ID con el ID que busco
+            ToR = true; //Si coinsiden, no lo copio en la lista auxiliar, simplemente cambio la variable ToR a true
+        else
+            array[i] = _listaProductos[i]; //lo copio en una lista auxiliar
+    }
+    if (ToR)
+        this->_listaProductos = array;  // Si ToR = true, la listaProductos es ahora la lista auxiliar modificada (excluye el elemento que encontró con el ID, y si nunca lo encontró, la lista sigue igual)
+
+    return ToR;
 }
 
 /**
@@ -51,7 +70,7 @@ void cCarrito::EliminarProducto() {
 float cCarrito::VerTotal() {
     int i;
     float ToR = 0;
-    for (i = 0; i < Cantidad; i++) {
+    for (i = 0; i < contProducto; i++) {
         ToR = ToR + this->_listaProductos[i]->getprecio(); //RECORRO LA LISTA Y LE AGREGO LOS PRECIOS A LOS PRODUCTOS
     }
     return ToR;
@@ -60,8 +79,13 @@ float cCarrito::VerTotal() {
 /**
  * @return int
  */
-int cCarrito::BuscarProducto() {
-    return 0;
+int cCarrito::BuscarProducto(int ID) {
+    int ToR = -1;
+    for (int i = 0; i < this->contProducto; i++) {  // recorro la lista 
+        if (_listaProductos[i]->getID() == ID) //veo cuando coinside el ID con el ID que busco
+            ToR = i; //Si coinsiden, ToR pasa a ser i, que corresponde a la posicion del elemento buscado
+    }
+    return ToR; //se retorna Tor que puede ser = i si lo encontró, o = -1 si nunca lo encontró
 }
 
 /**
@@ -78,9 +102,6 @@ void cCarrito::setTipoProducto() {
     return;
 }
 
-cCarrito::cCarrito(int _Cantidad){
-    this->Cantidad = _Cantidad;
-}
 
 cCarrito::~cCarrito() {
 

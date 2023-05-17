@@ -19,9 +19,9 @@ using namespace std;
 
 class cCarrito {
 private:
-    static int MAX_ID;
-    const int ID;
-    int Cantidad;
+    const int MAX= 100;  //Maxima cantidad de productos en el carrito
+    int ID;
+    int contProducto;
     cProducto** _listaProductos;
 
 
@@ -31,20 +31,20 @@ public:
  * @param TipoProducto
  * @param Cantidad
  */
-    cCarrito(int _Cantidad);
+    cCarrito();
     ~cCarrito();    
     void AgregarProducto();
-    int getMAXID() { return this->MAX_ID; }
+    int getMAXID() { return this->MAX; }
     int getID() { return this->ID; }
-    int getcantidad() { return this->Cantidad; }
+    //int getcantidad() { return this->Cantidad; }
     
 //cProducto* QuitarProducto();
     
-    void EliminarProducto();
+    bool EliminarProducto(int ID);
     
     float VerTotal();
     
-    int BuscarProducto();
+    int BuscarProducto(int ID);
     
     void getTipoProducto();
     

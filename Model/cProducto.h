@@ -21,10 +21,10 @@ protected:
     int Stock;
     string Marca;
     string Area;
-    const int ID;
+    int ID;
 public: 
     
-    cProducto(string Nombre, float Precio, int Stock, string Marca, string Area, const int ID);
+    cProducto(string Nombre, float Precio, int Stock, string Marca, string Area, int _ID);
     ~cProducto();
     virtual bool VerificarStock();
     float getPrecio();

@@ -20,14 +20,14 @@ using namespace std;
 
 class cAtienden: public cEmpleado {
 protected:
-    float Factura;
+    
     cCliente* cliente;
 public: 
-    cAtienden(float _Factura);
+    cAtienden(string _Nombre,int _ID);
     ~cAtienden();
     void setcliente(cCliente* cliente);
     cCliente* getcliente() { return this->cliente; }
-    float getfactura() { return this->Factura; }
+   
 
     virtual void LlamarCliente();
     

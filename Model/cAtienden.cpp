@@ -14,8 +14,8 @@ using namespace std;
  * cAtienden implementation
  */
 
-cAtienden::cAtienden(float _Factura) {
-	this->Factura = _Factura;
+cAtienden::cAtienden(string _Nombre, int _ID):cEmpleado(_Nombre, _ID) {
+	
 }
 cAtienden::~cAtienden() {
 

@@ -23,7 +23,7 @@ using namespace std;
  * @param ID
  * @param FechaVencimiento
  */
-cGolosinas::cGolosinas(string _Nombre, float _Precio, int _Stock, string _Marca, string _Area, const int ID, cTime _FechaVencimiento) {
+cGolosinas::cGolosinas(string _Nombre, float _Precio, int _Stock, string _Marca, string _Area, int ID, cTime _FechaVencimiento) :cProducto(_Nombre, _Precio, _Stock, _Marca, _Area, ID) {
     this->Nombre = _Nombre;
     this->Precio = _Precio;
     this->Stock = _Stock;

@@ -19,6 +19,7 @@ using namespace std;
 
 
 class cEMostrador: public cAtienden {
+    float Factura;
 public: 
     
 /**
@@ -26,7 +27,7 @@ public:
  * @param ID
  * @param Factura
  */
-    cEMostrador(string Nombre, const int ID, float Factura);
+    cEMostrador(string Nombre, int ID, float Factura);
     
     ~cEMostrador();
     

@@ -26,7 +26,7 @@ using namespace std;
  * @param Dosis
  * @param FechaVencimiento
  */
-cMedicamento::cMedicamento(string _Nombre, float _Precio, int _Stock, string _Marca, string _Area, const int ID, TipoAdmision _tipoAdmision, float _ContenidoNeto, string _Dosis, cTime _FechaVencimiento) {
+cMedicamento::cMedicamento(string _Nombre, float _Precio, int _Stock, string _Marca, string _Area, int ID, TipoAdmision _tipoAdmision, float _ContenidoNeto, string _Dosis, cTime _FechaVencimiento) :cProducto(_Nombre, _Precio, _Stock, _Marca, _Area, ID) {
     this->Nombre = _Nombre;
     this->Precio = _Precio;
     this->Stock = _Stock;
