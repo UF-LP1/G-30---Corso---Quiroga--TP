@@ -8,7 +8,9 @@
 #include "../Model/Pago.h"
 #include "../Model/Ticket.h"
 #include "../Model/TipoAdmision.h"
-#include "../Model/TipoProducto.h"
+#include "../G30-Corso-Quiroga-TP/TipoProducto.h"
+#include "../G30-Corso-Quiroga-TP/TipoEmpleado.h"
+#include "../G30-Corso-Quiroga-TP/cFecha.h"
 #include "../Model/cCarrito.h"
 #include "../Model/cEmpleado.h"
 #include "../Model/cCliente.h"
@@ -31,12 +33,12 @@ public:
      * @param Limpio
      * @param Producto
      */
-    cFarmacia(cTime Fecha, bool Abierto, string Nombre, bool Limpio, string Producto);
+    cFarmacia(cFecha* Fecha, bool Abierto, string Nombre, bool Limpio, string Producto);
     cFarmacia(bool Abierto, string Nombre, bool Limpio);
 
     bool AbrirFarmacia();
 
-    bool CerrarFarmacia();
+    void CerrarFarmacia();
 
     bool getAbierto();
     // inserto el producto en el carrito

@@ -8,7 +8,8 @@
 #include "../Model/Pago.h"
 #include "../Model/Ticket.h"
 #include "../Model/TipoAdmision.h"
-#include "../Model/TipoProducto.h"
+#include "../G30-Corso-Quiroga-TP/TipoProducto.h"
+#include "../G30-Corso-Quiroga-TP/TipoEmpleado.h"
 using namespace std;
 
 #ifndef _CEORTOPEDIA_H
@@ -26,10 +27,12 @@ public:
  * @param ID
  * @param Factura
  */
-    cEOrtopedia(string Nombre);
+    cEOrtopedia(string Nombre, int ID);
     ~cEOrtopedia();    
     void LlamarCliente();
-    TipoEmpleado getTipoEmpleado();
+    string getNombre() { return this->Nombre; }
+    int getID() { return this->ID; }
+    TipoEmpleado getTipoEmpleado() { return this->tipoEmpleado; }
 /**
  * @param Factura
  */

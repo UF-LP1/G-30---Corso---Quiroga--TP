@@ -3,7 +3,7 @@
  */
 #include <iostream>
 #include <string>
-#include <cTime>
+
 
 using namespace std;
 
@@ -19,9 +19,8 @@ using namespace std;
  * @param ID
  * @param Factura
  */
-cEOrtopedia::cEOrtopedia(string _Nombre, int _ID, float _Factura) :cAtienden(_Nombre, _ID) {
+cEOrtopedia::cEOrtopedia(string _Nombre, int _ID) :cAtienden(_Nombre) {
     this->Nombre = _Nombre;
-    this->Factura = _Factura;
     this->ID = cEmpleado::cont;
     cEmpleado::cont++;
 }
@@ -38,9 +37,7 @@ cEOrtopedia::cEOrtopedia(string _Nombre, int _ID, float _Factura) :cAtienden(_No
 void cEOrtopedia::LlamarCliente() {
     return;
 }
-TipoProducto cOrtopedia::getTipoProducto() {
-    return TipoProducto.Ortopedia;
-}
+
 /**
 * 
 * Esta función genera un monto de los productos pertenecientes al sector donde trabaja este empleado.
@@ -48,7 +45,7 @@ TipoProducto cOrtopedia::getTipoProducto() {
  * @param Factura
  * @return float
  */
-float cEOrtopedia::EmitirFactura(float Factura) {
+float cEOrtopedia::EmitirFactura() {
     cCliente* _cliente = this->getcliente();
     float _monto = _cliente->getcarrito()->VerTotal();//corregido
     cout << "Emitiendo Factura" << endl;

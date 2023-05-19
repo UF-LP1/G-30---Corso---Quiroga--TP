@@ -50,6 +50,16 @@ void cCliente::setNombre(string Nombre)
     return;
 }
 
+void cCliente::setTicket(Ticket ticket){
+    this->ticket = ticket;
+    return;
+}
+
+void cCliente::setApellido(string Apellido){
+    this->Apellido = Apellido;
+    return;
+}
+
 /**
  * @param Ticket
  * @return void

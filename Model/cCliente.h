@@ -11,7 +11,7 @@
 #include "../Model/TipoAdmision.h"
 #include "../Model/cCarrito.h"
 #include "../Model/cAtienden.h"
-#include "../Model/TipoProducto.h"
+#include "../G30-Corso-Quiroga-TP/TipoProducto.h"
 #include "../Model/cAsistente.h"
 
 using namespace std;
@@ -37,8 +37,15 @@ private:
 public:
     cCliente(string _Nombre, string _Apellido, const int _DNI, Pago _pago, ObraSocial _obraSocial, cAtienden* _atiende, cCarrito* _carrito, cAsistente _asistente, int _numero, float _facturado);
     ~cCliente();
+    string getNombre() { return this->Nombre; }
+    void setNombre(string Nombre);
+    Ticket getTicket() { return this->ticket; }
+    void setTicket(Ticket ticket);
+    string getApellido() { return this->Apellido; }
+    void setApellido(string Apellido);
     ObraSocial getObraSocial() { return this->obraSocial; }
-
+    void setObraSocial(ObraSocial obraSocial);
+    cAtienden* getAtender();
     cCarrito* getcarrito() { return this->carrito; }
     cAsistente* getAsistente() { return this->asistente; }
     int getNumero() { return this->numero; }
@@ -46,14 +53,12 @@ public:
     float getFacturado() { return this->Facturado; }
     void setFacturado();
 
-    void setObraSocial(ObraSocial obraSocial);
-
-    string getNombre() { return this->Nombre; }
+    
 
     /**
      * @param string
      */
-    void setNombre(string Nombre);
+    
 
     /**
      * @param Ticket

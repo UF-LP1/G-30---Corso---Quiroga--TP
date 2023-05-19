@@ -8,7 +8,7 @@
 #include "../Model/Pago.h"
 #include "../Model/Ticket.h"
 #include "../Model/TipoAdmision.h"
-#include "TipoProducto.h"
+#include "../G30-Corso-Quiroga-TP/TipoProducto.h"
 using namespace std;
 
 #ifndef _CPERFUMERIA_H
@@ -32,11 +32,13 @@ public:
  * @param ID
  * @param CantLitros
  */
-    cPerfumeria(string Nombre, float Precio, int Stock, string Marca, string Area, int ID, float CantLitros);
+    cPerfumeria(string Nombre, float Precio, int Stock, string Marca, string Area, int ID, TipoProducto tipoProducto, float CantLitros);
     ~cPerfumeria();
-bool VerificarStock();
+    TipoProducto getTipoProducto();
+
+    bool VerificarStock();
     
-float getPrecio();
+    float getPrecio();
     
 /**
  * @param float

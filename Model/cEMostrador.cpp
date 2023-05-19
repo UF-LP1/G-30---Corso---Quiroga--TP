@@ -19,16 +19,20 @@ using namespace std;
   * @param ID
   * @param Factura
   */
-cEMostrador::cEMostrador(string _Nombre, int _ID, float _Factura) : cAtienden(_Nombre, _ID)
+cEMostrador::cEMostrador(string _Nombre, int _ID) : cAtienden(_Nombre, _ID)
 {
     this->Nombre = _Nombre;
-    this->Factura = _Factura;
     this->ID = cEmpleado::cont;
     cEmpleado::cont++;
 }
 
 cEMostrador::~cEMostrador()
 {
+}
+
+void cEMostrador::setTipoEmpleado(TipoEmpleado tipoEmpleado){
+    this->tipoEmpleado = tipoEmpleado;
+    return;
 }
 
 /**

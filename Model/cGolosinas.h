@@ -8,9 +8,10 @@
 #include "../Model/Pago.h"
 #include "../Model/Ticket.h"
 #include "../Model/TipoAdmision.h"
-#include "TipoProducto.h"
+#include "../G30-Corso-Quiroga-TP/TipoProducto.h"
 #include "cProducto.h"
-#include "cFecha.h"
+#include "../G30-Corso-Quiroga-TP/cFecha.h"
+
 using namespace std;
 
 #ifndef _CGOLOSINAS_H
@@ -31,9 +32,9 @@ public:
  * @param ID
  * @param FechaVencimiento
  */
-    cGolosinas(string Nombre, float Precio, int Stock, string Marca, string Area,  int ID, cFecha* FechaVencimiento);
+    cGolosinas(string Nombre, float Precio, int Stock, string Marca, string Area, int ID, TipoProducto tipoProducto, cFecha* FechaVencimiento);
     ~cGolosinas();
-    
+    TipoProducto getTipoProducto();
     bool VerificarStock();
     
     float getPrecio();

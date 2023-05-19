@@ -63,3 +63,5 @@ float cCajero::Cobrar(cCliente* cliente) {
 cCajero::~cCajero() {
 
 }
+
+

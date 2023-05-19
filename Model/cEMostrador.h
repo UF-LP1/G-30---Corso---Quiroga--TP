@@ -16,7 +16,7 @@ using namespace std;
 #include "../Model/Pago.h"
 #include "../Model/Ticket.h"
 #include "../Model/TipoAdmision.h"
-
+#include "../G30-Corso-Quiroga-TP/TipoEmpleado.h"
 class cEMostrador : public cAtienden
 {
 
@@ -27,12 +27,13 @@ public:
      * @param ID
      * @param Factura
      */
-    cEMostrador(string Nombre);
+    cEMostrador(string Nombre, int ID);
 
     ~cEMostrador();
 
     void LlamarCliente(cCliente* cliente);
-    TipoEmpleado getTipoEmpleado();
+    TipoEmpleado getTipoEmpleado() { return this->tipoEmpleado; }
+    void setTipoEmpleado(TipoEmpleado tipoEmpleado);
     /**
      * @param Factura
      */

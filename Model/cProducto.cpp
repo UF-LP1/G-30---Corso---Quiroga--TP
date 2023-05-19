@@ -3,7 +3,7 @@
  */
 #include <iostream>
 #include <string>
-#include <cTime>
+
 
 using namespace std;
 
@@ -13,20 +13,20 @@ using namespace std;
  * cProducto implementation
  */
 
-cProducto::cProducto(string _Nombre, float _Precio, int _Stock, string _Marca, string _Area, int _ID) {
+cProducto::cProducto(string _Nombre, float _Precio, int _Stock, string _Marca, string _Area, int _ID, TipoProducto _tipoProducto) {
 	this->Nombre = _Nombre;
 	this->Precio = _Precio;
 	this->Stock = _Stock;
 	this->Marca = _Marca;
 	this->Area = _Area;
 	this->ID = _ID;
+	this->tipoProducto = _tipoProducto;
 }
 cProducto::~cProducto() {
 
 }
 
 
-void cProducto::setPrecio(float Precio) {}
 //void cProducto::virtual bool VerificarStock() {
 //
 //}

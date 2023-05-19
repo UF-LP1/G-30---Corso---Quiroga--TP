@@ -14,15 +14,16 @@ using namespace std;
  * cAtienden implementation
  */
 
-cAtienden::cAtienden(string _Nombre, int _ID):cEmpleado(_Nombre, _ID) {
-	
+cAtienden::cAtienden(string _Nombre):cEmpleado(_Nombre) {
+	this->Nombre = _Nombre;
 }
 cAtienden::~cAtienden() {
 
 }
 
 void cAtienden::setcliente(cCliente* cliente){
-
+	this->cliente = cliente;
+	return;
 }
 
 

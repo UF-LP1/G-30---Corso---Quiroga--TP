@@ -8,7 +8,7 @@
 #include "../Model/Pago.h"
 #include "../Model/Ticket.h"
 #include "../Model/TipoAdmision.h"
-#include "TipoEmpleado.h"
+#include "../G30-Corso-Quiroga-TP/TipoEmpleado.h"
 
 using namespace std;
 
@@ -25,10 +25,11 @@ protected:
 public:
     cEmpleado(string _Nombre);
     ~cEmpleado();
-    string getNombre() { return this->Nombre; }
-    int getID() { return this->ID; }
+    virtual string getNombre() = 0;
+    virtual int getID() = 0;
+    virtual TipoEmpleado getTipoEmpleado() = 0;
     static int cont;
-    TipoEmpleado getTipoEmpleado();
+    
 };
 
 #endif //_CEMPLEADO_H

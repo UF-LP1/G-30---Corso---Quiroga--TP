@@ -8,6 +8,7 @@
 #include "../Model/Pago.h"
 #include "../Model/Ticket.h"
 #include "../Model/TipoAdmision.h"
+#include "../G30-Corso-Quiroga-TP/TipoEmpleado.h"
 
 using namespace std;
 
@@ -34,7 +35,7 @@ public:
     string getNombre() { return this->Nombre; }
     void setNombre(string Nombre);
     void LlamarCliente();
-    virtual TipoEmpleado getTipoEmpleado() = 0;
+    TipoEmpleado getTipoEmpleado() { return this->tipoEmpleado; }
     
 /**
  * @param Factura

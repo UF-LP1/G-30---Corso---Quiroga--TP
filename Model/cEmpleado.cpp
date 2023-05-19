@@ -21,3 +21,8 @@ cEmpleado::cEmpleado(string _Nombre) {
 cEmpleado::~cEmpleado() {
 
 }
+
+void cEmpleado::setTipoEmpleado(TipoEmpleado tipoEmpleado){
+	this->tipoEmpleado = tipoEmpleado;
+	return;
+}

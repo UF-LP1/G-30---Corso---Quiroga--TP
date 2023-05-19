@@ -22,7 +22,7 @@ using namespace std;
   * @param Limpio
   * @param Producto
   */
-cFarmacia::cFarmacia(cTime _Fecha, bool _Abierto, string _Nombre, bool _Limpio, string _Producto)
+cFarmacia::cFarmacia(cFecha* _Fecha, bool _Abierto, string _Nombre, bool _Limpio, string _Producto)
 {
     this->Fecha = _Fecha;
     this->Abierto = _Abierto;

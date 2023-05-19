@@ -41,6 +41,11 @@ void cAsistente::setNumero(int Numero)
     this->Numero = Numero;
 }
 
+void cAsistente::setTicket(Ticket ticket){
+    this->ticket = ticket;
+    return;
+}
+
 /**
  * @param Ticket
  * @param Numero
@@ -55,4 +60,9 @@ int cAsistente::GenerarTicket(Ticket _ticket, int Numero)
 
 cAsistente::~cAsistente() {
 
+}
+
+void cAsistente::setNumero(int Numero){
+    this->Numero = Numero;
+    return;
 }

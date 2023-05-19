@@ -3,11 +3,8 @@
  */
 #include <iostream>
 #include <string>
-#include <cTime>
-#include "../Model/ObraSocial.h"
-#include "../Model/Pago.h"
-#include "../Model/Ticket.h"
-#include "../Model/TipoAdmision.h"
+#include "../G30-Corso-Quiroga-TP/cFecha.h"
+#include "../G30-Corso-Quiroga-TP/TipoEmpleado.h"
 
 using namespace std;
 

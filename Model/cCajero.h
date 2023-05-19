@@ -27,11 +27,12 @@ public:
     cCajero(string Nombre);
     ~cCajero();    
     string getNombre() { return this->Nombre; }
+    void setNombre(string Nombre);
     
 /**
  * @param string
  */
-    void setNombre(string Nombre);
+
     
 /**
  * @param Factura

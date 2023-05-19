@@ -34,10 +34,13 @@ public:
     void AgregarProducto(cProducto* producto);
     int getMAXID() { return this->MAX; }
     int getID() { return this->ID; }
+    void setID(int ID);
     int getcontProducto() { return this->contProducto; }
-    // chequeen que i este entre 0 y contProductos sino tiro error...
+    void setcontProducto(int contProducto);
+    // chequear que i este entre 0 y contProductos sino tiro error...
     cProducto getProducto(int i) { return this->_listaProductos[i]; }
-    // cProducto* QuitarProducto();
+    
+    cProducto* QuitarProducto();
 
     bool EliminarProducto(int ID);
 

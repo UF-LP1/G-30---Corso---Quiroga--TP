@@ -38,6 +38,18 @@ void cCarrito::AgregarProducto(cProducto*producto) {
     return;
 }
 
+void cCarrito::setID(int ID){
+    this->ID = ID;
+    return;
+}
+
+void cCarrito::setcontProducto(int contProducto){
+    this->contProducto = contProducto;
+    return;
+}
+
+
+
 /**
  * @return *cProducto
  */
@@ -120,6 +132,8 @@ cProducto* cCarrito::BuscarProducto(int ID) {
 /**
  * @return void
  */
+/*
+*/
 void cCarrito::getTipoProducto() {
     return;
 }

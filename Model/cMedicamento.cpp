@@ -3,7 +3,6 @@
  */
 #include <iostream>
 #include <string>
-#include <cTime>
 
 using namespace std;
 
@@ -25,13 +24,15 @@ using namespace std;
   * @param Dosis
   * @param FechaVencimiento
   */
-cMedicamento::cMedicamento(string _Nombre, float _Precio, int _Stock, string _Marca, string _Area, int ID, TipoAdmision _tipoAdmision, float _ContenidoNeto, string _Dosis, cTime _FechaVencimiento) : cProducto(_Nombre, _Precio, _Stock, _Marca, _Area, ID)
+cMedicamento::cMedicamento(string _Nombre, float _Precio, int _Stock, string _Marca, string _Area, int ID, TipoProducto _tipoProducto, TipoMedicamento _tipoMedicamento, TipoAdmision _tipoAdmision, float _ContenidoNeto, string _Dosis, cFecha* _FechaVencimiento) : cProducto(_Nombre, _Precio, _Stock, _Marca, _Area, ID)
 {
     this->Nombre = _Nombre;
     this->Precio = _Precio;
     this->Stock = _Stock;
     this->Marca = _Marca;
     this->Area = _Area;
+    this->tipoProducto = _tipoProducto;
+    this->tipoMedicamento = _tipoMedicamento;
     this->tipoAdmision = _tipoAdmision;
     this->ContenidoNeto = _ContenidoNeto;
     this->Dosis = _Dosis;
@@ -71,3 +72,4 @@ cMedicamento::~cMedicamento()
 TipoProducto cMedicamento::getTipoProducto() {
     return TipoProducto.Medicamento;
 }
+

@@ -25,11 +25,14 @@ public:
  * @param Ticket
  * @param Numero
  */
-
-    cAsistente(enum _Ticket, int _Numero);
+    static int contN;
+    cAsistente(Ticket _ticket, int _Numero);
     ~cAsistente();
     int getNumero() { return this->Numero; }
-    static int contN;
+    void setNumero(int Numero);
+    Ticket getTicket() { return this->ticket; }
+    void setTicket(Ticket ticket);
+    
     
 /**
  * @param int

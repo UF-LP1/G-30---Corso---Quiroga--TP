@@ -8,7 +8,8 @@
 #include "../Model/Pago.h"
 #include "../Model/Ticket.h"
 #include "../Model/TipoAdmision.h"
-#include "TipoMedicamento.h"
+#include "../G30-Corso-Quiroga-TP/TipoProducto.h"
+#include "../G30-Corso-Quiroga-TP/TipoMedicamento.h"
 using namespace std;
 
 #ifndef _CPRODUCTO_H
@@ -23,14 +24,19 @@ protected:
     string Marca;
     string Area;
     int ID;
+    TipoProducto tipoProducto;
 
 public:
-    cProducto(string Nombre, float Precio, int Stock, string Marca, string Area, int _ID);
+    cProducto(string Nombre, float Precio, int Stock, string Marca, string Area, int ID, TipoProducto tipoProducto);
     ~cProducto();
-    virtual bool VerificarStock();
-    float getPrecio();
-    void setPrecio(float Precio);
+    virtual string getNombre() = 0;
+    virtual int getStock() = 0;
+    virtual string getMarca() = 0;
+    virtual string getArea() = 0;
+    virtual int getID() = 0;
+    virtual float getPrecio() = 0;
     virtual TipoProducto getTipoProducto() = 0;
+   
 };
 
 #endif //_CPRODUCTO_H

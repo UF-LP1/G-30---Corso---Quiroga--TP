@@ -1,7 +1,6 @@
 #pragma once
 #include <iostream>
 #include <string>
-
 #include "../Model/cFarmacia.h"
 #include "../Model/cAtienden.h"
 #include "../Model/cCajero.h"
@@ -19,12 +18,16 @@
 #include "../Model/cPerfumeria.h"
 #include "../Model/cProducto.h"
 #include "../Model/cReceta.h"
-
 #include "../Model/ObraSocial.h"
 #include "../Model/Pago.h"
 #include "../Model/Ticket.h"
 #include "../Model/TipoAdmision.h"
-#include "../Model/TipoProducto.h"
+#include "../G30-Corso-Quiroga-TP/TipoProducto.h"
+#include "../G30-Corso-Quiroga-TP/TipoEmpleado.h"
+#include "../G30-Corso-Quiroga-TP/TipoProducto.h"
+#include "../G30-Corso-Quiroga-TP/TipoMedicamento.h"
+#include "../G30-Corso-Quiroga-TP/cFecha.h"
+
 
 using namespace std;
 
@@ -67,6 +70,7 @@ int main()
 	_farmacia->AbrirFarmacia();
 
 	cCliente* cliente1 = new cCliente("Juan", "Garcia", 44665522, "CREDITO", "OSDE");
+	cCarrito* carrito = new cCarrito(Medicamento,1);
 	// Agrego los productos que quiere comprar el cliente
 	cliente1->getcarrito()->AgregarProducto(medicamento1);
 	// hago que la farmacia atienda al cliente

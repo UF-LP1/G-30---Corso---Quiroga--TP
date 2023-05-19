@@ -8,7 +8,7 @@
 #include "../Model/Pago.h"
 #include "../Model/Ticket.h"
 #include "../Model/TipoAdmision.h"
-#include "../Model/TipoMedicamento.h"
+#include "../G30-Corso-Quiroga-TP/TipoMedicamento.h"
 using namespace std;
 
 #ifndef _CRECETA_H
@@ -19,7 +19,7 @@ private:
     string Nombre;
     TipoAdmision tipoAdmision;
     int Unidades;
-    string Medicamento;
+    TipoMedicamento tipoMedicamento;
     string Medico;
     ObraSocial obraSocial;
 
@@ -34,13 +34,25 @@ public:
  * @param ObraSocial
  */
     cReceta(string Nombre, TipoAdmision tipoAdmision, int Unidades, string Medicamento, string Medico, ObraSocial obraSocial);
-    ~cReceta();    
-    int getCantidad();
+    ~cReceta(); 
+    string getNombre() { return this->Nombre; }
+    void setNombre(string Nombre);
+    TipoAdmision gettipoAdmision() { return this->tipoAdmision; }
+    void settipoAdmision(TipoAdmision tipoAdmision);
+    TipoMedicamento gettipoMedicamento() { return this->tipoMedicamento; }
+    void settipoMedicamento(TipoMedicamento tipoMedicamento);
+    int getCantidad() { return this->Unidades; }
+    void setCantidad(int Unidades);
+    string getMedico() { return this->Medico; }
+    void setMedico(string Medico);
+    ObraSocial getObraSocial() { return this->obraSocial; }
+    void setObraSocial(ObraSocial obraSocial);
+
     
 /**
  * @param int
  */
-void setCantidad(int Unidades);
+
 
 
 };

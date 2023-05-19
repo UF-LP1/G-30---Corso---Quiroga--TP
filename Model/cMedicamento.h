@@ -3,12 +3,14 @@
  */
 #include <iostream>
 #include <string>
-#include <cTime>
+
 #include "../Model/ObraSocial.h"
 #include "../Model/Pago.h"
 #include "../Model/Ticket.h"
 #include "../Model/TipoAdmision.h"
-#include "TipoProducto.h"
+#include "../G30-Corso-Quiroga-TP/TipoMedicamento.h"
+#include "../G30-Corso-Quiroga-TP/TipoProducto.h"
+#include "../G30-Corso-Quiroga-TP/cFecha.h"
 using namespace std;
 
 #ifndef _CMEDICAMENTO_H
@@ -20,9 +22,11 @@ class cMedicamento : public cProducto
 {
 private:
     TipoAdmision tipoAdmision;
+    TipoProducto tipoProducto;
+    TipoMedicamento tipoMedicamento;
     float ContenidoNeto;
     string Dosis;
-    cTime FechaVencimiento;
+    cFecha* FechaVencimiento;
 
 public:
     /**
@@ -37,8 +41,12 @@ public:
      * @param Dosis
      * @param FechaVencimiento
      */
-    cMedicamento(string Nombre, float Precio, int Stock, string Marca, string Area, int ID, TipoAdmision tipoAdmision, float ContenidoNeto, string Dosis, cTime FechaVencimiento);
+    cMedicamento(string Nombre, float Precio, int Stock, string Marca, string Area, int ID, TipoProducto tipoProducto, TipoMedicamento tipoMedicamento, TipoAdmision tipoAdmision, float ContenidoNeto, string Dosis, cFecha* FechaVencimiento);
     ~cMedicamento();
+    TipoProducto getTipoProducto();
+
+    TipoAdmision getTipoAdmision();
+    TipoMedicamento getTipoMedicamento();
     bool VerificarStock();
 
     float getPrecio();
