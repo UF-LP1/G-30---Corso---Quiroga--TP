@@ -8,17 +8,19 @@
 #include "../Model/Pago.h"
 #include "../Model/Ticket.h"
 #include "../Model/TipoAdmision.h"
+#include "TipoEmpleado.h"
 
 using namespace std;
 
 #ifndef _CEMPLEADO_H
 #define _CEMPLEADO_H
 
-class cEmpleado {
-protected: 
+class cEmpleado
+{
+protected:
     string Nombre;
     int ID;
-    
+    TipoEmpleado tipoEmpleado;
 
 public:
     cEmpleado(string _Nombre);
@@ -26,6 +28,7 @@ public:
     string getNombre() { return this->Nombre; }
     int getID() { return this->ID; }
     static int cont;
+    TipoEmpleado getTipoEmpleado();
 };
 
 #endif //_CEMPLEADO_H

@@ -21,15 +21,12 @@ class cCajero: public cAtienden {
   
 protected:
     string Nombre;
-    int ID;
-    float Factura;
+
 
 public:
-    cCajero(string Nombre,  int ID, float Factura);
+    cCajero(string Nombre);
     ~cCajero();    
     string getNombre() { return this->Nombre; }
-    int getID() { return this->ID; }
-    float getfactura() { return this->Factura; }
     
 /**
  * @param string
@@ -39,7 +36,7 @@ public:
 /**
  * @param Factura
  */
-    float Cobrar(float Factura);
+    float Cobrar(cCliente * cliente);
 
 };
 

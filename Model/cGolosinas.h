@@ -8,18 +8,18 @@
 #include "../Model/Pago.h"
 #include "../Model/Ticket.h"
 #include "../Model/TipoAdmision.h"
-#include "../Model/TipoProducto.h"
+#include "TipoProducto.h"
+#include "cProducto.h"
+#include "cFecha.h"
 using namespace std;
 
 #ifndef _CGOLOSINAS_H
 #define _CGOLOSINAS_H
 
-#include "cProducto.h"
-
 
 class cGolosinas: public cProducto {
 private: 
-    cTime FechaVencimiento;
+    cFecha* FechaVencimiento;
 public: 
     
 /**
@@ -31,7 +31,7 @@ public:
  * @param ID
  * @param FechaVencimiento
  */
-    cGolosinas(string Nombre, float Precio, int Stock, string Marca, string Area,  int ID, cTime FechaVencimiento);
+    cGolosinas(string Nombre, float Precio, int Stock, string Marca, string Area,  int ID, cFecha* FechaVencimiento);
     ~cGolosinas();
     
     bool VerificarStock();

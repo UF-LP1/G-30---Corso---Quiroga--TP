@@ -19,10 +19,8 @@ using namespace std;
  * @param ID
  * @param Factura
  */
-cCajero::cCajero(string _Nombre, int _ID, float _Factura) :cAtienden(_Nombre, _ID) {
+cCajero::cCajero(string _Nombre) :cAtienden(_Nombre) {
     this->Nombre = _Nombre;
-    this->Factura = _Factura;
-
 }
 
 /**
@@ -59,7 +57,7 @@ float cCajero::Cobrar(cCliente* cliente) {
     //float totPerfumeria = cEPerfumeria::EmitirFactura(Factura);
 
     //float TOTAL = totFarmacia + totMostrador + totOrtopedia + totPerfumeria;
-    return TOTAL;
+    //return TOTAL;
 }
 
 cCajero::~cCajero() {

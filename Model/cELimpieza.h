@@ -13,12 +13,13 @@ using namespace std;
 
 #ifndef _CELIMPIEZA_H
 #define _CELIMPIEZA_H
-
+#include "cFecha.h"
 #include "cEmpleado.h"
 
 
 class cELimpieza: public cEmpleado {
 private:
+    cFecha* Fecha;
     int NumeroEmpleado;
     int HoraEntrada;
     int HoraSalida;
@@ -35,8 +36,8 @@ public:
  * @param Fecha
  * @param NumeroEmpleado
  */
-void Limpiar(bool Limpio, cTime Fecha, int NumeroEmpleado);
-    
+void Limpiar(bool Limpio, cFecha* Fecha, int NumeroEmpleado);
+  
 int getNumeroEmpleado();
 int getHoraEntrada() { return this->HoraEntrada; }
 int getHoraSalida() { return this->HoraSalida; }

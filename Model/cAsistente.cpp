@@ -13,30 +13,31 @@ using namespace std;
  * cAsistente implementation
  */
 
-
-/**
- * @param Ticket
- * @param Numero
- */
-cAsistente::cAsistente(Ticket _ticket, int _Numero) {
+ /**
+  * @param Ticket
+  * @param Numero
+  */
+cAsistente::cAsistente(Ticket _ticket, int _Numero)
+{
     this->Numero = _Numero;
     this->Numero = cAsistente::contN;
     cAsistente::contN++;
-
 }
 
 /**
  * @return int
  */
-int cAsistente::getNumero() {
-    return this-> Numero;
+int cAsistente::getNumero()
+{
+    return this->Numero;
 }
 
 /**
  * @param int
  * @return void
  */
-void cAsistente::setNumero(int Numero) {
+void cAsistente::setNumero(int Numero)
+{
     this->Numero = Numero;
 }
 
@@ -45,12 +46,11 @@ void cAsistente::setNumero(int Numero) {
  * @param Numero
  * @return void
  */
-int cAsistente::GenerarTicket(Ticket _ticket, int Numero) {
-    
-    if ()
-    
-   
-    return;
+
+ // Chequeen esto
+int cAsistente::GenerarTicket(Ticket _ticket, int Numero)
+{
+    return _ticket;
 }
 
 cAsistente::~cAsistente() {

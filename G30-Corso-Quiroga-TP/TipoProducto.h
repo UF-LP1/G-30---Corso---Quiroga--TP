@@ -1,15 +1,13 @@
-/**
- * Project Untitled
- */
+#pragma once
 #include <iostream>
 #include <string>
 
 
 using namespace std;
 
-#ifndef _TIPOADMISION_H
-#define _TIPOADMISION_H
+#ifndef _TIPOPRODUCTO_H
+#define _TIPOPRODUCTO_H
 
 enum TipoProducto { Perfumeria, Medicamento, Ortopedia, Golosinas };
 
-#endif //_TIPOADMISION_H
+#endif //_TIPOPRODUCTO_H

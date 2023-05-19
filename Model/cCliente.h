@@ -19,28 +19,36 @@ using namespace std;
 #ifndef _CCLIENTE_H
 #define _CCLIENTE_H
 
-class cCliente {
+class cCliente
+{
 private:
     string Nombre;
+    Ticket ticket;
     string Apellido;
     const int DNI;
     Pago pago;
     ObraSocial obraSocial;
     cAtienden* atiende;
-    float Facturado; //HACER SETTER Y GETTER
+    cCarrito* carrito;
+    cAsistente* asistente;
+    int numero;      
+    float Facturado; 
 
 public:
-
-    cCliente(string _Nombre, string _Apellido, const int _DNI, Pago _pago, ObraSocial _obraSocial);
+    cCliente(string _Nombre, string _Apellido, const int _DNI, Pago _pago, ObraSocial _obraSocial, cAtienden* _atiende, cCarrito* _carrito, cAsistente _asistente, int _numero, float _facturado);
     ~cCliente();
     ObraSocial getObraSocial() { return this->obraSocial; }
 
-    cCarrito* getcarrito();
-    cAsistente* getAsistente();
+    cCarrito* getcarrito() { return this->carrito; }
+    cAsistente* getAsistente() { return this->asistente; }
+    int getNumero() { return this->numero; }
+    void setNumero();
+    float getFacturado() { return this->Facturado; }
+    void setFacturado();
 
     void setObraSocial(ObraSocial obraSocial);
 
-    string getNombre();
+    string getNombre() { return this->Nombre; }
 
     /**
      * @param string
@@ -50,7 +58,7 @@ public:
     /**
      * @param Ticket
      */
-    void SacarTicket();
+    void SacarTicket(Ticket ticket);
 
     /**
      * @param Pago
@@ -58,6 +66,10 @@ public:
     void Pagar(Pago pago);
 
     void ElegirProducto();
-
+    // le agrego lo que me pasan de la factura
+    void sumarFactura(float factura)
+    {
+        this->Facturado += factura;
+    }
 };
 #endif //_CCLIENTE_H

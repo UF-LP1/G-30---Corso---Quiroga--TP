@@ -38,7 +38,9 @@ cEOrtopedia::cEOrtopedia(string _Nombre, int _ID, float _Factura) :cAtienden(_No
 void cEOrtopedia::LlamarCliente() {
     return;
 }
-
+TipoProducto cOrtopedia::getTipoProducto() {
+    return TipoProducto.Ortopedia;
+}
 /**
 * 
 * Esta función genera un monto de los productos pertenecientes al sector donde trabaja este empleado.
@@ -52,6 +54,7 @@ float cEOrtopedia::EmitirFactura(float Factura) {
     cout << "Emitiendo Factura" << endl;
     return _monto;
 }
+
 
 /**
  * @return void

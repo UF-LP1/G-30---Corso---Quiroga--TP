@@ -8,7 +8,7 @@
 #include "../Model/Pago.h"
 #include "../Model/Ticket.h"
 #include "../Model/TipoAdmision.h"
-#include "../Model/TipoProducto.h"
+#include "../Model/TipoMedicamento.h"
 using namespace std;
 
 #ifndef _CRECETA_H
@@ -35,7 +35,7 @@ public:
  */
     cReceta(string Nombre, TipoAdmision tipoAdmision, int Unidades, string Medicamento, string Medico, ObraSocial obraSocial);
     ~cReceta();    
-int getCantidad();
+    int getCantidad();
     
 /**
  * @param int

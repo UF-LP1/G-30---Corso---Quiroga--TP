@@ -23,7 +23,7 @@ protected:
     
     cCliente* cliente;
 public: 
-    cAtienden(string _Nombre,int _ID);
+    cAtienden(string _Nombre);
     ~cAtienden();
     void setcliente(cCliente* cliente);
     cCliente* getcliente() { return this->cliente; }
@@ -34,7 +34,7 @@ public:
 /**
  * @param Factura
  */
-    float virtual EmitirFactura(float Factura);
+    float virtual EmitirFactura();
 
 };
 

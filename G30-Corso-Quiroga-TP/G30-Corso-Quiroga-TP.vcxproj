@@ -37,6 +37,8 @@
     <ClCompile Include="..\Model\cPerfumeria.cpp" />
     <ClCompile Include="..\Model\cProducto.cpp" />
     <ClCompile Include="..\Model\cReceta.cpp" />
+    <ClCompile Include="cFactura.cpp" />
+    <ClCompile Include="cFecha.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -62,6 +64,10 @@
     <ClInclude Include="..\Model\Pago.h" />
     <ClInclude Include="..\Model\Ticket.h" />
     <ClInclude Include="..\Model\TipoAdmision.h" />
+    <ClInclude Include="cFactura.h" />
+    <ClInclude Include="cFecha.h" />
+    <ClInclude Include="TipoEmpleado.h" />
+    <ClInclude Include="TipoMedicamento.h" />
     <ClInclude Include="TipoProducto.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

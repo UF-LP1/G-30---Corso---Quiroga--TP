@@ -8,7 +8,7 @@
 #include "../Model/Pago.h"
 #include "../Model/Ticket.h"
 #include "../Model/TipoAdmision.h"
-#include "../Model/TipoProducto.h"
+#include "TipoProducto.h"
 using namespace std;
 
 #ifndef _CMEDICAMENTO_H
@@ -16,39 +16,37 @@ using namespace std;
 
 #include "cProducto.h"
 
-
-class cMedicamento: public cProducto {
-private: 
+class cMedicamento : public cProducto
+{
+private:
     TipoAdmision tipoAdmision;
     float ContenidoNeto;
     string Dosis;
     cTime FechaVencimiento;
 
-public: 
-    
-/**
- * @param Nombre
- * @param Precio
- * @param Stock
- * @param Marca
- * @param Area
- * @param ID
- * @param TipoAdmision
- * @param ContenidoNeto
- * @param Dosis
- * @param FechaVencimiento
- */
-    cMedicamento(string Nombre, float Precio, int Stock, string Marca, string Area,  int ID, TipoAdmision tipoAdmision, float ContenidoNeto, string Dosis, cTime FechaVencimiento);
-    ~cMedicamento();    
+public:
+    /**
+     * @param Nombre
+     * @param Precio
+     * @param Stock
+     * @param Marca
+     * @param Area
+     * @param ID
+     * @param TipoAdmision
+     * @param ContenidoNeto
+     * @param Dosis
+     * @param FechaVencimiento
+     */
+    cMedicamento(string Nombre, float Precio, int Stock, string Marca, string Area, int ID, TipoAdmision tipoAdmision, float ContenidoNeto, string Dosis, cTime FechaVencimiento);
+    ~cMedicamento();
     bool VerificarStock();
-    
-    float getPrecio();
-    
-/**
- * @param float
- */
-    void setPrecio(float Precio);
 
+    float getPrecio();
+
+    /**
+     * @param float
+     */
+    void setPrecio(float Precio);
 };
 
 #endif //_CMEDICAMENTO_H

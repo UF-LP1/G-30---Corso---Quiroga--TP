@@ -18,7 +18,7 @@ using namespace std;
 
 
 class cEOrtopedia: public cAtienden {
-    float Factura;
+ 
 public: 
     
 /**
@@ -26,14 +26,14 @@ public:
  * @param ID
  * @param Factura
  */
-    cEOrtopedia(string Nombre, int ID, float Factura);
+    cEOrtopedia(string Nombre);
     ~cEOrtopedia();    
     void LlamarCliente();
-    
+    TipoEmpleado getTipoEmpleado();
 /**
  * @param Factura
  */
-    float EmitirFactura(float Factura);
+    float EmitirFactura();
     
     void Asesorar();
     

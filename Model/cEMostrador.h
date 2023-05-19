@@ -17,44 +17,44 @@ using namespace std;
 #include "../Model/Ticket.h"
 #include "../Model/TipoAdmision.h"
 
+class cEMostrador : public cAtienden
+{
 
-class cEMostrador: public cAtienden {
-    float Factura;
-public: 
-    
-/**
- * @param Nombre
- * @param ID
- * @param Factura
- */
-    cEMostrador(string Nombre, int ID, float Factura);
-    
+
+public:
+    /**
+     * @param Nombre
+     * @param ID
+     * @param Factura
+     */
+    cEMostrador(string Nombre);
+
     ~cEMostrador();
-    
-    void LlamarCliente();
-    
-/**
- * @param Factura
- */
+
+    void LlamarCliente(cCliente* cliente);
+    TipoEmpleado getTipoEmpleado();
+    /**
+     * @param Factura
+     */
     float EmitirFactura();
-    
-/**
- * @param ObraSocial
- */
+
+    /**
+     * @param ObraSocial
+     */
     float AplicarDescuento(ObraSocial obraSocial, float Monto);
-    
+
     string getNombre();
-    
-/**
- * @param string
- */
+
+    /**
+     * @param string
+     */
     void setNombre(string Nombre);
-    
-/**
- * @param Nombre
- * @param Unidades
- * @param Medicamento
- */
+
+    /**
+     * @param Nombre
+     * @param Unidades
+     * @param Medicamento
+     */
     void LeerReceta(string Nombre, int Unidades, string Medicamento);
 };
 

@@ -13,17 +13,17 @@ using namespace std;
  * cFarmacia implementation
  */
 
-
-/**
- * @param Fecha
- * @param Abierto
- * @param Nombre
- * @param Perfumeria
- * @param Ortopedia
- * @param Limpio
- * @param Producto
- */
-cFarmacia::cFarmacia(cTime _Fecha, bool _Abierto, string _Nombre, bool _Limpio, string _Producto) {
+ /**
+  * @param Fecha
+  * @param Abierto
+  * @param Nombre
+  * @param Perfumeria
+  * @param Ortopedia
+  * @param Limpio
+  * @param Producto
+  */
+cFarmacia::cFarmacia(cTime _Fecha, bool _Abierto, string _Nombre, bool _Limpio, string _Producto)
+{
     this->Fecha = _Fecha;
     this->Abierto = _Abierto;
     this->Nombre = _Nombre;
@@ -31,32 +31,64 @@ cFarmacia::cFarmacia(cTime _Fecha, bool _Abierto, string _Nombre, bool _Limpio, 
     this->Producto = _Producto;
 }
 
-/**
- * @return bool
- */
-bool cFarmacia::AbrirFarmacia() {
-    return false;
+cFarmacia::cFarmacia(bool _Abierto, string _Nombre, bool _Limpio)
+{
+    // Vean la definicion del constructor del carrito
+    this->_carritoFarmacia = new cCarrito();
+    this->_listaEmpleados = new cEmpleado * [20];
+    for (int i = 0; i < 20; i++)
+    {
+        this->_listaEmpleados[i] = NULL;
+    };
+    this->cantEmpleados = 0;
+    this->Abierto = _Abierto;
+    this->Nombre = _Nombre;
+    this->Limpio = _Limpio;
 }
 
 /**
  * @return bool
  */
-bool cFarmacia::CerrarFarmacia() {
-    return false;
-}
-
-/**
- * @return bool
- */
-bool cFarmacia::getAbierto() {
+bool cFarmacia::AbrirFarmacia()
+{
+    // me tengo que fijar que haya uno de cada uno
+    if (this->cantEmpleados >= 5)
+        this->Abierto = true;
     return this->Abierto;
+}
+
+/**
+ * @return bool
+ */
+void cFarmacia::CerrarFarmacia()
+{
+    this->Abierto = false;
+}
+
+/**
+ * @return bool
+ */
+bool cFarmacia::getAbierto()
+{
+    return this->Abierto;
+}
+
+void cFarmacia::insertarEmpleado(cEmpleado* empleado)
+{
+    // Y así con el resto...
+    if (empleado->getTipoEmpleado() == TipoEmpleado.mostrador)
+        this->empleadoMostrador = empleado;
+
+    this->_listaEmpleados[this->cantEmpleados] = empleado;
+    this->cantEmpleados++;
 }
 
 /**
  * @param bool
  * @return void
  */
-void cFarmacia::setAbierto(bool Abierto) {
+void cFarmacia::setAbierto(bool Abierto)
+{
     this->Abierto = Abierto;
     return;
 }
@@ -65,10 +97,47 @@ void cFarmacia::setAbierto(bool Abierto) {
  * @param Producto
  * @return void
  */
-void cFarmacia::SeleccionarProducto(string Producto) {
+void cFarmacia::SeleccionarProducto(string Producto)
+{
     return;
 }
 
-cFarmacia::~cFarmacia() {
+void cFarmacia::insertarProducto(cProducto* producto)
+{
+    this->_carritoFarmacia->AgregarProducto(producto);
+    return;
+}
+
+void cFarmacia::atenderCliente(cCliente* cliente)
+{
+    // Me fijo si la farmacia esta abierta
+    if (this->Abierto)
+    {
+        // Esto lo hace el empleado de mostradorç
+        cCarrito* carrito = cliente->getCarrito();
+        int i;
+        for (i = 0; i < carrito->getcontProducto(); i++)
+        {
+            // Si en mi lista de productos seleccione un medicamento saco un ticket de medicamento
+            cProducto* producto = carrito->getProducto(i);
+            if (producto->getTipoProducto() == TipoProducto.medicamento)
+            {
+                cliente->SacarTicket(asistente->GenerarTicket(Ticket.Farmacia, i))
+                    cliente->setNumero(i);
+                this->empleadoMostrador->llamarCliente(cliente);
+                // creo una funcion que suma a lo facturado
+                this->cliente->sumarFactura(this->emitirFactura(cliente));
+            }
+            if (producto->getTipoProducto() == TipoProducto.Ortopedia)
+            {
+                /**
+                 *
+                 */
+            }
+        }
+    }
+}
+
+cFarmacia::~cFarmacia(){
 
 }

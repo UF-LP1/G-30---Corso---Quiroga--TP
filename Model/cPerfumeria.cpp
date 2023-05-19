@@ -54,6 +54,9 @@ void cPerfumeria::setPrecio(float Precio) {
     this->Precio = Precio;
     return;
 }
+TipoProducto cPerfumeria::getTipoProducto() {
+    return TipoProducto.Perfumeria;
+}
 
 cPerfumeria::~cPerfumeria() {
 

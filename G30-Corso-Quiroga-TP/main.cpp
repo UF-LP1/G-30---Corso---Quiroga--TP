@@ -28,34 +28,55 @@
 
 using namespace std;
 
-int main() {
+int main()
+{
 
-	cEmpleado::cont = 0;   //elemento static
+	cEmpleado::cont = 0; // elemento static
 	cAsistente::contN = 0;
 
-	//creo productos
+	// Creo la farmacia
+	cFarmacia* _farmacia = new cFarmacia(false, "Farmacia 1 ", true);
+
+	// creo productos
 	cPerfumeria* perfume1 = new cPerfumeria("Jabon", 144.99, 80, "Dove", "Perfumeria", 21, 0.0);
 	cGolosinas* golosina1 = new cGolosinas("Caramelo", 144.99, 80, "Moggul", "Golosinas", 21);
 	cOrtopedia* ortopedia1 = new cOrtopedia("Protesis", 144.99, 80, "Dove", "Ortopedia", 21);
 	cMedicamento* medicamento1 = new cMedicamento("Paracetamol", 144.99, 80, "Paracetamol", "Medicamento", 21);
 
-	/*
-	cCliente* cliente1 = new cCliente ("Juan", "Garcia", 44665522, "CREDITO", "OSDE");
-	cCajero* cajero = new cCajero ("Luis", 001);
-	cEPerfumeria* empleadoPerfumeria = new cEPerfumeria("Ana", 023);
-	cPerfumeria* perfume1 = new cPerfumeria("Jabon", 144.99, 80, "Dove", "Perfumeria", 21, 0.0);
-	cCarrito* carrito = new cCarrito();
+	// Inserto los productos en la farmacia
+	_farmacia->insertarProducto(perfume1);
+	_farmacia->insertarProducto(golosina1);
+	_farmacia->insertarProducto(ortopedia1);
+	_farmacia->insertarProducto(medicamento1);
 
-	carrito->AgregarProducto(perfume1);
-	
-	float TOTAL = cajero->Cobrar();
+	// Creo los empleados
+	// chequear si estan bien los parametros en los constructores
+	cCajero* cajero = new cCajero("Luis");
+	cEPerfumeria* empleadoPerfumeria = new cEPerfumeria("Ana");
+	cEOrtopedia* empleadoOrtopedia = new cEOrtopedia("Juan");
+	cEMostrador* empleadoMostrador = new cEMostrador("Pablo");
+	cEFarmaceutico* farmaceutico = new cEFarmaceutico("Clara");
+
+	// inserto los empleados
+	_farmacia->insertarEmpleado(cajero);
+	_farmacia->insertarEmpleado(empleadoPerfumeria);
+	_farmacia->insertarEmpleado(empleadoOrtopedia);
+	_farmacia->insertarEmpleado(empleadoMostrador);
+	_farmacia->insertarEmpleado(farmaceutico);
+
+	_farmacia->AbrirFarmacia();
+
+	cCliente* cliente1 = new cCliente("Juan", "Garcia", 44665522, "CREDITO", "OSDE");
+	// Agrego los productos que quiere comprar el cliente
+	cliente1->getcarrito()->AgregarProducto(medicamento1);
+	// hago que la farmacia atienda al cliente
+	_farmacia->atenderCliente(cliente1);
 
 	delete carrito;
 	delete perfume1;
 	delete empleadoPerfumeria;
 	delete cajero;
 	delete cliente1;
-	*/
 
 	return 0;
 }

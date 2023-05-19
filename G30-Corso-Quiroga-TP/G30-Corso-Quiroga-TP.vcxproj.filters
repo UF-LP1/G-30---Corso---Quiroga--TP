@@ -72,6 +72,12 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="cFecha.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cFactura.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Model\cAtienden.h">
@@ -138,6 +144,18 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\Model\cAsistente.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cFecha.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TipoEmpleado.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TipoMedicamento.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cFactura.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="TipoProducto.h">

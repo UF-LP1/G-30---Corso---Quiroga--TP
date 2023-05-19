@@ -29,7 +29,7 @@ cELimpieza::cELimpieza(string _Nombre, int _NumeroEmpleado, int _HoraEntrada, in
  * @param NumeroEmpleado
  * @return void
  */
-void cELimpieza::Limpiar(bool Limpio, cTime Fecha, int NumeroEmpleado) {
+void cELimpieza::Limpiar(bool Limpio, cFecha* Fecha, int NumeroEmpleado) {
     return;
 }
 

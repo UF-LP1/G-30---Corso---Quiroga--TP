@@ -13,20 +13,20 @@ using namespace std;
  * cMedicamento implementation
  */
 
-
-/**
- * @param Nombre
- * @param Precio
- * @param Stock
- * @param Marca
- * @param Area
- * @param ID
- * @param TipoAdmision
- * @param ContenidoNeto
- * @param Dosis
- * @param FechaVencimiento
- */
-cMedicamento::cMedicamento(string _Nombre, float _Precio, int _Stock, string _Marca, string _Area, int ID, TipoAdmision _tipoAdmision, float _ContenidoNeto, string _Dosis, cTime _FechaVencimiento) :cProducto(_Nombre, _Precio, _Stock, _Marca, _Area, ID) {
+ /**
+  * @param Nombre
+  * @param Precio
+  * @param Stock
+  * @param Marca
+  * @param Area
+  * @param ID
+  * @param TipoAdmision
+  * @param ContenidoNeto
+  * @param Dosis
+  * @param FechaVencimiento
+  */
+cMedicamento::cMedicamento(string _Nombre, float _Precio, int _Stock, string _Marca, string _Area, int ID, TipoAdmision _tipoAdmision, float _ContenidoNeto, string _Dosis, cTime _FechaVencimiento) : cProducto(_Nombre, _Precio, _Stock, _Marca, _Area, ID)
+{
     this->Nombre = _Nombre;
     this->Precio = _Precio;
     this->Stock = _Stock;
@@ -41,14 +41,16 @@ cMedicamento::cMedicamento(string _Nombre, float _Precio, int _Stock, string _Ma
 /**
  * @return bool
  */
-bool cMedicamento::VerificarStock() {
+bool cMedicamento::VerificarStock()
+{
     return false;
 }
 
 /**
  * @return float
  */
-float cMedicamento::getPrecio() {
+float cMedicamento::getPrecio()
+{
     return this->Precio;
 }
 
@@ -56,11 +58,16 @@ float cMedicamento::getPrecio() {
  * @param float
  * @return void
  */
-void cMedicamento::setPrecio(float Precio) {
+void cMedicamento::setPrecio(float Precio)
+{
     this->Precio = Precio;
     return;
 }
 
-cMedicamento::~cMedicamento() {
+cMedicamento::~cMedicamento()
+{
+}
 
+TipoProducto cMedicamento::getTipoProducto() {
+    return TipoProducto.Medicamento;
 }

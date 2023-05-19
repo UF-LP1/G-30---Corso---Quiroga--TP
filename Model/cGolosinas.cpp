@@ -3,11 +3,12 @@
  */
 #include <iostream>
 #include <string>
-#include <cTime>
+
 
 using namespace std;
 
 #include "cGolosinas.h"
+#include "cFecha.h"
 
 /**
  * cGolosinas implementation
@@ -23,13 +24,16 @@ using namespace std;
  * @param ID
  * @param FechaVencimiento
  */
-cGolosinas::cGolosinas(string _Nombre, float _Precio, int _Stock, string _Marca, string _Area, int ID, cTime _FechaVencimiento) :cProducto(_Nombre, _Precio, _Stock, _Marca, _Area, ID) {
+cGolosinas::cGolosinas(string _Nombre, float _Precio, int _Stock, string _Marca, string _Area, int ID, cFecha* _FechaVencimiento) :cProducto(_Nombre, _Precio, _Stock, _Marca, _Area, ID) {
     this->Nombre = _Nombre;
     this->Precio = _Precio;
     this->Stock = _Stock;
     this->Marca = _Marca;
     this->Area = _Area;
     this->FechaVencimiento = _FechaVencimiento;
+}
+TipoProducto cGolosinas::getTipoProducto() {
+    return TipoProducto.Golosinas;
 }
 
 /**

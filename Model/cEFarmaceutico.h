@@ -18,11 +18,10 @@ using namespace std;
 
 
 class cEFarmaceutico: public cAtienden {
-    float Factura;
+
 protected:
     string Nombre;
-    int ID;
-    float Factura;
+
 public: 
     
 /**
@@ -30,18 +29,16 @@ public:
  * @param ID
  * @param Factura
  */
-    cEFarmaceutico(string Nombre, const int ID, float Factura);
+    cEFarmaceutico(string Nombre);
     ~cEFarmaceutico();   
     string getNombre() { return this->Nombre; }
-    int getID() { return this->ID; }
-    float getFactura() { return this->Factura; }
+    void setNombre(string Nombre);
     void LlamarCliente();
+    virtual TipoEmpleado getTipoEmpleado() = 0;
     
 /**
  * @param Factura
  */
-    float EmitirFactura(float Factura);
-    
     void AconsejarCliente();
     
     string getNombre();
@@ -49,7 +46,7 @@ public:
 /**
  * @param string
  */
-    void setNombre(string Nombre);
+  
 
 };
 

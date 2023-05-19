@@ -24,12 +24,10 @@ cProducto::cProducto(string _Nombre, float _Precio, int _Stock, string _Marca, s
 cProducto::~cProducto() {
 
 }
-float cProducto::getPrecio() {
-	return this->Precio;
-}
+
 
 void cProducto::setPrecio(float Precio) {}
-//void cProducto::irtual bool VerificarStock() {
+//void cProducto::virtual bool VerificarStock() {
 //
 //}
 

@@ -18,7 +18,7 @@ using namespace std;
 
 
 class cEPerfumeria: public cAtienden {
-    float Factura;
+
 public: 
     
 /**
@@ -26,14 +26,14 @@ public:
  * @param ID
  * @param Factura
  */
-    cEPerfumeria(string Nombre, int ID, float Factura);
+    cEPerfumeria(string Nombre);
     ~cEPerfumeria();    
     void LlamarCliente();
-    
+    TipoEmpleado getTipoEmpleado();
 /**
  * @param Factura
  */
-    float EmitirFactura(float Factura);
+    float EmitirFactura();
     
     void Asesorar();
     

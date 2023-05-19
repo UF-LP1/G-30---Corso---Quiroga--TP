@@ -98,7 +98,7 @@ float cCarrito::VerTotal() {
     int i;
     float ToR = 0;
     for (i = 0; i < contProducto; i++) {
-        ToR = ToR + this->_listaProductos[i]->getprecio(); //RECORRO LA LISTA Y LE AGREGO LOS PRECIOS A LOS PRODUCTOS
+        ToR = ToR + this->_listaProductos[i]->getPrecio(); //RECORRO LA LISTA Y LE AGREGO LOS PRECIOS A LOS PRODUCTOS
     }
     return ToR;
 }
