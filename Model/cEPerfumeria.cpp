@@ -19,7 +19,7 @@ using namespace std;
  * @param ID
  * @param Factura
  */
-cEPerfumeria::cEPerfumeria(string _Nombre, int _ID) :cAtienden(_Nombre) {
+cEPerfumeria::cEPerfumeria(string _Nombre, int _ID, cCliente* _cliente) :cAtienden(_Nombre, _cliente) {
     this->Nombre = _Nombre;
     this->ID = cEmpleado::cont;
     cEmpleado::cont++;
@@ -42,7 +42,7 @@ void cEPerfumeria::LlamarCliente() {
 float cEPerfumeria::EmitirFactura() {
     cCliente* _cliente = this->getcliente();
     
-    float _monto = _cliente->getcarrito()->VerTotal(); //corregido
+    float _monto = _cliente->getCarrito()->VerTotal(); //corregido
     cout << "Emitiendo Factura" << endl;
     return _monto;
 }
@@ -50,9 +50,7 @@ float cEPerfumeria::EmitirFactura() {
 /**
  * @return void
  */
-void cEPerfumeria::Asesorar() {
-    return;
-}
+
 
 /**
  * @return string
@@ -74,4 +72,9 @@ void cEPerfumeria::setNombre(string Nombre) {
 
 cEPerfumeria::~cEPerfumeria() {
 
+}
+
+void Asesorar()
+{
+    return;
 }

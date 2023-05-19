@@ -27,12 +27,12 @@ public:
  * @param ID
  * @param Factura
  */
-    cEPerfumeria(string Nombre, int ID);
+    cEPerfumeria(string _Nombre, int _ID, cCliente* _cliente);
     ~cEPerfumeria();    
     void LlamarCliente();
     string getNombre() { return this->Nombre; }
     int getID() { return this->ID; }
-    TipoEmpleado getTipoEmpleado() { return this->tipoEmpleado; }
+    
 /**
  * @param Factura
  */

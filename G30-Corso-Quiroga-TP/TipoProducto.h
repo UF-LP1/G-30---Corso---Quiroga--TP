@@ -8,6 +8,6 @@ using namespace std;
 #ifndef _TIPOPRODUCTO_H
 #define _TIPOPRODUCTO_H
 
-enum TipoProducto { Perfumeria, Medicamento, Ortopedia, Golosinas };
+enum TipoProducto { Perfume, Medicamento, Ortopedico, Golosinas };
 
 #endif //_TIPOPRODUCTO_H

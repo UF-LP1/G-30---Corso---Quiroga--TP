@@ -20,11 +20,11 @@ using namespace std;
 class cCajero: public cAtienden {
   
 protected:
-    string Nombre;
+   
 
 
 public:
-    cCajero(string Nombre);
+    cCajero(string _Nombre, int _ID, cCliente* _cliente);
     ~cCajero();    
     string getNombre() { return this->Nombre; }
     void setNombre(string Nombre);

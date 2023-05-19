@@ -22,11 +22,10 @@
 #include "../Model/Pago.h"
 #include "../Model/Ticket.h"
 #include "../Model/TipoAdmision.h"
-#include "../G30-Corso-Quiroga-TP/TipoProducto.h"
-#include "../G30-Corso-Quiroga-TP/TipoEmpleado.h"
-#include "../G30-Corso-Quiroga-TP/TipoProducto.h"
-#include "../G30-Corso-Quiroga-TP/TipoMedicamento.h"
-#include "../G30-Corso-Quiroga-TP/cFecha.h"
+#include "TipoEmpleado.h"
+#include "TipoProducto.h"
+#include "TipoMedicamento.h"
+#include "cFecha.h"
 
 
 using namespace std;

@@ -19,7 +19,7 @@ using namespace std;
   * @param ID
   * @param Factura
   */
-cEMostrador::cEMostrador(string _Nombre, int _ID) : cAtienden(_Nombre, _ID)
+cEMostrador::cEMostrador(string _Nombre, int _ID, cCliente* _cliente) :cAtienden(_Nombre, _cliente)
 {
     this->Nombre = _Nombre;
     this->ID = cEmpleado::cont;
@@ -38,7 +38,7 @@ void cEMostrador::setTipoEmpleado(TipoEmpleado tipoEmpleado){
 /**
  * @return void
  */
-void cEMostrador::LlamarCliente(Cliente* cliente)
+void cEMostrador::LlamarCliente(cCliente* cliente)
 {
     this->setCliente(cliente);
     // int num = _cliente->getAsistente()->GenerarTicket();

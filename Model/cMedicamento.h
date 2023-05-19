@@ -8,9 +8,9 @@
 #include "../Model/Pago.h"
 #include "../Model/Ticket.h"
 #include "../Model/TipoAdmision.h"
-#include "../G30-Corso-Quiroga-TP/TipoMedicamento.h"
+#include "TipoMedicamento.h"
 #include "../G30-Corso-Quiroga-TP/TipoProducto.h"
-#include "../G30-Corso-Quiroga-TP/cFecha.h"
+#include "cFecha.h"
 using namespace std;
 
 #ifndef _CMEDICAMENTO_H
@@ -34,16 +34,14 @@ public:
      * @param Precio
      * @param Stock
      * @param Marca
-     * @param Area
      * @param ID
      * @param TipoAdmision
      * @param ContenidoNeto
      * @param Dosis
      * @param FechaVencimiento
      */
-    cMedicamento(string Nombre, float Precio, int Stock, string Marca, string Area, int ID, TipoProducto tipoProducto, TipoMedicamento tipoMedicamento, TipoAdmision tipoAdmision, float ContenidoNeto, string Dosis, cFecha* FechaVencimiento);
+    cMedicamento(string Nombre, float Precio, int Stock, string Marca, int ID, TipoProducto tipoProducto, TipoMedicamento tipoMedicamento, TipoAdmision tipoAdmision, float ContenidoNeto, string Dosis, cFecha* FechaVencimiento);
     ~cMedicamento();
-    TipoProducto getTipoProducto();
 
     TipoAdmision getTipoAdmision();
     TipoMedicamento getTipoMedicamento();

@@ -28,15 +28,13 @@ public:
  * @param Precio
  * @param Stock
  * @param Marca
- * @param Area
  * @param ID const int
  * @param CantUnidades
  * @param Color
  */
-    cOrtopedia(string Nombre, float Precio, int Stock, string Marca, string Area, int ID, TipoProducto tipoProducto, int CantUnidades, string Color);
+    cOrtopedia(string Nombre, float Precio, int Stock, string Marca,  int ID, TipoProducto tipoProducto, int CantUnidades, string Color);
     ~cOrtopedia();    
     bool VerificarStock();
-    TipoProducto getTipoProducto();
     float getPrecio();
     
 /**

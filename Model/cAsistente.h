@@ -34,11 +34,7 @@ public:
     void setTicket(Ticket ticket);
     
     
-/**
- * @param int
- */
-void setNumero(int Numero);
-    
+
 /**
  * @param Ticket
  * @param Numero

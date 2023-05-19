@@ -14,6 +14,7 @@
 #include "../Model/cCarrito.h"
 #include "../Model/cEmpleado.h"
 #include "../Model/cCliente.h"
+#include "../Model/cEMostrador.h"
 
 using namespace std;
 
@@ -33,13 +34,13 @@ public:
      * @param Limpio
      * @param Producto
      */
-    cFarmacia(cFecha* Fecha, bool Abierto, string Nombre, bool Limpio, string Producto);
-    cFarmacia(bool Abierto, string Nombre, bool Limpio);
+    cFarmacia(cFecha* _Fecha, bool _Abierto, string _Nombre, bool _Limpio, string _Producto);
+    cFarmacia(bool Abierto, string Nombre, bool Limpio, cEmpleado** _listaEmpleados, cCarrito* _carritoFarmacia, int cantEmpleados);
 
     bool AbrirFarmacia();
 
     void CerrarFarmacia();
-
+    
     bool getAbierto();
     // inserto el producto en el carrito
     void insertarProducto(cProducto* producto);
@@ -51,16 +52,11 @@ public:
      */
     void setAbierto(bool Abierto);
 
-    /**
-     * @param Producto
-     */
-    void SeleccionarProducto(string Producto);
-
 protected:
     ~cFarmacia();
 
 private:
-    cTime Fecha; // VER
+    cFecha* Fecha; // VER
     bool Abierto;
     string Nombre;
     bool Limpio;
@@ -69,8 +65,9 @@ private:
     cCarrito* _carritoFarmacia;
     cEmpleado** _listaEmpleados;
     int cantEmpleados;
-    cEMostrador empleadoMostrador;
+    cEMostrador* empleadoMostrador;
     cAsistente* asistente;
+    cCliente* cliente;
 };
 
 #endif //_CFARMACIA_H

@@ -64,9 +64,7 @@ void cCliente::setApellido(string Apellido){
  * @param Ticket
  * @return void
  */
-void cCliente::SacarTicket(Ticket ticket)
-{
-    this->
+void cCliente::SacarTicket(Ticket ticket){
 
         return;
 }

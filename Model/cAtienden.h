@@ -9,6 +9,7 @@
 #include "../Model/Ticket.h"
 #include "../Model/TipoAdmision.h"
 
+
 using namespace std;
 
 #ifndef _CATIENDEN_H
@@ -23,7 +24,7 @@ protected:
     
     cCliente* cliente;
 public: 
-    cAtienden(string _Nombre);
+    cAtienden(string _Nombre, cCliente* _cliente);
     ~cAtienden();
     void setcliente(cCliente* cliente);
     cCliente* getcliente() { return this->cliente; }
@@ -31,9 +32,7 @@ public:
 
     virtual void LlamarCliente();
     
-/**
- * @param Factura
- */
+
     float virtual EmitirFactura();
 
 };

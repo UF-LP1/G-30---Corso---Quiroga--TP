@@ -19,8 +19,10 @@ using namespace std;
  * @param ID
  * @param Factura
  */
-cCajero::cCajero(string _Nombre) :cAtienden(_Nombre) {
+cCajero::cCajero(string _Nombre, int _ID, cCliente* _cliente) :cAtienden(_Nombre,  _cliente) {
     this->Nombre = _Nombre;
+    this->ID = cEmpleado::cont;
+    cEmpleado::cont++;
 }
 
 /**

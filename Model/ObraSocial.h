@@ -10,6 +10,6 @@ using namespace std;
 #ifndef _OBRASOCIAL_H
 #define _OBRASOCIAL_H
 
-enum ObraSocial { OSDE, PAMI, SwissMedical, UP, Medicus, Jerarquicos, Ninguno };
+enum ObraSocial { OSDE, PAMI, SwissMedical, UP, Medicus, Jerarquicos, Sin};
 
 #endif //_OBRASOCIAL_H

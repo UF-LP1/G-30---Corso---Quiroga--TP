@@ -25,9 +25,9 @@ protected:
 public:
     cEmpleado(string _Nombre);
     ~cEmpleado();
-    virtual string getNombre() = 0;
-    virtual int getID() = 0;
-    virtual TipoEmpleado getTipoEmpleado() = 0;
+    string getNombre() { return this->Nombre; }
+    
+    TipoEmpleado getTipoEmpleado() { return this->tipoEmpleado; }
     static int cont;
     
 };

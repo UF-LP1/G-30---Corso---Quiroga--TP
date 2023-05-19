@@ -14,22 +14,20 @@ using namespace std;
  * cAtienden implementation
  */
 
-cAtienden::cAtienden(string _Nombre):cEmpleado(_Nombre) {
+cAtienden::cAtienden(string _Nombre, cCliente* _cliente):cEmpleado(_Nombre) {
 	this->Nombre = _Nombre;
+	this->cliente = _cliente;
 }
 cAtienden::~cAtienden() {
 
 }
 
-void cAtienden::setcliente(cCliente* cliente){
+void cAtienden::setcliente(cCliente* cliente) {
 	this->cliente = cliente;
 	return;
 }
 
 
-//cAtienden::virtual void LlamarCliente() {}
+void cAtienden:: LlamarCliente() {}
 
-/**
- * @param Factura
- */
-//void cAtienden::virtual float EmitirFactura(void Factura) {}
+float cAtienden:: EmitirFactura() {}

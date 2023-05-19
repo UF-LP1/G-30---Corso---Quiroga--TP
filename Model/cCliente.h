@@ -4,11 +4,6 @@
 
 #include <iostream>
 #include <string>
-#include <cTime>
-#include "../Model/ObraSocial.h"
-#include "../Model/Pago.h"
-#include "../Model/Ticket.h"
-#include "../Model/TipoAdmision.h"
 #include "../Model/cCarrito.h"
 #include "../Model/cAtienden.h"
 #include "../G30-Corso-Quiroga-TP/TipoProducto.h"
@@ -45,8 +40,8 @@ public:
     void setApellido(string Apellido);
     ObraSocial getObraSocial() { return this->obraSocial; }
     void setObraSocial(ObraSocial obraSocial);
-    cAtienden* getAtender();
-    cCarrito* getcarrito() { return this->carrito; }
+    cAtienden* getAtiende() { return this->atiende; }
+    cCarrito* getCarrito() { return this->carrito; }
     cAsistente* getAsistente() { return this->asistente; }
     int getNumero() { return this->numero; }
     void setNumero();

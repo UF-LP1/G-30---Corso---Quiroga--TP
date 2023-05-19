@@ -3,7 +3,6 @@
  */
 #include <iostream>
 #include <string>
-#include <cTime>
 #include "../Model/ObraSocial.h"
 #include "../Model/Pago.h"
 #include "../Model/Ticket.h"
@@ -28,13 +27,11 @@ public:
  * @param Precio
  * @param Stock
  * @param Marca
- * @param Area
  * @param ID
  * @param FechaVencimiento
  */
-    cGolosinas(string Nombre, float Precio, int Stock, string Marca, string Area, int ID, TipoProducto tipoProducto, cFecha* FechaVencimiento);
+    cGolosinas(string Nombre, float Precio, int Stock, string Marca, int ID, TipoProducto tipoProducto, cFecha* FechaVencimiento);
     ~cGolosinas();
-    TipoProducto getTipoProducto();
     bool VerificarStock();
     
     float getPrecio();

@@ -29,9 +29,10 @@ cFarmacia::cFarmacia(cFecha* _Fecha, bool _Abierto, string _Nombre, bool _Limpio
     this->Nombre = _Nombre;
     this->Limpio = _Limpio;
     this->Producto = _Producto;
+    
 }
 
-cFarmacia::cFarmacia(bool _Abierto, string _Nombre, bool _Limpio)
+cFarmacia::cFarmacia(bool _Abierto, string _Nombre, bool _Limpio, cEmpleado** _listaEmpleados, cCarrito* _carritoFarmacia, int cantEmpleados)
 {
     // Vean la definicion del constructor del carrito
     this->_carritoFarmacia = new cCarrito();
@@ -76,7 +77,7 @@ bool cFarmacia::getAbierto()
 void cFarmacia::insertarEmpleado(cEmpleado* empleado)
 {
     // Y así con el resto...
-    if (empleado->getTipoEmpleado() == TipoEmpleado.mostrador)
+    if (empleado->getTipoEmpleado() == TipoEmpleado::Mostrador)
         this->empleadoMostrador = empleado;
 
     this->_listaEmpleados[this->cantEmpleados] = empleado;
@@ -97,10 +98,7 @@ void cFarmacia::setAbierto(bool Abierto)
  * @param Producto
  * @return void
  */
-void cFarmacia::SeleccionarProducto(string Producto)
-{
-    return;
-}
+
 
 void cFarmacia::insertarProducto(cProducto* producto)
 {
@@ -113,22 +111,22 @@ void cFarmacia::atenderCliente(cCliente* cliente)
     // Me fijo si la farmacia esta abierta
     if (this->Abierto)
     {
-        // Esto lo hace el empleado de mostradorç
+        // Esto lo hace el empleado de mostrador
         cCarrito* carrito = cliente->getCarrito();
         int i;
         for (i = 0; i < carrito->getcontProducto(); i++)
         {
             // Si en mi lista de productos seleccione un medicamento saco un ticket de medicamento
             cProducto* producto = carrito->getProducto(i);
-            if (producto->getTipoProducto() == TipoProducto.medicamento)
+            if (producto->getTipoProducto() == TipoProducto:: Medicamento)
             {
-                cliente->SacarTicket(asistente->GenerarTicket(Ticket.Farmacia, i))
-                    cliente->setNumero(i);
-                this->empleadoMostrador->llamarCliente(cliente);
+                cliente->SacarTicket(asistente->GenerarTicket(Ticket::Farmacia, i));
+                cliente->setNumero(i);
+                this->empleadoMostrador->LlamarCliente(cliente);
                 // creo una funcion que suma a lo facturado
-                this->cliente->sumarFactura(this->emitirFactura(cliente));
+                this->cliente->sumarFactura(this->EmitirFactura(cliente));
             }
-            if (producto->getTipoProducto() == TipoProducto.Ortopedia)
+            if (producto->getTipoProducto() == TipoProducto::Ortopedia)
             {
                 /**
                  *

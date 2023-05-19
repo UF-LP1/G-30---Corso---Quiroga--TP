@@ -4,7 +4,6 @@
 #include <iostream>
 #include <string>
 #include <cTime>
-#include "../Model/ObraSocial.h"
 #include "../Model/Pago.h"
 #include "../Model/Ticket.h"
 #include "../Model/TipoAdmision.h"
@@ -30,12 +29,12 @@ public:
  * @param ID
  * @param Factura
  */
-    cEFarmaceutico(string Nombre);
+    cEFarmaceutico(string Nombre, int ID, cCliente* _cliente);
     ~cEFarmaceutico();   
     string getNombre() { return this->Nombre; }
     void setNombre(string Nombre);
     void LlamarCliente();
-    TipoEmpleado getTipoEmpleado() { return this->tipoEmpleado; }
+    
     
 /**
  * @param Factura

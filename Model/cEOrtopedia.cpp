@@ -19,7 +19,7 @@ using namespace std;
  * @param ID
  * @param Factura
  */
-cEOrtopedia::cEOrtopedia(string _Nombre, int _ID) :cAtienden(_Nombre) {
+cEOrtopedia::cEOrtopedia(string _Nombre, int _ID, cCliente* _cliente) :cAtienden(_Nombre, _cliente) {
     this->Nombre = _Nombre;
     this->ID = cEmpleado::cont;
     cEmpleado::cont++;
@@ -47,7 +47,7 @@ void cEOrtopedia::LlamarCliente() {
  */
 float cEOrtopedia::EmitirFactura() {
     cCliente* _cliente = this->getcliente();
-    float _monto = _cliente->getcarrito()->VerTotal();//corregido
+    float _monto = _cliente->getCarrito()->VerTotal();//corregido
     cout << "Emitiendo Factura" << endl;
     return _monto;
 }

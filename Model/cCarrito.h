@@ -38,7 +38,7 @@ public:
     int getcontProducto() { return this->contProducto; }
     void setcontProducto(int contProducto);
     // chequear que i este entre 0 y contProductos sino tiro error...
-    cProducto getProducto(int i) { return this->_listaProductos[i]; }
+    cProducto* getProducto(int i) { return this->_listaProductos[i]; }
     
     cProducto* QuitarProducto();
 

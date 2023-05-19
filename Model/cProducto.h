@@ -10,6 +10,7 @@
 #include "../Model/TipoAdmision.h"
 #include "../G30-Corso-Quiroga-TP/TipoProducto.h"
 #include "../G30-Corso-Quiroga-TP/TipoMedicamento.h"
+#include "../G30-Corso-Quiroga-TP/cFecha.h"
 using namespace std;
 
 #ifndef _CPRODUCTO_H
@@ -22,20 +23,19 @@ protected:
     float Precio;
     int Stock;
     string Marca;
-    string Area;
     int ID;
     TipoProducto tipoProducto;
 
 public:
-    cProducto(string Nombre, float Precio, int Stock, string Marca, string Area, int ID, TipoProducto tipoProducto);
+    cProducto(string Nombre, float Precio, int Stock, string Marca, int ID, TipoProducto tipoProducto);
     ~cProducto();
-    virtual string getNombre() = 0;
-    virtual int getStock() = 0;
-    virtual string getMarca() = 0;
-    virtual string getArea() = 0;
-    virtual int getID() = 0;
-    virtual float getPrecio() = 0;
-    virtual TipoProducto getTipoProducto() = 0;
+    string getNombre();
+    int getStock() { return this->Stock; }
+    string getMarca() { return this->Marca; }
+    
+    int getID() { return this->ID; }
+    float getPrecio() { return this->Precio; }
+    TipoProducto getTipoProducto() { return this->tipoProducto; }
    
 };
 

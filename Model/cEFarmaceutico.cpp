@@ -19,9 +19,8 @@ using namespace std;
  * @param ID
  * @param Factura
  */
-cEFarmaceutico::cEFarmaceutico(string _Nombre, const int _ID, float _Factura) :cAtienden(_Nombre, _ID) {
+cEFarmaceutico::cEFarmaceutico(string _Nombre, int _ID, cCliente* _cliente) :cAtienden(_Nombre, _cliente) {
     this->Nombre = _Nombre;
-    this->Factura = _Factura;
     this->ID = cEmpleado::cont;
     cEmpleado::cont++;
 }

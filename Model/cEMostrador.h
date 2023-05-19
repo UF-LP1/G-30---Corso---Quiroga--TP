@@ -27,12 +27,12 @@ public:
      * @param ID
      * @param Factura
      */
-    cEMostrador(string Nombre, int ID);
+    cEMostrador(string Nombre, int _ID, cCliente* _cliente);
 
     ~cEMostrador();
 
     void LlamarCliente(cCliente* cliente);
-    TipoEmpleado getTipoEmpleado() { return this->tipoEmpleado; }
+    
     void setTipoEmpleado(TipoEmpleado tipoEmpleado);
     /**
      * @param Factura

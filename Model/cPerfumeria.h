@@ -28,13 +28,11 @@ public:
  * @param Precio
  * @param Stock
  * @param Marca
- * @param Area
  * @param ID
  * @param CantLitros
  */
-    cPerfumeria(string Nombre, float Precio, int Stock, string Marca, string Area, int ID, TipoProducto tipoProducto, float CantLitros);
+    cPerfumeria(string Nombre, float Precio, int Stock, string Marca,  int ID, TipoProducto tipoProducto, float CantLitros);
     ~cPerfumeria();
-    TipoProducto getTipoProducto();
 
     bool VerificarStock();
     
