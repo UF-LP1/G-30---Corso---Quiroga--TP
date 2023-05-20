@@ -8,6 +8,7 @@
 using namespace std;
 
 #include "cAsistente.h"
+#include "cCliente.h"
 
 /**
  * cAsistente implementation
@@ -27,19 +28,13 @@ cAsistente::cAsistente(Ticket _ticket, int _Numero)
 /**
  * @return int
  */
-int cAsistente::getNumero()
-{
-    return this->Numero;
-}
+
 
 /**
  * @param int
  * @return void
  */
-void cAsistente::setNumero(int Numero)
-{
-    this->Numero = Numero;
-}
+
 
 void cAsistente::setTicket(Ticket ticket){
     this->ticket = ticket;
@@ -53,9 +48,18 @@ void cAsistente::setTicket(Ticket ticket){
  */
 
  // Chequeen esto
-int cAsistente::GenerarTicket(Ticket _ticket, int Numero)
+void cAsistente::GenerarTicket(cCliente* cliente)
 {
-    return _ticket;
+    if (TipoTicket::PAMI == cliente->getTipoTicket()) {
+        if (cliente->getObraSocial() = !PAMI)
+            cout << "error obra social" << endl;
+    }
+    else {
+        
+    }
+
+    cTicket ticketcliente = new cTicket(cliente->getTipoTicket());
+    cliente->setTicket(ticketcliente);
 }
 
 cAsistente::~cAsistente() {

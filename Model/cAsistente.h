@@ -26,10 +26,8 @@ public:
  * @param Numero
  */
     static int contN;
-    cAsistente(Ticket _ticket, int _Numero);
+    cAsistente();
     ~cAsistente();
-    int getNumero() { return this->Numero; }
-    void setNumero(int Numero);
     Ticket getTicket() { return this->ticket; }
     void setTicket(Ticket ticket);
     
@@ -39,7 +37,7 @@ public:
  * @param Ticket
  * @param Numero
  */
-int GenerarTicket(enum Ticket, int Numero);  //voy a generar el numero que le corresponde dependiendo de a que sector quiero ir. Necesito contadores para cada sector
+void GenerarTicket(cCliente* cliente);  //voy a generar el numero que le corresponde dependiendo de a que sector quiero ir. Necesito contadores para cada sector
 
     
 };

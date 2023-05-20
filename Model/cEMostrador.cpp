@@ -40,10 +40,15 @@ void cEMostrador::setTipoEmpleado(TipoEmpleado tipoEmpleado){
  */
 void cEMostrador::LlamarCliente(cCliente* cliente)
 {
-    this->setCliente(cliente);
+    cTicket ticketCliente = cliente->getTicket();
+    if(ticketCliente==)
+    /*
+     this->setCliente(cliente);
     // int num = _cliente->getAsistente()->GenerarTicket();
     cout << "Numero de cliente " << cliente->getNumero() << " acercarse a mostrador" << endl;
     return;
+    */
+    
 } // CORREGIR
 
 /**
@@ -57,7 +62,7 @@ void cEMostrador::LlamarCliente(cCliente* cliente)
 float cEMostrador::EmitirFactura()
 {
     cCliente* _cliente = this->getcliente();
-    float _monto = _cliente->getcarrito()->VerTotal(); // corregido
+    float _monto = _cliente->getCarrito()->VerTotal(); // corregido
     cout << "Emitiendo Factura" << endl;
     return this->AplicarDescuento(_cliente->getObraSocial(), _monto);
 }

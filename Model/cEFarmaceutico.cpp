@@ -28,8 +28,11 @@ cEFarmaceutico::cEFarmaceutico(string _Nombre, int _ID, cCliente* _cliente) :cAt
 /**
  * @return void
  */
-void cEFarmaceutico::LlamarCliente() {
-    return;
+void cEFarmaceutico::LlamarCliente(cCliente* cliente) {
+    cTicket* ticketCliente = cliente->getTicket();
+    if (ticketCliente->getNumero() == this->numeroAtender && (ticketCliente->getTipoTicket() == TipoTicket::farmacia_obrasocial || ticketCliente->getTipoTicket() == TipoTicket::farmacia_particular || ticketCliente->getTipoTicket() == TipoTicket::PAMI)) {
+        EmitirFactura();
+    }
 }
 
 /**
@@ -38,9 +41,8 @@ void cEFarmaceutico::LlamarCliente() {
  * @param Factura
  * @return float
  */
-float cEFarmaceutico::EmitirFactura(float Factura) {
-    cCliente* _cliente = this->getcliente();   //corregido
-    float _monto = _cliente->getcarrito()->VerTotal();
+float cEFarmaceutico::EmitirFactura(cCliente* cliente) {
+    float _monto = _cliente->getCarrito()->VerTotal();
     cout << "Emitiendo Factura" << endl;
     return _monto;
 }

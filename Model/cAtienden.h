@@ -21,16 +21,16 @@ using namespace std;
 
 class cAtienden: public cEmpleado {
 protected:
-    
-    cCliente* cliente;
-public: 
-    cAtienden(string _Nombre, cCliente* _cliente);
+    int numeroAtender;
+public:
+
+    cAtienden(string _Nombre);
     ~cAtienden();
-    void setcliente(cCliente* cliente);
-    cCliente* getcliente() { return this->cliente; }
+    //void setcliente(cCliente* cliente);
+    //cCliente* getcliente() { return this->cliente; }
    
 
-    virtual void LlamarCliente();
+    virtual void LlamarCliente(cCliente* cliente);
     
 
     float virtual EmitirFactura();

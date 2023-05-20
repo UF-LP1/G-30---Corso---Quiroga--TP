@@ -9,6 +9,7 @@
 #include "../G30-Corso-Quiroga-TP/TipoProducto.h"
 #include "../Model/cAsistente.h"
 
+
 using namespace std;
 
 #ifndef _CCLIENTE_H
@@ -18,19 +19,20 @@ class cCliente
 {
 private:
     string Nombre;
-    Ticket ticket;
+    Ticket* ticket;
+    TipoTicket tipoticket;
     string Apellido;
     const int DNI;
     Pago pago;
     ObraSocial obraSocial;
-    cAtienden* atiende;
-    cCarrito* carrito;
+    cAtienden * atiende;
+    cCarrito * carrito;
     cAsistente* asistente;
     int numero;      
     float Facturado; 
 
 public:
-    cCliente(string _Nombre, string _Apellido, const int _DNI, Pago _pago, ObraSocial _obraSocial, cAtienden* _atiende, cCarrito* _carrito, cAsistente _asistente, int _numero, float _facturado);
+    cCliente(string _Nombre, string _Apellido, const int _DNI, Pago _pago, ObraSocial _obraSocial, cAtienden* _atiende, cCarrito* _carrito, cAsistente _asistente, int _numero, float _facturado, TipoTicket tipoticket);
     ~cCliente();
     string getNombre() { return this->Nombre; }
     void setNombre(string Nombre);

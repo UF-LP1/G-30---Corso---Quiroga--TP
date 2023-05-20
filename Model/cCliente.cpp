@@ -84,7 +84,7 @@ void cCliente::setFacturado(){
  */
 void cCliente::Pagar(Pago pago)
 {
-    float _factura = this->atiende->EmitirFactura();
+    float _factura = this->Facturado;
     if (pago == Efectivo)
     {
         cout << "El pago se realiza en efectivo" << endl;

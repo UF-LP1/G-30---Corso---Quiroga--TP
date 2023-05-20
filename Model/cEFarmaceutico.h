@@ -29,11 +29,11 @@ public:
  * @param ID
  * @param Factura
  */
-    cEFarmaceutico(string Nombre, int ID, cCliente* _cliente);
+    cEFarmaceutico(string Nombre, int ID);
     ~cEFarmaceutico();   
     string getNombre() { return this->Nombre; }
     void setNombre(string Nombre);
-    void LlamarCliente();
+    void LlamarCliente(cCliente* cliente);
     
     
 /**
