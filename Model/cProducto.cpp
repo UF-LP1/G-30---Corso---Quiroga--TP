@@ -21,6 +21,8 @@ cProducto::cProducto(string _Nombre, float _Precio, int _Stock, string _Marca,  
 	this->Marca = _Marca;
 	this->ID = _ID;
 	this->tipoProducto = _tipoProducto;
+	this->ID = cProducto::contProducto;
+	cProducto::contProducto++;
 }
 cProducto::~cProducto() {
 

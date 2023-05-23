@@ -31,9 +31,10 @@ public:
    
 
     virtual void LlamarCliente(cCliente* cliente);
-    
+    int getnumeroAtender() { return this->numeroAtender; }
+    void setnumeroAtender(int numeroAtender);
 
-    float virtual EmitirFactura();
+    float virtual EmitirFactura(cCliente* cliente);
 
 };
 

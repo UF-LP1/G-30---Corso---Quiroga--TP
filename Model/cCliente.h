@@ -26,7 +26,10 @@ private:
     Pago pago;
     ObraSocial obraSocial;
     cAtienden * atiende;
-    cCarrito * carrito;
+    cCarrito * carritoMedicamentos;
+    cCarrito* carritoPerfumeria;
+    cCarrito* carritoOrtopedia;
+    cCarrito* carritoGolosinas;
     cAsistente* asistente;
     int numero;      
     float Facturado; 
@@ -34,6 +37,7 @@ private:
 public:
     cCliente(string _Nombre, string _Apellido, const int _DNI, Pago _pago, ObraSocial _obraSocial, cAtienden* _atiende, cCarrito* _carrito, cAsistente _asistente, int _numero, float _facturado, TipoTicket tipoticket);
     ~cCliente();
+    void agregarProducto(cProducto* producto);
     string getNombre() { return this->Nombre; }
     void setNombre(string Nombre);
     Ticket getTicket() { return this->ticket; }

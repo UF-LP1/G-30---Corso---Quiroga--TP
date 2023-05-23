@@ -12,9 +12,7 @@ private:
 	int anio;
 public:
 #pragma region Constructor y Destructor:
-	cFecha();
-	cFecha(int d, int m, int a);
-	cFecha(int dia, int mes, int año, int hora, int minutos);
+	cFecha(int _d, int _m, int _a);
 	~cFecha();
 #pragma endregion
 

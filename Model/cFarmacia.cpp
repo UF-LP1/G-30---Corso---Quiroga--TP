@@ -112,28 +112,19 @@ void cFarmacia::atenderCliente(cCliente* cliente)
     if (this->Abierto)
     {
         // Esto lo hace el empleado de mostrador
-        cCarrito* carrito = cliente->getCarrito();
-        int i;
-        for (i = 0; i < carrito->getcontProducto(); i++)
-        {
-            // Si en mi lista de productos seleccione un medicamento saco un ticket de medicamento
-            cProducto* producto = carrito->getProducto(i);
-            if (producto->getTipoProducto() == TipoProducto:: Medicamento)
-            {
-                cliente->SacarTicket(asistente->GenerarTicket(Ticket::Farmacia, i));
-                cliente->setNumero(i);
-                this->empleadoMostrador->LlamarCliente(cliente);
-                // creo una funcion que suma a lo facturado
-                this->cliente->sumarFactura(this->EmitirFactura(cliente));
-            }
-            if (producto->getTipoProducto() == TipoProducto::Ortopedia)
-            {
-                /**
-                 *
-                 */
-            }
+        if (cliente->getCarritoMedicamentos()->getCant() > 0) {
+            if (cliente->getObraSocial() != ObraSocial::PAMI && cliente->getObraSocial() != ObraSocial::Sin) 
+                cliente->setTipoTicket(TipoTicket::farmacia_obrasocial);
+                if (cliente->getObraSocial() == ObraSocial::PAMI) 
+                    cliente->setTipoTicket(TipoTicket::PAMI);
+                    if (cliente->getObraSocial() == ObraSocial::Sin) 
+                        cliente->setTipoTicket(TipoTicket::farmacia_particular);
+            this->getFarmaceutico()->setnumeroAtender(this->asistente->GenerarTicket(cliente));
+            this->getFarmaceutico()->atenderCliente(cliente);
         }
     }
+    cajero->Cobrar(cliente);
+  
 }
 
 cFarmacia::~cFarmacia(){

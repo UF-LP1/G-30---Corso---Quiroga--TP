@@ -106,11 +106,12 @@ bool cCarrito::EliminarProducto(int ID) {
 /**
  * @return void
  */
-float cCarrito::VerTotal() {
+float cCarrito::VerTotal(TipoProducto producto) {
     int i;
     float ToR = 0;
     for (i = 0; i < contProducto; i++) {
-        ToR = ToR + this->_listaProductos[i]->getPrecio(); //RECORRO LA LISTA Y LE AGREGO LOS PRECIOS A LOS PRODUCTOS
+        if(producto == _listaProductos[i]->getTipoProducto())//veo que sea el producto correspondiente
+            ToR = ToR + this->_listaProductos[i]->getPrecio(); //RECORRO LA LISTA Y LE AGREGO LOS PRECIOS A LOS PRODUCTOS
     }
     return ToR;
 }

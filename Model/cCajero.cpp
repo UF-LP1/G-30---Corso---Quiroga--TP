@@ -50,8 +50,12 @@ void cCajero::setNombre(string Nombre) {
  * @param Factura
  * @return float
  */
-float cCajero::Cobrar(cCliente* cliente) {
+void cCajero::Cobrar(cCliente* cliente) {
     
+    float facturado = cliente->getFacturado();
+    cliente->Pagar(Pago::Debito); //hacerlo con random
+    cout << "Cobrado" << facturado << endl;
+
     
     // float totFarmacia = cEFarmaceutico::EmitirFactura(Factura);
     //float totMostrador = cEMostrador::EmitirFactura(Factura);

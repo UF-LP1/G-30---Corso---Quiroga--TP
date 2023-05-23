@@ -31,7 +31,7 @@ cEFarmaceutico::cEFarmaceutico(string _Nombre, int _ID, cCliente* _cliente) :cAt
 void cEFarmaceutico::LlamarCliente(cCliente* cliente) {
     cTicket* ticketCliente = cliente->getTicket();
     if (ticketCliente->getNumero() == this->numeroAtender && (ticketCliente->getTipoTicket() == TipoTicket::farmacia_obrasocial || ticketCliente->getTipoTicket() == TipoTicket::farmacia_particular || ticketCliente->getTipoTicket() == TipoTicket::PAMI)) {
-        EmitirFactura();
+       cliente->sumarFactura(EmitirFactura(cliente));
     }
 }
 
@@ -42,9 +42,23 @@ void cEFarmaceutico::LlamarCliente(cCliente* cliente) {
  * @return float
  */
 float cEFarmaceutico::EmitirFactura(cCliente* cliente) {
-    float _monto = _cliente->getCarrito()->VerTotal();
+    float _monto = cliente->getCarritoMedicamentos()->VerTotal();
     cout << "Emitiendo Factura" << endl;
-    return _monto;
+    return AplicarDescuento(cliente->getObraSocial(), _monto);
+}
+float cEFarmaceutico::AplicarDescuento(ObraSocial obraSocial, float Monto)
+{
+    float Descuento, Total;
+
+    if (obraSocial != Sin)
+    {
+        Descuento = (15.0 * Monto) / 100.0;
+        Total = Monto - Descuento;
+    }
+    else
+        Total = Monto;
+
+    return Total;
 }
 
 /**

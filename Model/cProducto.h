@@ -32,7 +32,7 @@ public:
     string getNombre();
     int getStock() { return this->Stock; }
     string getMarca() { return this->Marca; }
-    
+    static int contProducto;
     int getID() { return this->ID; }
     float getPrecio() { return this->Precio; }
     TipoProducto getTipoProducto() { return this->tipoProducto; }

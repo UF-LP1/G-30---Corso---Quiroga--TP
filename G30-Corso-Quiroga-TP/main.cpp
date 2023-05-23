@@ -32,9 +32,10 @@ using namespace std;
 
 int main()
 {
-
-	cEmpleado::cont = 0; // elemento static
+	// elementos static
+	cEmpleado::cont = 0; 
 	cAsistente::contN = 0;
+	cProducto::contProducto = 0;
 
 	// Creo la farmacia
 	cFarmacia* _farmacia = new cFarmacia(false, "Farmacia 1 ", true);
@@ -71,7 +72,7 @@ int main()
 	cCliente* cliente1 = new cCliente("Juan", "Garcia", 44665522, "CREDITO", "OSDE");
 	cCarrito* carrito = new cCarrito(Medicamento,1);
 	// Agrego los productos que quiere comprar el cliente
-	cliente1->getcarrito()->AgregarProducto(medicamento1);
+	cliente1->getCarrito()->AgregarProducto(medicamento1);
 	// hago que la farmacia atienda al cliente
 	_farmacia->atenderCliente(cliente1);
 

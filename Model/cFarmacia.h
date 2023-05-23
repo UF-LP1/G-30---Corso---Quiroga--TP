@@ -21,39 +21,7 @@ using namespace std;
 #ifndef _CFARMACIA_H
 #define _CFARMACIA_H
 
-class cFarmacia
-{
-
-public:
-    /**
-     * @param Fecha
-     * @param Abierto
-     * @param Nombre
-     * @param Perfumeria
-     * @param Ortopedia
-     * @param Limpio
-     * @param Producto
-     */
-    cFarmacia(cFecha* _Fecha, bool _Abierto, string _Nombre, bool _Limpio, string _Producto);
-    cFarmacia(bool Abierto, string Nombre, bool Limpio, cEmpleado** _listaEmpleados, cCarrito* _carritoFarmacia, int cantEmpleados);
-
-    bool AbrirFarmacia();
-
-    void CerrarFarmacia();
-    
-    bool getAbierto();
-    // inserto el producto en el carrito
-    void insertarProducto(cProducto* producto);
-    void atenderCliente(cCliente* cliente);
-    void insertarEmpleado(cEmpleado* empleado);
-
-    /**
-     * @param bool
-     */
-    void setAbierto(bool Abierto);
-
-protected:
-    ~cFarmacia();
+class cFarmacia{
 
 private:
     cFecha* Fecha; // VER
@@ -68,6 +36,41 @@ private:
     cEMostrador* empleadoMostrador;
     cAsistente* asistente;
     cCliente* cliente;
+    cEFarmaceutico* farmaceutico;
+    cEOrtopedia* ortopedista;
+    cEPerfumeria* perfumero;
+    cCajero* cajero;
+
+    //chequear e insertar empleados
+
+public:
+    /**
+     * @param Fecha
+     * @param Abierto
+     * @param Nombre
+     * @param Perfumeria
+     * @param Ortopedia
+     * @param Limpio
+     * @param Producto
+     */
+    cFarmacia(cFecha* _Fecha, bool _Abierto, string _Nombre, bool _Limpio, string _Producto);
+    cFarmacia(bool Abierto, string Nombre, bool Limpio, cEmpleado** _listaEmpleados, cCarrito* _carritoFarmacia, int cantEmpleados);
+    ~cFarmacia();
+    bool AbrirFarmacia();
+    
+    void CerrarFarmacia();
+    
+    bool getAbierto();
+    // inserto el producto en el carrito
+    void insertarProducto(cProducto* producto);
+    void atenderCliente(cCliente* cliente);
+    void insertarEmpleado(cEmpleado* empleado);
+
+    /**
+     * @param bool
+     */
+    void setAbierto(bool Abierto);  
+
 };
 
 #endif //_CFARMACIA_H

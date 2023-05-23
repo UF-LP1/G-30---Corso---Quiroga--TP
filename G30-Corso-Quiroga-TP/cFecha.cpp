@@ -1,13 +1,11 @@
 #include "cFecha.h"
-cFecha::cFecha() {
 
+cFecha::cFecha(int _d, int _m, int _a) {
+	this->dia = _d;
+	this->mes = _m;
+	this->anio = _a;
 }
-cFecha::cFecha(int d, int m, int a) {
 
-}
-cFecha::cFecha(int dia, int mes, int año, int hora, int minutos) {
-
-}
 cFecha::~cFecha() {
 
 }
@@ -58,5 +56,5 @@ void cFecha::VerificarFecha(int d, int m, int a) {
 		}
 	}
 	else
-		cout << "Mes Incorrecta" << endl;
+		cout << "Mes Incorrecto" << endl;
 }

@@ -22,6 +22,7 @@ class cEFarmaceutico: public cAtienden {
 protected:
     string Nombre;
 
+    
 public: 
     
 /**
@@ -34,6 +35,8 @@ public:
     string getNombre() { return this->Nombre; }
     void setNombre(string Nombre);
     void LlamarCliente(cCliente* cliente);
+   
+    
     
     
 /**

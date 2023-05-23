@@ -24,10 +24,21 @@ cCliente::cCliente(string _Nombre, string _Apellido, const int _DNI, Pago _pago,
     this->Nombre = _Nombre;
     this->Apellido = _Apellido;
     this->Facturado = 0;
+    this->carritoGolosinas = new cCarrito();
+    this->carritoPerfumeria = new cCarrito();
+    this->carritoOrtopedia = new cCarrito();
+    this->carritoMedicamentos = new cCarrito();
 }
 
 cCliente::~cCliente()
 {
+}
+
+void cCliente::agregarProducto(cProducto* producto){
+    if (producto->getTipoProducto() == TipoProducto::Golosinas)
+        this->carritoGolosinas->AgregarProducto(producto);
+    if (producto->getTipoProducto() == TipoProducto::Medicamento)
+        this->carritoMedicamentos->AgregarProducto(producto);
 }
 
 void cCliente::setObraSocial(ObraSocial _obraSocial)

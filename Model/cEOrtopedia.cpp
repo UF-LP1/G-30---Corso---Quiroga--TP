@@ -34,24 +34,24 @@ cEOrtopedia::cEOrtopedia(string _Nombre, int _ID, cCliente* _cliente) :cAtienden
 /**
  * @return void
  */
-void cEOrtopedia::LlamarCliente() {
-    return;
+void cEOrtopedia::LlamarCliente(cCliente* cliente) {
+    cTicket* ticketCliente = cliente->getTicket();
+    if (ticketCliente->getNumero() == this->numeroAtender && (ticketCliente->getTipoTicket() == TipoTicket::ortopedia) {
+        cliente->sumarFactura(EmitirFactura(cliente));
+    }
 }
 
 /**
-* 
 * Esta función genera un monto de los productos pertenecientes al sector donde trabaja este empleado.
-* 
+*
  * @param Factura
  * @return float
  */
-float cEOrtopedia::EmitirFactura() {
-    cCliente* _cliente = this->getcliente();
-    float _monto = _cliente->getCarrito()->VerTotal();//corregido
+float cEOrtopedia::EmitirFactura(cCliente* cliente) {
+    float _monto = cliente->getCarrito()->VerTotal(TipoProducto::Ortopedico);
     cout << "Emitiendo Factura" << endl;
     return _monto;
 }
-
 
 /**
  * @return void

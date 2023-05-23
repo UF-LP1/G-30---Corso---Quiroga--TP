@@ -78,7 +78,7 @@ float cEMostrador::AplicarDescuento(ObraSocial obraSocial, float Monto)
 {
     float Descuento, Total;
 
-    if (obraSocial != Ninguno)
+    if (obraSocial != Sin)
     {
         Descuento = (15.0 * Monto) / 100.0;
         Total = Monto - Descuento;

@@ -30,4 +30,5 @@ void cAtienden::setcliente(cCliente* cliente) {
 
 void cAtienden:: LlamarCliente() {}
 
-float cAtienden:: EmitirFactura() {}
+float cAtienden:: EmitirFactura() {
+}

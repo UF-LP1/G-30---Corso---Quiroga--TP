@@ -28,21 +28,21 @@ cEPerfumeria::cEPerfumeria(string _Nombre, int _ID, cCliente* _cliente) :cAtiend
 /**
  * @return void
  */
-void cEPerfumeria::LlamarCliente() {
-    return;
+void cEPerfumeria::LlamarCliente(cCliente* cliente) {
+    cTicket* ticketCliente = cliente->getTicket();
+    if (ticketCliente->getNumero() == this->numeroAtender && (ticketCliente->getTipoTicket() == TipoTicket::perfumería) {
+        cliente->sumarFactura(EmitirFactura(cliente));
+    }
 }
 
 /**
-*
 * Esta función genera un monto de los productos pertenecientes al sector donde trabaja este empleado.
-* 
+*
  * @param Factura
  * @return float
  */
-float cEPerfumeria::EmitirFactura() {
-    cCliente* _cliente = this->getcliente();
-    
-    float _monto = _cliente->getCarrito()->VerTotal(); //corregido
+float cEPerfumeria::EmitirFactura(cCliente* cliente) {
+    float _monto = cliente->getCarrito()->VerTotal(TipoProducto::Perfume);
     cout << "Emitiendo Factura" << endl;
     return _monto;
 }
