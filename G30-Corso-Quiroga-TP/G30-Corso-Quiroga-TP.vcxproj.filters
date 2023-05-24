@@ -36,9 +36,6 @@
     <ClCompile Include="..\Model\cELimpieza.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\Model\cEMostrador.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="..\Model\cEmpleado.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -75,7 +72,7 @@
     <ClCompile Include="cFecha.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="cFactura.cpp">
+    <ClCompile Include="..\Model\Ticket.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -96,9 +93,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\Model\cELimpieza.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Model\cEMostrador.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\Model\cEmpleado.h">
@@ -153,9 +147,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="TipoMedicamento.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="cFactura.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="TipoProducto.h">

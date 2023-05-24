@@ -69,18 +69,37 @@ int main()
 
 	_farmacia->AbrirFarmacia();
 
-	cCliente* cliente1 = new cCliente("Juan", "Garcia", 44665522, "CREDITO", "OSDE");
-	cCarrito* carrito = new cCarrito(Medicamento,1);
+	cCliente* cliente1 = new cCliente("Juan", "Garcia", 44665522, "Credito", "OSDE");
+	cCliente* cliente2 = new cCliente("Jose", "Dias", 43532267, "Debito", "SwissMedical");
+	cCliente* cliente3 = new cCliente("Maria", "Gomez", 30405060, "Efectivo", "UP");
+	cCliente* cliente4 = new cCliente("Victoria", "Gonzales", 32456678, "Aplicacion", "Medicus");
+
+	
 	// Agrego los productos que quiere comprar el cliente
-	cliente1->getCarrito()->AgregarProducto(medicamento1);
+	cliente1->getcarritoMedicamentos()->AgregarProducto(medicamento1);
+	cliente2->getcarritoGolosinas()->AgregarProducto(golosina1);
+	cliente3->getcarritoOrtopedia()->AgregarProducto(ortopedia1);
+	cliente4->getcarritoPerfumeria()->AgregarProducto(perfume1);
+
 	// hago que la farmacia atienda al cliente
 	_farmacia->atenderCliente(cliente1);
+	_farmacia->atenderCliente(cliente2);
+	_farmacia->atenderCliente(cliente3);
+	_farmacia->atenderCliente(cliente4);
 
-	delete carrito;
+	delete medicamento1;
+	delete golosina1;
+	delete ortopedia1;
 	delete perfume1;
 	delete empleadoPerfumeria;
+	delete empleadoOrtopedia;
+	delete empleadoMostrador;
+	delete farmaceutico;
 	delete cajero;
 	delete cliente1;
+	delete cliente2;
+	delete cliente3;
+	delete cliente4;
 
 	return 0;
 }

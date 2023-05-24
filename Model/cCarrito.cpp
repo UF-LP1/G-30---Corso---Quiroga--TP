@@ -3,7 +3,6 @@
  */
 #include <iostream>
 #include <string>
-#include <cTime>
 
 using namespace std;
 
@@ -60,22 +59,6 @@ void cCarrito::setcontProducto(int contProducto){
 /**
  * @return void
  */
-
-/*bool cCarrito::EliminarProducto(int ID) {
-    bool ToR = false;
-    cProducto** array = new cProducto * [this->MAX](); //copio la lista
-    for (int i = 0; i < this->contProducto; i++) {  // recorro la lista copiada
-        if (_listaProductos[i]->getID() == ID) //veo cuando coinside el ID con el ID que busco
-            ToR = true; //Si coinsiden, no lo copio en la lista auxiliar, simplemente cambio la variable ToR a true
-        else
-            array[i] = _listaProductos[i]; //lo copio en una lista auxiliar
-    }
-    if (ToR) {
-        this->_listaProductos = array;  // Si ToR = true, la listaProductos es ahora la lista auxiliar modificada (excluye el elemento que encontró con el ID, y si nunca lo encontró, la lista sigue igual)
-        contProducto--;
-    }
-    return ToR;
-}*/
 
 bool cCarrito::EliminarProducto(int ID) {
     bool ToR = false;

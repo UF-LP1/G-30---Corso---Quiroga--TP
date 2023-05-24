@@ -20,7 +20,7 @@ using namespace std;
   * @param Pago
   * @param ObraSocial
   */
-cCliente::cCliente(string _Nombre, string _Apellido, const int _DNI, Pago _pago, ObraSocial _obraSocial, cAtienden* _atiende, cCarrito* _carrito, cAsistente _asistente, int _numero, float _facturado) {
+cCliente::cCliente(string _Nombre, string _Apellido, const int _DNI, Pago _pago, ObraSocial _obraSocial, cAtienden* _atiende, cCarrito* _carrito, cAsistente* _asistente, int _numero, float _facturado) {
     this->Nombre = _Nombre;
     this->Apellido = _Apellido;
     this->Facturado = 0;
@@ -39,11 +39,41 @@ void cCliente::agregarProducto(cProducto* producto){
         this->carritoGolosinas->AgregarProducto(producto);
     if (producto->getTipoProducto() == TipoProducto::Medicamento)
         this->carritoMedicamentos->AgregarProducto(producto);
+    if (producto->getTipoProducto() == TipoProducto::Ortopedico)
+        this->carritoOrtopedia->AgregarProducto(producto);
+    if (producto->getTipoProducto() == TipoProducto::Perfume)
+        this->carritoPerfumeria->AgregarProducto(producto);
+    return;
 }
 
 void cCliente::setObraSocial(ObraSocial _obraSocial)
 {
     this->obraSocial = _obraSocial;
+    return;
+}
+
+void cCliente::setAtiende(cAtienden* atiende){
+    this->atiende = atiende;
+    return;
+}
+
+void cCliente::setcarritoMedicamentos(cCarrito* carritoMedicamentos){
+    this->carritoMedicamentos = carritoMedicamentos;
+    return;
+}
+
+void cCliente::setcarritoPerfumeria(cCarrito* carritoPerfumeria){
+    this->carritoPerfumeria = carritoPerfumeria;
+    return;
+}
+
+void cCliente::setcarritoOrtopedia(cCarrito* carritoOrtopedia){
+    this->carritoOrtopedia = carritoOrtopedia;
+    return;
+}
+
+void cCliente::setcarritoGolosinas(cCarrito* carritoGolosinas){
+    this->carritoGolosinas = carritoGolosinas;
     return;
 }
 
@@ -61,8 +91,15 @@ void cCliente::setNombre(string Nombre)
     return;
 }
 
-void cCliente::setTicket(Ticket ticket){
+
+
+void cCliente::setTicket(cTicket* ticket){
     this->ticket = ticket;
+    return;
+}
+
+void cCliente::setTipoTicket(TipoTicket tipoticket){
+    this->tipoticket = tipoticket;
     return;
 }
 
@@ -75,7 +112,7 @@ void cCliente::setApellido(string Apellido){
  * @param Ticket
  * @return void
  */
-void cCliente::SacarTicket(Ticket ticket){
+void cCliente::SacarTicket(cTicket* ticket){
 
         return;
 }
@@ -121,4 +158,8 @@ void cCliente::Pagar(Pago pago)
 void cCliente::ElegirProducto()
 {
     return;
+}
+
+void cCliente::sumarFactura(float factura){
+        this->Facturado += factura;
 }

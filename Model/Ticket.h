@@ -10,7 +10,7 @@ using namespace std;
 #define _TICKET_H
 
 enum TipoTicket
-{ farmacia_obrasocial, farmacia_particular, PAMI, perfumería, ortopedia };
+{ farmacia_obrasocial, farmacia_particular, pami, perfumeria, ortopedia };
 class cTicket {
 private: 
 	int numero;
@@ -19,8 +19,10 @@ private:
 public:
 	cTicket(TipoTicket ticket);
 	~cTicket();
-	TipoTicket getTipoTicket();
-	int getnumero();
+	TipoTicket getTipoTicket() { return this->ticket; }
+	void setTipoTicket(TipoTicket ticket);
+	void setNumero(int numero);
+	int getNumero() {return this->numero;}
 
 };
 #endif //_TICKET_H

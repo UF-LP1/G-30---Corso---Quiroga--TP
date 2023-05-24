@@ -3,9 +3,9 @@
  */
 #include <iostream>
 #include <string>
-#include <cTime>
+
 #include "cAtienden.h"
-#include "cEmpleado.h"
+
 using namespace std;
 
 
@@ -28,7 +28,14 @@ void cAtienden::setcliente(cCliente* cliente) {
 }
 
 
-void cAtienden:: LlamarCliente() {}
+void cAtienden:: LlamarCliente(cCliente* cliente) {
 
-float cAtienden:: EmitirFactura() {
+}
+
+void cAtienden::setnumeroAtender(int numeroAtender){
+	this->numeroAtender = numeroAtender;
+	return;
+}
+
+float cAtienden:: EmitirFactura(cCliente* cliente) {
 }

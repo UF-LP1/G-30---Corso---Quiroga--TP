@@ -20,7 +20,6 @@ private:
     TipoAdmision tipoAdmision;
     int Unidades;
     TipoMedicamento tipoMedicamento;
-    string Medico;
     ObraSocial obraSocial;
 
 public: 
@@ -33,18 +32,20 @@ public:
  * @param Medico
  * @param ObraSocial
  */
-    cReceta(string Nombre, TipoAdmision tipoAdmision, int Unidades, string Medicamento, string Medico, ObraSocial obraSocial);
+    cReceta(string Nombre, TipoAdmision tipoAdmision, int Unidades, TipoMedicamento tipoMedicamento, ObraSocial obraSocial);
     ~cReceta(); 
     string getNombre() { return this->Nombre; }
     void setNombre(string Nombre);
+
     TipoAdmision gettipoAdmision() { return this->tipoAdmision; }
     void settipoAdmision(TipoAdmision tipoAdmision);
+
     TipoMedicamento gettipoMedicamento() { return this->tipoMedicamento; }
     void settipoMedicamento(TipoMedicamento tipoMedicamento);
+
     int getCantidad() { return this->Unidades; }
     void setCantidad(int Unidades);
-    string getMedico() { return this->Medico; }
-    void setMedico(string Medico);
+
     ObraSocial getObraSocial() { return this->obraSocial; }
     void setObraSocial(ObraSocial obraSocial);
 

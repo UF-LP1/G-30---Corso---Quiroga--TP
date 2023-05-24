@@ -28,23 +28,19 @@ public:
 /**
  * @param Nombre
  * @param ID
- * @param Factura
  */
-    cEFarmaceutico(string Nombre, int ID);
+    cEFarmaceutico(string Nombre, int ID, cCliente* cliente);
     ~cEFarmaceutico();   
     string getNombre() { return this->Nombre; }
     void setNombre(string Nombre);
     void LlamarCliente(cCliente* cliente);
+    
+    
+    float AplicarDescuento(ObraSocial obraSocial, float Monto);
+    float EmitirFactura(cCliente* cliente);
+
    
-    
-    
-    
-/**
- * @param Factura
- */
-    void AconsejarCliente();
-    
-    string getNombre();
+
     
 /**
  * @param string

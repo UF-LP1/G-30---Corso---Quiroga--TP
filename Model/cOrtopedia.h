@@ -19,7 +19,6 @@ using namespace std;
 class cOrtopedia: public cProducto {
 private: 
     int CantUnidades;
-    string Color;
 
 public: 
     
@@ -32,15 +31,17 @@ public:
  * @param CantUnidades
  * @param Color
  */
-    cOrtopedia(string Nombre, float Precio, int Stock, string Marca,  int ID, TipoProducto tipoProducto, int CantUnidades, string Color);
+    cOrtopedia(string Nombre, float Precio, int Stock, string Marca,  int ID, TipoProducto tipoProducto, int CantUnidades);
     ~cOrtopedia();    
-    bool VerificarStock();
+    bool VerificarStock(int Stock);
     float getPrecio();
     
 /**
  * @param float
  */
     void setPrecio(float Precio);
+    int getStock();
+    void setStock(int Stock);
 
 };
 

@@ -76,12 +76,28 @@ bool cFarmacia::getAbierto()
 
 void cFarmacia::insertarEmpleado(cEmpleado* empleado)
 {
-    // Y así con el resto...
-    if (empleado->getTipoEmpleado() == TipoEmpleado::Mostrador)
+    /*
+    * if (empleado->getTipoEmpleado() == TipoEmpleado::Mostrador)
         this->empleadoMostrador = empleado;
 
     this->_listaEmpleados[this->cantEmpleados] = empleado;
     this->cantEmpleados++;
+    */
+  
+    
+}
+
+void cFarmacia::setFarmaceutico(cEFarmaceutico* farmaceutico){
+    this->farmaceutico = farmaceutico;
+    return;
+}
+void cFarmacia::setEPerfumeria(cEPerfumeria* perfumero){
+    this->perfumero = perfumero;
+    return;
+}
+void cFarmacia::setEOrtopedia(cEOrtopedia* ortopedista){
+    this->ortopedista = ortopedista;
+    return;
 }
 
 /**
@@ -111,17 +127,28 @@ void cFarmacia::atenderCliente(cCliente* cliente)
     // Me fijo si la farmacia esta abierta
     if (this->Abierto)
     {
-        // Esto lo hace el empleado de mostrador
-        if (cliente->getCarritoMedicamentos()->getCant() > 0) {
+        if (cliente->getcarritoMedicamentos()->getCant() > 0) {
             if (cliente->getObraSocial() != ObraSocial::PAMI && cliente->getObraSocial() != ObraSocial::Sin) 
                 cliente->setTipoTicket(TipoTicket::farmacia_obrasocial);
                 if (cliente->getObraSocial() == ObraSocial::PAMI) 
-                    cliente->setTipoTicket(TipoTicket::PAMI);
+                    cliente->setTipoTicket(TipoTicket::pami);
                     if (cliente->getObraSocial() == ObraSocial::Sin) 
                         cliente->setTipoTicket(TipoTicket::farmacia_particular);
             this->getFarmaceutico()->setnumeroAtender(this->asistente->GenerarTicket(cliente));
             this->getFarmaceutico()->atenderCliente(cliente);
         }
+        if (cliente->getcarritoPerfumeria()->getCant() > 0) {
+            cliente->setTipoTicket(TipoTicket::perfumeria);
+            this->getEPerfumeria()->setnumeroAtender(this->asistente->GenerarTicket(cliente));
+            this->getEPerfumeria()->atenderCliente(cliente);
+        }
+        if (cliente->getcarritoOrtopedia()->getCant() > 0) {
+            cliente->setTipoTicket(TipoTicket::ortopedia);
+            this->getEOrtopedia()->setnumeroAtender(this->asistente->GenerarTicket(cliente));
+            this->getEOrtopedia()->atenderCliente(cliente);
+        }
+      
+
     }
     cajero->Cobrar(cliente);
   

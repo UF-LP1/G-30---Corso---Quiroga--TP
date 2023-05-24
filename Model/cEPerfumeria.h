@@ -25,22 +25,16 @@ public:
 /**
  * @param Nombre
  * @param ID
- * @param Factura
  */
     cEPerfumeria(string _Nombre, int _ID, cCliente* _cliente);
     ~cEPerfumeria();    
-    void LlamarCliente();
+    void LlamarCliente(cCliente* cliente);
     string getNombre() { return this->Nombre; }
     int getID() { return this->ID; }
     
-/**
- * @param Factura
- */
-    float EmitirFactura();
-    
-    void Asesorar();
-    
-    string getNombre();
+
+    float EmitirFactura(cCliente* cliente);
+  
     
 /**
  * @param string

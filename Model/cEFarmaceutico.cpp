@@ -17,7 +17,6 @@ using namespace std;
 /**
  * @param Nombre
  * @param ID
- * @param Factura
  */
 cEFarmaceutico::cEFarmaceutico(string _Nombre, int _ID, cCliente* _cliente) :cAtienden(_Nombre, _cliente) {
     this->Nombre = _Nombre;
@@ -30,7 +29,7 @@ cEFarmaceutico::cEFarmaceutico(string _Nombre, int _ID, cCliente* _cliente) :cAt
  */
 void cEFarmaceutico::LlamarCliente(cCliente* cliente) {
     cTicket* ticketCliente = cliente->getTicket();
-    if (ticketCliente->getNumero() == this->numeroAtender && (ticketCliente->getTipoTicket() == TipoTicket::farmacia_obrasocial || ticketCliente->getTipoTicket() == TipoTicket::farmacia_particular || ticketCliente->getTipoTicket() == TipoTicket::PAMI)) {
+    if (ticketCliente->getNumero() == this->numeroAtender && (ticketCliente->getTipoTicket() == TipoTicket::farmacia_obrasocial || ticketCliente->getTipoTicket() == TipoTicket::farmacia_particular || ticketCliente->getTipoTicket() == TipoTicket::pami)) {
        cliente->sumarFactura(EmitirFactura(cliente));
     }
 }
@@ -38,11 +37,11 @@ void cEFarmaceutico::LlamarCliente(cCliente* cliente) {
 /**
 * Esta función genera un monto de los productos pertenecientes al sector donde trabaja este empleado.
 * 
- * @param Factura
+ 
  * @return float
  */
 float cEFarmaceutico::EmitirFactura(cCliente* cliente) {
-    float _monto = cliente->getCarritoMedicamentos()->VerTotal();
+    float _monto = cliente->getcarritoMedicamentos()->VerTotal(TipoProducto::Medicamento);
     cout << "Emitiendo Factura" << endl;
     return AplicarDescuento(cliente->getObraSocial(), _monto);
 }
@@ -61,20 +60,12 @@ float cEFarmaceutico::AplicarDescuento(ObraSocial obraSocial, float Monto)
     return Total;
 }
 
-/**
- * @return void
- */
-void cEFarmaceutico::AconsejarCliente() {
-    return;
-}
+
 
 /**
  * @return string
  */
-string cEFarmaceutico::getNombre() {
-    return this->Nombre;
 
-}
 
 /**
  * @param string

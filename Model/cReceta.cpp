@@ -22,21 +22,18 @@ using namespace std;
  * @param Medico
  * @param ObraSocial
  */
-cReceta::cReceta(string _Nombre, TipoAdmision _tipoAdmision, int _Unidades, string _Medicamento, string _Medico, ObraSocial _obraSocial) {
+cReceta::cReceta(string _Nombre, TipoAdmision _tipoAdmision, int _Unidades, TipoMedicamento _tipoMedicamento, ObraSocial _obraSocial) {
     this->Nombre = _Nombre;
     this->tipoAdmision = _tipoAdmision;
     this->Unidades = _Unidades;
-    this->Medicamento = _Medicamento;
-    this->Medico = _Medico;
+    this->tipoMedicamento = _tipoMedicamento;
     this->obraSocial = _obraSocial;
 }
 
 /**
  * @return int
  */
-int cReceta::getCantidad() {
-    return this->Unidades;
-}
+
 
 /**
  * @param int
@@ -47,6 +44,29 @@ void cReceta::setCantidad(int Unidades) {
     return;
 }
 
+void cReceta::setObraSocial(ObraSocial obraSocial)
+{
+    this->obraSocial = obraSocial;
+    return;
+}
+
 cReceta::~cReceta() {
 
+}
+
+void cReceta::setNombre(string Nombre)
+{
+    this->Nombre = Nombre;
+    return;
+}
+
+void cReceta::settipoAdmision(TipoAdmision tipoAdmision)
+{
+    this->tipoAdmision = tipoAdmision;
+    return;
+}
+
+void cReceta::settipoMedicamento(TipoMedicamento tipoMedicamento){
+    this->tipoMedicamento = tipoMedicamento;
+    return;
 }

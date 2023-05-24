@@ -53,17 +53,12 @@ void cCajero::setNombre(string Nombre) {
 void cCajero::Cobrar(cCliente* cliente) {
     
     float facturado = cliente->getFacturado();
+    if (cliente->getcarritoGolosinas()->getCant() > 0) {
+       facturado += cliente->getcarritoGolosinas()->VerTotal(TipoProducto::Golosinas); //rechequeo por si se mete otro producto
+    }
     cliente->Pagar(Pago::Debito); //hacerlo con random
     cout << "Cobrado" << facturado << endl;
-
     
-    // float totFarmacia = cEFarmaceutico::EmitirFactura(Factura);
-    //float totMostrador = cEMostrador::EmitirFactura(Factura);
-    //float totOrtopedia = cEOrtopedia::EmitirFactura(Factura);
-    //float totPerfumeria = cEPerfumeria::EmitirFactura(Factura);
-
-    //float TOTAL = totFarmacia + totMostrador + totOrtopedia + totPerfumeria;
-    //return TOTAL;
 }
 
 cCajero::~cCajero() {

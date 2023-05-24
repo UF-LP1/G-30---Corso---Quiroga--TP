@@ -10,7 +10,7 @@ using namespace std;
 
 #ifndef _CELIMPIEZA_H
 #define _CELIMPIEZA_H
-#include "cFecha.h"
+
 #include "cEmpleado.h"
 
 

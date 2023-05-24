@@ -32,14 +32,15 @@ public:
  */
     cGolosinas(string Nombre, float Precio, int Stock, string Marca, int ID, TipoProducto tipoProducto, cFecha* FechaVencimiento);
     ~cGolosinas();
-    bool VerificarStock();
-    
+    bool VerificarStock(int Stock);
+    int getStock();
     float getPrecio();
     
 /**
  * @param float
  */
     void setPrecio(float Precio);
+    void setStock(int Stock);
 };
 
 #endif //_CGOLOSINAS_H

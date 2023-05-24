@@ -34,14 +34,15 @@ public:
     cPerfumeria(string Nombre, float Precio, int Stock, string Marca,  int ID, TipoProducto tipoProducto, float CantLitros);
     ~cPerfumeria();
 
-    bool VerificarStock();
-    
+    bool VerificarStock(int Stock);
+    int getStock(int Stock);
+    void setStock(int Stock);
     float getPrecio();
     
 /**
  * @param float
  */
-void setPrecio(float Precio);
+    void setPrecio(float Precio);
 
 
 };

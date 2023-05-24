@@ -18,7 +18,7 @@ using namespace std;
   * @param Ticket
   * @param Numero
   */
-cAsistente::cAsistente(Ticket _ticket, int _Numero)
+cAsistente::cAsistente(cTicket* _ticket, int _Numero)
 {
     this->Numero = _Numero;
     this->Numero = cAsistente::contN;
@@ -36,7 +36,7 @@ cAsistente::cAsistente(Ticket _ticket, int _Numero)
  */
 
 
-void cAsistente::setTicket(Ticket ticket){
+void cAsistente::setTicket(cTicket* ticket){
     this->ticket = ticket;
     return;
 }
@@ -50,15 +50,15 @@ void cAsistente::setTicket(Ticket ticket){
  // Chequeen esto
 void cAsistente::GenerarTicket(cCliente* cliente)
 {
-    if (TipoTicket::PAMI == cliente->getTipoTicket()) {
-        if (cliente->getObraSocial() = !PAMI)
+    if (TipoTicket::pami == cliente->getTipoTicket()) {
+        if (cliente->getObraSocial() =! PAMI)
             cout << "error obra social" << endl;
     }
     else {
         
     }
 
-    cTicket ticketcliente = new cTicket(cliente->getTipoTicket());
+    cTicket* ticketcliente = new cTicket(cliente->getTipoTicket());
     cliente->setTicket(ticketcliente);
 }
 

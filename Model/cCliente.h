@@ -15,11 +15,10 @@ using namespace std;
 #ifndef _CCLIENTE_H
 #define _CCLIENTE_H
 
-class cCliente
-{
+class cCliente{
 private:
     string Nombre;
-    Ticket* ticket;
+    cTicket* ticket;
     TipoTicket tipoticket;
     string Apellido;
     const int DNI;
@@ -35,22 +34,45 @@ private:
     float Facturado; 
 
 public:
-    cCliente(string _Nombre, string _Apellido, const int _DNI, Pago _pago, ObraSocial _obraSocial, cAtienden* _atiende, cCarrito* _carrito, cAsistente _asistente, int _numero, float _facturado, TipoTicket tipoticket);
+    cCliente(string Nombre, string Apellido, const int DNI, Pago pago, ObraSocial obraSocial, cAtienden* atiende, cCarrito* carrito, cAsistente* asistente, int numero, float facturado, TipoTicket tipoticket);
     ~cCliente();
     void agregarProducto(cProducto* producto);
+
     string getNombre() { return this->Nombre; }
     void setNombre(string Nombre);
-    Ticket getTicket() { return this->ticket; }
-    void setTicket(Ticket ticket);
+
+    cTicket* getTicket() { return this->ticket; }
+    void setTicket(cTicket* ticket);
+
+    TipoTicket getTipoTicket() { return this->tipoticket;}
+    void setTipoTicket(TipoTicket tipoticket);
+
     string getApellido() { return this->Apellido; }
     void setApellido(string Apellido);
+
     ObraSocial getObraSocial() { return this->obraSocial; }
     void setObraSocial(ObraSocial obraSocial);
+
     cAtienden* getAtiende() { return this->atiende; }
-    cCarrito* getCarrito() { return this->carrito; }
+    void setAtiende(cAtienden* atiende);
+
+    cCarrito* getcarritoMedicamentos() { return this->carritoMedicamentos; }
+    void setcarritoMedicamentos(cCarrito* carritoMedicamentos);
+
+    cCarrito* getcarritoPerfumeria() { return this->carritoPerfumeria; }
+    void setcarritoPerfumeria(cCarrito* carritoPerfumeria);
+
+    cCarrito* getcarritoOrtopedia() { return this->carritoOrtopedia; }
+    void setcarritoOrtopedia(cCarrito* carritoOrtopedia);
+
+    cCarrito* getcarritoGolosinas() { return this->carritoGolosinas; }
+    void setcarritoGolosinas(cCarrito* carritoGolosinas);
+
     cAsistente* getAsistente() { return this->asistente; }
+
     int getNumero() { return this->numero; }
     void setNumero();
+
     float getFacturado() { return this->Facturado; }
     void setFacturado();
 
@@ -64,7 +86,7 @@ public:
     /**
      * @param Ticket
      */
-    void SacarTicket(Ticket ticket);
+    void SacarTicket(cTicket* ticket);
 
     /**
      * @param Pago
@@ -73,9 +95,7 @@ public:
 
     void ElegirProducto();
     // le agrego lo que me pasan de la factura
-    void sumarFactura(float factura)
-    {
-        this->Facturado += factura;
-    }
+    void sumarFactura(float factura);
+   
 };
 #endif //_CCLIENTE_H

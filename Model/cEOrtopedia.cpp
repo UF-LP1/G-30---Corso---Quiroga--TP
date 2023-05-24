@@ -36,7 +36,7 @@ cEOrtopedia::cEOrtopedia(string _Nombre, int _ID, cCliente* _cliente) :cAtienden
  */
 void cEOrtopedia::LlamarCliente(cCliente* cliente) {
     cTicket* ticketCliente = cliente->getTicket();
-    if (ticketCliente->getNumero() == this->numeroAtender && (ticketCliente->getTipoTicket() == TipoTicket::ortopedia) {
+    if (ticketCliente->getNumero() == this->numeroAtender && (ticketCliente->getTipoTicket() == TipoTicket::ortopedia)) {
         cliente->sumarFactura(EmitirFactura(cliente));
     }
 }
@@ -48,25 +48,17 @@ void cEOrtopedia::LlamarCliente(cCliente* cliente) {
  * @return float
  */
 float cEOrtopedia::EmitirFactura(cCliente* cliente) {
-    float _monto = cliente->getCarrito()->VerTotal(TipoProducto::Ortopedico);
+    float _monto = cliente->getcarritoOrtopedia()->VerTotal(TipoProducto::Ortopedico);
     cout << "Emitiendo Factura" << endl;
     return _monto;
 }
 
-/**
- * @return void
- */
-void cEOrtopedia::Asesorar() {
-    return;
-}
+
 
 /**
  * @return string
  */
-string cEOrtopedia::getNombre() {
-    return this->Nombre;
 
-}
 
 /**
  * @param string
@@ -76,6 +68,12 @@ void cEOrtopedia::setNombre(string Nombre) {
     this->Nombre = Nombre;
     return;
 
+}
+
+void cEOrtopedia::setID(int ID)
+{
+    this->ID = ID;
+    return;
 }
 
 cEOrtopedia::~cEOrtopedia() {

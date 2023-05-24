@@ -44,7 +44,7 @@ public:
 
     bool EliminarProducto(int ID);
 
-    float VerTotal();
+    float VerTotal(TipoProducto producto);
 
     cProducto* BuscarProducto(int ID);
 };

@@ -36,8 +36,12 @@ cPerfumeria::cPerfumeria(string _Nombre, float _Precio, int _Stock, string _Marc
 /**
  * @return bool
  */
-bool cPerfumeria::VerificarStock() {
-    return false;
+bool cPerfumeria::VerificarStock(int Stock) {
+     bool queda= false;
+    if(this->Stock>0)
+        queda=true;
+    
+    return queda;
 }
 
 /**
@@ -55,6 +59,21 @@ void cPerfumeria::setPrecio(float Precio) {
     this->Precio = Precio;
     return;
 }
+/**
+ * @return int
+ */
+int cPerfumeria::getStock(int Stock){
+    return this->Stock;
+}
+void cPerfumeria::setStock(int Stock)
+{
+    this->Stock = Stock;
+    return;
+}
+/**
+ * @param int
+ * @return void
+ */
 
 
 cPerfumeria::~cPerfumeria() {

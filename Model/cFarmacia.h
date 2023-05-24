@@ -15,7 +15,10 @@
 #include "../Model/cEmpleado.h"
 #include "../Model/cCliente.h"
 #include "../Model/cEMostrador.h"
-
+#include "../Model/cEFarmaceutico.h"
+#include "../Model/cEOrtopedia.h"
+#include "../Model/cEPerfumeria.h"
+#include "../Model/cCajero.h"
 using namespace std;
 
 #ifndef _CFARMACIA_H
@@ -24,12 +27,12 @@ using namespace std;
 class cFarmacia{
 
 private:
-    cFecha* Fecha; // VER
+    cFecha* Fecha; 
     bool Abierto;
     string Nombre;
     bool Limpio;
     string Producto;
-    // faltan todos los demás atributos
+    
     cCarrito* _carritoFarmacia;
     cEmpleado** _listaEmpleados;
     int cantEmpleados;
@@ -40,8 +43,6 @@ private:
     cEOrtopedia* ortopedista;
     cEPerfumeria* perfumero;
     cCajero* cajero;
-
-    //chequear e insertar empleados
 
 public:
     /**
@@ -65,6 +66,16 @@ public:
     void insertarProducto(cProducto* producto);
     void atenderCliente(cCliente* cliente);
     void insertarEmpleado(cEmpleado* empleado);
+
+    cEFarmaceutico* getFarmaceutico() { return this->farmaceutico; }
+    void setFarmaceutico(cEFarmaceutico* farmaceutico);
+
+    cEPerfumeria* getEPerfumeria() { return this->perfumero; }
+    void setEPerfumeria(cEPerfumeria* perfumero);
+    
+    cEOrtopedia* getEOrtopedia() { return this->ortopedista; }
+    void setEOrtopedia(cEOrtopedia* ortopedista);
+
 
     /**
      * @param bool

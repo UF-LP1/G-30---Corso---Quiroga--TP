@@ -30,7 +30,7 @@ cEPerfumeria::cEPerfumeria(string _Nombre, int _ID, cCliente* _cliente) :cAtiend
  */
 void cEPerfumeria::LlamarCliente(cCliente* cliente) {
     cTicket* ticketCliente = cliente->getTicket();
-    if (ticketCliente->getNumero() == this->numeroAtender && (ticketCliente->getTipoTicket() == TipoTicket::perfumería) {
+    if (ticketCliente->getNumero() == this->numeroAtender && (ticketCliente->getTipoTicket() == TipoTicket::perfumeria)) {
         cliente->sumarFactura(EmitirFactura(cliente));
     }
 }
@@ -42,23 +42,16 @@ void cEPerfumeria::LlamarCliente(cCliente* cliente) {
  * @return float
  */
 float cEPerfumeria::EmitirFactura(cCliente* cliente) {
-    float _monto = cliente->getCarrito()->VerTotal(TipoProducto::Perfume);
+    float _monto = cliente->getcarritoPerfumeria()->VerTotal(TipoProducto::Perfume);
     cout << "Emitiendo Factura" << endl;
     return _monto;
 }
-
-/**
- * @return void
- */
 
 
 /**
  * @return string
  */
-string cEPerfumeria::getNombre() {
-    return this->Nombre;
 
-}
 
 /**
  * @param string
@@ -74,7 +67,3 @@ cEPerfumeria::~cEPerfumeria() {
 
 }
 
-void Asesorar()
-{
-    return;
-}

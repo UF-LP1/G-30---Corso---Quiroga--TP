@@ -24,21 +24,24 @@ using namespace std;
  * @param CantUnidades
  * @param Color
  */
-cOrtopedia::cOrtopedia(string _Nombre, float _Precio, int _Stock, string _Marca,  int _ID, TipoProducto _tipoProducto, int _CantUnidades, string _Color) :cProducto(_Nombre, _Precio, _Stock, _Marca, _ID, _tipoProducto) {
+cOrtopedia::cOrtopedia(string _Nombre, float _Precio, int _Stock, string _Marca,  int _ID, TipoProducto _tipoProducto, int _CantUnidades) :cProducto(_Nombre, _Precio, _Stock, _Marca, _ID, _tipoProducto) {
     this->Nombre = _Nombre;
     this->Precio = _Precio;
     this->Stock = _Stock;
     this->Marca = _Marca;
     this->CantUnidades = _CantUnidades;
-    this->Color = _Color;
     this->tipoProducto = tipoProducto;
 }
 
 /**
  * @return bool
  */
-bool cOrtopedia::VerificarStock() {
-    return false;
+bool cOrtopedia::VerificarStock(int Stock) {
+     bool queda= false;
+    if(this->Stock>0)
+        queda=true;
+    
+    return queda;
 }
 
 /**
@@ -55,6 +58,20 @@ float cOrtopedia::getPrecio() {
  */
 void cOrtopedia::setPrecio(float Precio) {
     this->Precio = Precio;
+    return;
+}
+/**
+ * @return int
+ */
+int cOrtopedia::getStock(){
+    return this->Stock;
+}
+/**
+ * @param int
+ * @return void
+ */
+void cOrtopedia::setStock(int Stock) {
+    this->Stock = Stock;
     return;
 }
 

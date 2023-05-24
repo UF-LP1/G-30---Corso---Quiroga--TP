@@ -25,27 +25,26 @@ public:
 /**
  * @param Nombre
  * @param ID
- * @param Factura
  */
     cEOrtopedia(string _Nombre, int _ID, cCliente* _cliente);
     ~cEOrtopedia();    
-    void LlamarCliente();
+    void LlamarCliente(cCliente* cliente);
     string getNombre() { return this->Nombre; }
+    void setNombre(string Nombre);
     int getID() { return this->ID; }
+    void setID(int ID);
     
-/**
- * @param Factura
- */
-    float EmitirFactura();
+
+    float EmitirFactura(cCliente* cliente);
+   
+   
     
-    void Asesorar();
-    
-    string getNombre();
+
     
 /**
  * @param string
  */
-    void setNombre(string Nombre);
+   
    
 
 };

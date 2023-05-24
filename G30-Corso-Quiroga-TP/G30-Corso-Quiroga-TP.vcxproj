@@ -26,7 +26,6 @@
     <ClCompile Include="..\Model\cCliente.cpp" />
     <ClCompile Include="..\Model\cEFarmaceutico.cpp" />
     <ClCompile Include="..\Model\cELimpieza.cpp" />
-    <ClCompile Include="..\Model\cEMostrador.cpp" />
     <ClCompile Include="..\Model\cEmpleado.cpp" />
     <ClCompile Include="..\Model\cEOrtopedia.cpp" />
     <ClCompile Include="..\Model\cEPerfumeria.cpp" />
@@ -37,7 +36,7 @@
     <ClCompile Include="..\Model\cPerfumeria.cpp" />
     <ClCompile Include="..\Model\cProducto.cpp" />
     <ClCompile Include="..\Model\cReceta.cpp" />
-    <ClCompile Include="cFactura.cpp" />
+    <ClCompile Include="..\Model\Ticket.cpp" />
     <ClCompile Include="cFecha.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
@@ -49,7 +48,6 @@
     <ClInclude Include="..\Model\cCliente.h" />
     <ClInclude Include="..\Model\cEFarmaceutico.h" />
     <ClInclude Include="..\Model\cELimpieza.h" />
-    <ClInclude Include="..\Model\cEMostrador.h" />
     <ClInclude Include="..\Model\cEmpleado.h" />
     <ClInclude Include="..\Model\cEOrtopedia.h" />
     <ClInclude Include="..\Model\cEPerfumeria.h" />
@@ -64,7 +62,6 @@
     <ClInclude Include="..\Model\Pago.h" />
     <ClInclude Include="..\Model\Ticket.h" />
     <ClInclude Include="..\Model\TipoAdmision.h" />
-    <ClInclude Include="cFactura.h" />
     <ClInclude Include="cFecha.h" />
     <ClInclude Include="TipoEmpleado.h" />
     <ClInclude Include="TipoMedicamento.h" />

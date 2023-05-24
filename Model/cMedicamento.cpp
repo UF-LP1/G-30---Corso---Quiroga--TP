@@ -41,9 +41,13 @@ cMedicamento::cMedicamento(string _Nombre, float _Precio, int _Stock, string _Ma
 /**
  * @return bool
  */
-bool cMedicamento::VerificarStock()
+bool cMedicamento::VerificarStock(int Stock)
 {
-    return false;
+     bool queda= false;
+    if(this->Stock>0)
+        queda=true;
+    
+    return queda;
 }
 
 /**
@@ -63,7 +67,20 @@ void cMedicamento::setPrecio(float Precio)
     this->Precio = Precio;
     return;
 }
-
+/**
+ * @return int
+ */
+int cMedicamento::getStock(){
+    return this->Stock;
+}
+/**
+ * @param int
+ * @return void
+ */
+void cMedicamento::setStock(int Stock) {
+    this->Stock = Stock;
+    return;
+}
 cMedicamento::~cMedicamento()
 {
 }

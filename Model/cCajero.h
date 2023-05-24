@@ -37,7 +37,7 @@ public:
 /**
  * @param Factura
  */
-    float Cobrar(cCliente * cliente);
+    void Cobrar(cCliente * cliente);
 
 };
 

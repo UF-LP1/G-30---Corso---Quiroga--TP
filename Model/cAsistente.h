@@ -17,7 +17,8 @@ using namespace std;
 
 class cAsistente {
 private:
-    Ticket ticket;
+    cTicket* ticket;
+    cCliente* cliente;
     int Numero;
 public: 
     
@@ -26,10 +27,14 @@ public:
  * @param Numero
  */
     static int contN;
-    cAsistente();
+    cAsistente(cTicket* _ticket, int _Numero);
     ~cAsistente();
-    Ticket getTicket() { return this->ticket; }
-    void setTicket(Ticket ticket);
+
+    cTicket* getTicket() { return this->ticket; }
+    void setTicket(cTicket* ticket);
+
+    int getNumero() { return this->Numero; }
+    void setNumero(int Numero);
     
     
 

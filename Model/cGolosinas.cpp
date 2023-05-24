@@ -38,9 +38,28 @@ cGolosinas::cGolosinas(string _Nombre, float _Precio, int _Stock, string _Marca,
 /**
  * @return bool
  */
-bool cGolosinas::VerificarStock() {
-    return false;
+bool cGolosinas::VerificarStock(int Stock) {
+    bool queda= false;
+    if(this->Stock>0)
+        queda=true;
+    
+    return queda;
 }
+/**
+ * @return int
+ */
+int cGolosinas::getStock(){
+    return this->Stock;
+}
+/**
+ * @param int
+ * @return void
+ */
+void cGolosinas::setStock(int Stock) {
+    this->Stock = Stock;
+    return;
+}
+
 
 /**
  * @return float

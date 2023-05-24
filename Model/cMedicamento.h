@@ -8,9 +8,9 @@
 #include "../Model/Pago.h"
 #include "../Model/Ticket.h"
 #include "../Model/TipoAdmision.h"
-#include "TipoMedicamento.h"
+#include "../G30-Corso-Quiroga-TP/TipoMedicamento.h"
 #include "../G30-Corso-Quiroga-TP/TipoProducto.h"
-#include "cFecha.h"
+#include "../G30-Corso-Quiroga-TP/cFecha.h"
 using namespace std;
 
 #ifndef _CMEDICAMENTO_H
@@ -45,7 +45,7 @@ public:
 
     TipoAdmision getTipoAdmision();
     TipoMedicamento getTipoMedicamento();
-    bool VerificarStock();
+    bool VerificarStock(int Stock);
 
     float getPrecio();
 
@@ -53,6 +53,8 @@ public:
      * @param float
      */
     void setPrecio(float Precio);
+    int getStock();
+    void setStock(int Stock);
 };
 
 #endif //_CMEDICAMENTO_H

@@ -30,6 +30,17 @@ cELimpieza::cELimpieza(string _Nombre, int _NumeroEmpleado, int _HoraEntrada, in
  * @return void
  */
 void cELimpieza::Limpiar(bool Limpio, cFecha* Fecha, int NumeroEmpleado) {
+    /* if (this->Limpio == false){
+        getHora()-> hora;
+        if(hora<=12){
+            cout<<"Empleado 1 debe limpiar"<<endl;
+        }
+        else{
+            cout<<"Empleado 2 debe limpiar"<<endl;
+        }
+        this->Limpio = true;
+    }*/
+    
     return;
 }
 
